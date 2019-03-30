@@ -1,0 +1,90 @@
+<!DOCTYPE log4j:configuration SYSTEM "org/apache/log4j/xml/log4j.dtd">
+<log4j:configuration debug="true"
+	xmlns:log4j='http://jakarta.apache.org/log4j/'>
+	<appender name="console"
+		class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] %l|%m%n" />
+		</layout>
+	</appender>
+	<appender name="infoappender"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="logs/loginfo.log" />
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<param name="threshold" value="INFO" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] Message: %m%n" />
+		</layout>
+	</appender>
+	<appender name="errorappender"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="logs/logerror.log" />
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<param name="threshold" value="ERROR" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] Message: %m%n" />
+		</layout>
+	</appender>
+	<appender name="debugappender"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="logs/logdebug.log" />
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<param name="threshold" value="DEBUG" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] Message: %m%n" />
+		</layout>
+	</appender>
+	<appender name="warnappender"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="logs/logwarn.log" />
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<param name="threshold" value="WARN" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] Message: %m%n" />
+		</layout>
+	</appender>
+	<appender name="fatalappender"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="logs/logfatal.log" />
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<param name="threshold" value="FATAL" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] Message: %m%n" />
+		</layout>
+	</appender>
+	<appender name="traceappender"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="logs/logtrace.log" />
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<param name="threshold" value="TRACE" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] Message: %m%n" />
+		</layout>
+	</appender>
+
+	<root>
+		<priority value="TRACE"></priority>
+		<appender-ref ref="console" />
+		<appender-ref ref="infoappender" />
+		<appender-ref ref="debugappender" />
+		<appender-ref ref="errorappender" />
+		<appender-ref ref="warnappender" />
+		<appender-ref ref="fatalappender" />
+		<appender-ref ref="traceappender" />
+	</root>
+
+</log4j:configuration>
