@@ -6,7 +6,7 @@
 	<artifactId>afnemo</artifactId>
 	<version>V1.0</version>
 	<packaging>war</packaging>
-	<name>Asociación Afrocultural Neftali Mosquera</name>
+	<name>AsociaciÃ³n Afrocultural Neftali Mosquera</name>
 	<description>Plataforma Web</description>
 	<url>http://afnemo.herokuapp.com</url>
 	<properties>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration monitorInterval="10">
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration debug="true"
+	xmlns:log4j='http://jakarta.apache.org/log4j/'>
 	<appender name="console"
 		class="org.apache.log4j.ConsoleAppender">
 		<param name="Target" value="System.out" />
@@ -85,5 +87,4 @@
 		<appender-ref ref="fatalappender" />
 		<appender-ref ref="traceappender" />
 	</root>
-
-</configuration>
+</log4j:configuration>
