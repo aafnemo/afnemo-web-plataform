@@ -1,0 +1,3 @@
+database: afnemosq_afnemo
+user: aafnemosq_admin
+pass: admin
