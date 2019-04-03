@@ -2,7 +2,7 @@
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
 -- Schema afnemo
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `afnemo`.`usuario` (
   `password` CHAR(128) NOT NULL,
   `tipousuario_idtipousuario` INT NOT NULL,
   PRIMARY KEY (`userid`, `tipousuario_idtipousuario`),
-  INDEX `fk_usuario_tipousuario1_idx` (`tipousuario_idtipousuario` ASC) VISIBLE,
+  INDEX `fk_usuario_tipousuario1_idx` (`tipousuario_idtipousuario` ASC),
   CONSTRAINT `fk_usuario_tipousuario1`
     FOREIGN KEY (`tipousuario_idtipousuario`)
     REFERENCES `afnemo`.`tipousuario` (`idtipousuario`)
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `afnemo`.`persona` (
   `fechanacimiento` DATE NOT NULL,
   `usuario_userid` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`idpersona`, `usuario_userid`),
-  INDEX `fk_persona_usuario1_idx` (`usuario_userid` ASC) VISIBLE,
+  INDEX `fk_persona_usuario1_idx` (`usuario_userid` ASC),
   CONSTRAINT `fk_persona_usuario1`
     FOREIGN KEY (`usuario_userid`)
     REFERENCES `afnemo`.`usuario` (`userid`)
@@ -84,8 +84,8 @@ CREATE TABLE IF NOT EXISTS `afnemo`.`actividad_has_persona` (
   `actividad_idactividad` INT NOT NULL,
   `persona_idpersona` VARCHAR(10) NOT NULL,
   PRIMARY KEY (`actividad_idactividad`, `persona_idpersona`),
-  INDEX `fk_actividad_has_persona_persona1_idx` (`persona_idpersona` ASC) VISIBLE,
-  INDEX `fk_actividad_has_persona_actividad_idx` (`actividad_idactividad` ASC) VISIBLE,
+  INDEX `fk_actividad_has_persona_persona1_idx` (`persona_idpersona` ASC),
+  INDEX `fk_actividad_has_persona_actividad_idx` (`actividad_idactividad` ASC),
   CONSTRAINT `fk_actividad_has_persona_actividad`
     FOREIGN KEY (`actividad_idactividad`)
     REFERENCES `afnemo`.`actividad` (`idactividad`)

@@ -2,7 +2,7 @@
 
 /* SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0; */
 /* SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0; */
-/* SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'; */
+/* SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES'; */
 
 -- -----------------------------------------------------
 -- Schema afnemo
@@ -46,13 +46,15 @@ CREATE TABLE IF NOT EXISTS afnemo.usuario (
   `password` CHAR(128) NOT NULL,
   `tipousuario_idtipousuario` INT NOT NULL,
   PRIMARY KEY (`userid`, `tipousuario_idtipousuario`)
-  CREATE INDEX `fk_usuario_tipousuario1_idx` ON afnemo.usuario (`tipousuario_idtipousuario` ASC) VISIBLE,
+ ,
   CONSTRAINT `fk_usuario_tipousuario1`
     FOREIGN KEY (`tipousuario_idtipousuario`)
-    REFERENCES `afnemo`.`tipousuario` (`idtipousuario`)
+    REFERENCES afnemo.tipousuario (`idtipousuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+;
+
+CREATE INDEX `fk_usuario_tipousuario1_idx` ON afnemo.usuario (`tipousuario_idtipousuario` ASC);
 
 
 -- -----------------------------------------------------
@@ -68,13 +70,15 @@ CREATE TABLE IF NOT EXISTS afnemo.persona (
   `fechanacimiento` DATE NOT NULL,
   `usuario_userid` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`idpersona`, `usuario_userid`)
-  CREATE INDEX `fk_persona_usuario1_idx` ON afnemo.persona (`usuario_userid` ASC) VISIBLE,
+ ,
   CONSTRAINT `fk_persona_usuario1`
     FOREIGN KEY (`usuario_userid`)
-    REFERENCES `afnemo`.`usuario` (`userid`)
+    REFERENCES afnemo.usuario (`userid`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+;
+
+CREATE INDEX `fk_persona_usuario1_idx` ON afnemo.persona (`usuario_userid` ASC);
 
 
 -- -----------------------------------------------------
@@ -84,19 +88,21 @@ CREATE TABLE IF NOT EXISTS afnemo.actividad_has_persona (
   `actividad_idactividad` INT NOT NULL,
   `persona_idpersona` VARCHAR(10) NOT NULL,
   PRIMARY KEY (`actividad_idactividad`, `persona_idpersona`)
-  CREATE INDEX `fk_actividad_has_persona_persona1_idx` ON afnemo.actividad_has_persona (`persona_idpersona` ASC) VISIBLE,
-  INDEX `fk_actividad_has_persona_actividad_idx` (`actividad_idactividad` ASC) VISIBLE,
+ ,
   CONSTRAINT `fk_actividad_has_persona_actividad`
     FOREIGN KEY (`actividad_idactividad`)
-    REFERENCES `afnemo`.`actividad` (`idactividad`)
+    REFERENCES afnemo.actividad (`idactividad`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_actividad_has_persona_persona1`
     FOREIGN KEY (`persona_idpersona`)
-    REFERENCES `afnemo`.`persona` (`idpersona`)
+    REFERENCES afnemo.persona (`idpersona`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+;
+
+CREATE INDEX `fk_actividad_has_persona_persona1_idx` ON afnemo.actividad_has_persona (`persona_idpersona` ASC);
+CREATE INDEX `fk_actividad_has_persona_actividad_idx` ON afnemo.actividad_has_persona (`actividad_idactividad` ASC);
 
 
 /* SET SQL_MODE=@OLD_SQL_MODE; */
