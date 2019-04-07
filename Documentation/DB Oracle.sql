@@ -1,8 +1,8 @@
 -- MySQL Workbench Forward Engineering
 
-/* SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0; */
-/* SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0; */
-/* SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES'; */
+-- SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+-- SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+-- SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
 -- Schema afnemo
@@ -43,7 +43,7 @@ CREATE TABLE afnemo.tipousuario (
 -- -----------------------------------------------------
 CREATE TABLE afnemo.usuario (
   userid VARCHAR2(15) NOT NULL,
-  password CHAR(128) NOT NULL,
+  password VARCHAR2(128) NOT NULL,
   tipousuario_idtipousuario NUMBER(10) NOT NULL,
   PRIMARY KEY (userid, tipousuario_idtipousuario)
  ,
@@ -101,6 +101,6 @@ CREATE INDEX fk_actividad_has_persona_persona1_idx ON afnemo.actividad_has_perso
 CREATE INDEX fk_actividad_has_persona_actividad_idx ON afnemo.actividad_has_persona (actividad_idactividad ASC);
 
 
-/* SET SQL_MODE=@OLD_SQL_MODE; */
-/* SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS; */
-/* SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS; */
+-- SET SQL_MODE=@OLD_SQL_MODE;
+-- SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+-- SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS; 

@@ -12,7 +12,8 @@
 	</appender>
 	<appender name="infoappender"
 		class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="logs/$${date:yyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_loginfo.log" />
+		<param name="File"
+			value="Afnemologs/%d{yyyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_loginfo.log" />
 		<param name="MaxFileSize" value="1000KB" />
 		<param name="MaxBackupIndex" value="100" />
 		<param name="threshold" value="INFO" />
@@ -23,7 +24,8 @@
 	</appender>
 	<appender name="errorappender"
 		class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="logs/$${date:yyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logerror.log" />
+		<param name="File"
+			value="Afnemologs/%d{yyyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logerror.log" />
 		<param name="MaxFileSize" value="1000KB" />
 		<param name="MaxBackupIndex" value="100" />
 		<param name="threshold" value="ERROR" />
@@ -34,7 +36,8 @@
 	</appender>
 	<appender name="debugappender"
 		class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="logs/$${date:yyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logdebug.log" />
+		<param name="File"
+			value="Afnemologs/%d{yyyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logdebug.log" />
 		<param name="MaxFileSize" value="1000KB" />
 		<param name="MaxBackupIndex" value="100" />
 		<param name="threshold" value="DEBUG" />
@@ -45,7 +48,8 @@
 	</appender>
 	<appender name="warnappender"
 		class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="logs/$${date:yyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logwarn.log" />
+		<param name="File"
+			value="Afnemologs/%d{yyyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logwarn.log" />
 		<param name="MaxFileSize" value="1000KB" />
 		<param name="MaxBackupIndex" value="100" />
 		<param name="threshold" value="WARN" />
@@ -56,7 +60,8 @@
 	</appender>
 	<appender name="fatalappender"
 		class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="logs/$${date:yyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logfatal.log" />
+		<param name="File"
+			value="Afnemologs/%d{yyyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logfatal.log" />
 		<param name="MaxFileSize" value="1000KB" />
 		<param name="MaxBackupIndex" value="100" />
 		<param name="threshold" value="FATAL" />
@@ -66,8 +71,14 @@
 		</layout>
 	</appender>
 	<appender name="traceappender"
-		class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="logs/$${date:yyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logtrace.log" />
+		class="org.apache.log4j.RollingFileAppender">
+		<rollingPolicy
+			class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
+			<param name="FileNamePattern"
+				value="Afnemologs/%d{yyyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logtrace.log" />
+		</rollingPolicy>
+		<param name="File"
+			value="Afnemologs/%d{yyyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logtrace.log" />
 		<param name="MaxFileSize" value="1000KB" />
 		<param name="MaxBackupIndex" value="100" />
 		<param name="threshold" value="TRACE" />
@@ -76,7 +87,20 @@
 				value="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] Message: %m%n" />
 		</layout>
 	</appender>
-
+	<appender name="rollingAppender"
+		class="org.apache.log4j.rolling.RollingFileAppender">
+		<rollingPolicy
+			class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
+			<param name="FileNamePattern"
+				value="logs/stuff.%d{yyyy-MM_HH-mm}.gz" />
+			<param name="ActiveFileName" value="logs/stuff.log" />
+		</rollingPolicy>
+		<param name="threshold" value="TRACE" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{yyyy MM dd HH:mm:ss} %5p %c{1} - %m%n" />
+		</layout>
+	</appender>
 	<root>
 		<priority value="TRACE"></priority>
 		<appender-ref ref="console" />
