@@ -1,5 +1,7 @@
 package com.afnemo.model.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -76,5 +78,9 @@ public class TipoUsuarioDao implements TipoUsuarioDaoInterface {
 			log.trace("Error al actualizar el Tipo de Usuario"
 					+ EXCEPTION_STRING + th.getMessage());
 		}
+	}
+	@Override
+	public List<TipoUsuario> consultarTipoUsuario(int id) {
+		return em.createNamedQuery("tipousuario.findAll").getResultList();
 	}
 }

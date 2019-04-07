@@ -1,5 +1,7 @@
 package com.afnemo.model.interfaces;
 
+import java.util.List;
+
 import com.afnemo.model.dto.Actividad;
 
 /**
@@ -15,4 +17,6 @@ public interface ActividadDaoInterface {
 	public void crearActividad(Actividad actividad);
 
 	public void actualizarActividad(Actividad actividad);
+	
+	public List<Actividad> consultarActividad(int id);
 }

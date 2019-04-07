@@ -1,5 +1,7 @@
 package com.afnemo.model.interfaces;
 
+import java.util.List;
+
 import com.afnemo.model.dto.TipoUsuario;
 
 /**
@@ -17,4 +19,5 @@ public interface TipoUsuarioDaoInterface {
 	
 	public void actualizarTipoUsuario(TipoUsuario tipoUsuario);
 	
+	public List<TipoUsuario> consultarTipoUsuario(int id);
 }

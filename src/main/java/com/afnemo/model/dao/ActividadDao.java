@@ -1,5 +1,7 @@
 package com.afnemo.model.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -7,6 +9,7 @@ import javax.persistence.PersistenceException;
 
 import org.apache.log4j.Logger;
 
+import com.afnemo.model.dto.Actividad;
 import com.afnemo.model.interfaces.ActividadDaoInterface;
 
 /**
@@ -80,6 +83,10 @@ public class ActividadDao implements ActividadDaoInterface {
 					+ th.getMessage());
 		}
 
+	}
+	@Override
+	public List<Actividad> consultarActividad(int id) {
+		return em.createNamedQuery("Actividad.findAll").getResultList();
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.afnemo.model.interfaces;
 
+import java.util.List;
+
 import com.afnemo.model.dto.Usuario;
 
 /**
@@ -15,5 +17,6 @@ public interface UsuarioDaoInterface {
 	public void crearUsuario(Usuario usuario);
 
 	public void actualizarUsuario(Usuario usuario);
-
+	
+	public List<Usuario>consultarUsuario(String id);
 }

@@ -1,5 +1,7 @@
 package com.afnemo.model.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -51,10 +53,10 @@ public class PersonaDao implements PersonaDaoInterface {
 		} catch (PersistenceException pe) {
 			em.getTransaction().rollback();
 			Throwable th = pe.getCause();
-			log.error("Error al crear la persona con id:" + persona.getId()+ " "
-					+ EXCEPTION_STRING + pe.getMessage());
-			log.trace("Error al crear la persona con id: " + persona.getId()+ " "
-					+ EXCEPTION_STRING + th.getMessage());
+			log.error("Error al crear la persona con id:" + persona.getId()
+					+ " " + EXCEPTION_STRING + pe.getMessage());
+			log.trace("Error al crear la persona con id: " + persona.getId()
+					+ " " + EXCEPTION_STRING + th.getMessage());
 		}
 
 	}
@@ -71,12 +73,21 @@ public class PersonaDao implements PersonaDaoInterface {
 		} catch (PersistenceException pe) {
 			em.getTransaction().rollback();
 			Throwable th = pe.getCause();
-			log.error("Error al actualizar la persona con id" + persona.getId()+ " "
-					+ EXCEPTION_STRING + pe.getMessage());
-			log.trace("Error al actualizar la persona con id" + persona.getId()+ " "
-					+ EXCEPTION_STRING + th.getMessage());
+			log.error("Error al actualizar la persona con id" + persona.getId()
+					+ " " + EXCEPTION_STRING + pe.getMessage());
+			log.trace("Error al actualizar la persona con id" + persona.getId()
+					+ " " + EXCEPTION_STRING + th.getMessage());
 		}
 
+	}
+	@Override
+	public List<Persona> consultarTodasPersonas() {
+		return em.createNamedQuery("Persona.findAll").getResultList();
+	}
+	@Override
+	public Persona consultarPorId(String id) {
+		// TODO: 
+		return null;
 	}
 
 }

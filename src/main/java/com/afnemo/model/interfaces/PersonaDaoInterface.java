@@ -1,5 +1,7 @@
 package com.afnemo.model.interfaces;
 
+import java.util.List;
+
 import com.afnemo.model.dto.Persona;
 
 /**
@@ -15,4 +17,8 @@ public interface PersonaDaoInterface {
 	public void crearPersona(Persona persona);
 
 	public void actualizarPersona(Persona persona);
+
+	public List<Persona> consultarTodasPersonas();
+	
+	public Persona consultarPorId(String id);
 }
