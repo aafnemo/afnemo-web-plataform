@@ -46,11 +46,11 @@ public class TipoUsuario implements Serializable {
 		this.id = id;
 	}
 
-	public String detalle() {
+	public String getDetalle() {
 		return this.detalle;
 	}
 
-	public void setdetalle(String detalle) {
+	public void setDetalle(String detalle) {
 		this.detalle = detalle;
 	}
 

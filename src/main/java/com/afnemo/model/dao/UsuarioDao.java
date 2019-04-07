@@ -7,74 +7,71 @@ import javax.persistence.PersistenceException;
 
 import org.apache.log4j.Logger;
 
-import com.afnemo.model.dto.TipoUsuario;
-import com.afnemo.model.interfaces.TipoUsuarioDaoInterface;
+import com.afnemo.model.dto.Usuario;
+import com.afnemo.model.interfaces.UsuarioDaoInterface;
 
 /**
  * 
  * @autor: Arnold Herrera
  * @date: 7/04/2019
- * @filename: TipoUsuarioDao.java
+ * @filename: UsuarioDao.java
  * @Copyright (C) 2019 Asociación Afrocultural Neftalí Mosquera (afnemo)
  * 
  */
 
-public class TipoUsuarioDao implements TipoUsuarioDaoInterface {
+public class UsuarioDao implements UsuarioDaoInterface {
 	private static final String persistenceUnitName = "afnemo";
 	private static EntityManagerFactory emf;
 	private static EntityManager em;
 	private final Logger log = Logger.getLogger(getClass());
 	private static final String EXCEPTION_STRING = "EXCEPTION STRING: ";
-	public TipoUsuarioDao() {
+	public UsuarioDao() {
 		try {
 			emf = Persistence.createEntityManagerFactory(persistenceUnitName);
 			em = emf.createEntityManager();
 			log.debug(
-					"Unidad de persistencia en TipoUsuarioDao Creada satisfactoriamente");
+					"Unidad de persistencia en UsuarioDao Creada satisfactoriamente");
 
 		} catch (PersistenceException pe) {
 			Throwable th = pe.getCause();
-			log.error(
-					"Error al crear entidades de persistencia en TipoUsuarioDao"
-							+ EXCEPTION_STRING + pe.getMessage());
+			log.error("Error al crear entidades de persistencia en UsuarioDao"
+					+ EXCEPTION_STRING + pe.getMessage());
 			log.trace("" + EXCEPTION_STRING + th.getMessage());
 		}
-
 	}
 	@Override
-	public void crearTipoUsuario(TipoUsuario tipoUsuario) {
+	public void crearUsuario(Usuario usuario) {
 		try {
 			em.getTransaction().begin();
-			em.persist(tipoUsuario);
+			em.persist(usuario);
 			em.getTransaction().commit();
 			em.close();
-			log.info("Se creo el tipo de usuario: " + tipoUsuario.getDetalle());
+			log.info("Se creo el tipo de usuario: " + usuario.getId());
 		} catch (PersistenceException pe) {
 			em.getTransaction().rollback();
 			Throwable th = pe.getCause();
 			log.error("Error al crear un tipo de usuario" + EXCEPTION_STRING
 					+ pe.getMessage());
-			log.trace("Error al actualizar el Tipo de Usuario"
+			log.trace("Error al crear el  Usuario" + usuario.getId() + " "
+					+ EXCEPTION_STRING + th.getMessage());
+		}
+	}
+	@Override
+	public void actualizarUsuario(Usuario usuario) {
+		try {
+			em.getTransaction().begin();
+			em.persist(usuario);
+			em.getTransaction().commit();
+			em.close();
+			log.info("Se creo el tipo de usuario: " + usuario.getId());
+		} catch (PersistenceException pe) {
+			em.getTransaction().rollback();
+			Throwable th = pe.getCause();
+			log.error("Error al crear un tipo de usuario" + usuario.getId()
+					+ " " + EXCEPTION_STRING + pe.getMessage());
+			log.trace("Error al actualizar el Usuario" + usuario.getId() + " "
 					+ EXCEPTION_STRING + th.getMessage());
 		}
 	}
 
-	@Override
-	public void actualizarTipoUsuario(TipoUsuario tipoUsuario) {
-		try {
-			em.getTransaction().begin();
-			em.merge(tipoUsuario);
-			em.getTransaction().commit();
-			em.close();
-			log.info("Se actualiza información del tipo de usuario: "
-					+ tipoUsuario.getDetalle());
-		} catch (PersistenceException pe) {
-			em.getTransaction().rollback();
-			Throwable th = pe.getCause();
-			log.error("Error al actualizar el Tipo de Usuario"
-					+ EXCEPTION_STRING + pe.getMessage());
-			log.trace("Error al actualizar el Tipo de Usuario"
-					+ EXCEPTION_STRING + th.getMessage());
-		}
-	}
 }

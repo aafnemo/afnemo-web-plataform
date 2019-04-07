@@ -7,25 +7,24 @@ import javax.persistence.PersistenceException;
 
 import org.apache.log4j.Logger;
 
-import com.afnemo.model.dto.TipoUsuario;
-import com.afnemo.model.interfaces.TipoUsuarioDaoInterface;
+import com.afnemo.model.interfaces.ActividadDaoInterface;
 
 /**
  * 
  * @autor: Arnold Herrera
  * @date: 7/04/2019
- * @filename: TipoUsuarioDao.java
+ * @filename: Actividad.java
  * @Copyright (C) 2019 Asociación Afrocultural Neftalí Mosquera (afnemo)
  * 
  */
 
-public class TipoUsuarioDao implements TipoUsuarioDaoInterface {
+public class ActividadDao implements ActividadDaoInterface {
 	private static final String persistenceUnitName = "afnemo";
 	private static EntityManagerFactory emf;
 	private static EntityManager em;
 	private final Logger log = Logger.getLogger(getClass());
 	private static final String EXCEPTION_STRING = "EXCEPTION STRING: ";
-	public TipoUsuarioDao() {
+	public ActividadDao() {
 		try {
 			emf = Persistence.createEntityManagerFactory(persistenceUnitName);
 			em = emf.createEntityManager();
@@ -42,39 +41,45 @@ public class TipoUsuarioDao implements TipoUsuarioDaoInterface {
 
 	}
 	@Override
-	public void crearTipoUsuario(TipoUsuario tipoUsuario) {
+	public void crearActividad(com.afnemo.model.dto.Actividad actividad) {
 		try {
 			em.getTransaction().begin();
-			em.persist(tipoUsuario);
+			em.merge(actividad);
 			em.getTransaction().commit();
 			em.close();
-			log.info("Se creo el tipo de usuario: " + tipoUsuario.getDetalle());
+			log.info("Se crea actividad con Id: " + actividad.getId());
 		} catch (PersistenceException pe) {
 			em.getTransaction().rollback();
 			Throwable th = pe.getCause();
-			log.error("Error al crear un tipo de usuario" + EXCEPTION_STRING
+			log.error("Error al crear la actividad con id:" + actividad.getId()
+					+ " " + actividad.getDetalle() + " " + EXCEPTION_STRING
 					+ pe.getMessage());
-			log.trace("Error al actualizar el Tipo de Usuario"
-					+ EXCEPTION_STRING + th.getMessage());
+			log.trace("Error al crear la actividad con id: " + actividad.getId()
+					+ " " + actividad.getDetalle() + " " + EXCEPTION_STRING
+					+ th.getMessage());
 		}
+
 	}
 
 	@Override
-	public void actualizarTipoUsuario(TipoUsuario tipoUsuario) {
+	public void actualizarActividad(com.afnemo.model.dto.Actividad actividad) {
 		try {
 			em.getTransaction().begin();
-			em.merge(tipoUsuario);
+			em.merge(actividad);
 			em.getTransaction().commit();
 			em.close();
-			log.info("Se actualiza información del tipo de usuario: "
-					+ tipoUsuario.getDetalle());
+			log.info("Se crea actividad con Id: " + actividad.getId());
 		} catch (PersistenceException pe) {
 			em.getTransaction().rollback();
 			Throwable th = pe.getCause();
-			log.error("Error al actualizar el Tipo de Usuario"
-					+ EXCEPTION_STRING + pe.getMessage());
-			log.trace("Error al actualizar el Tipo de Usuario"
-					+ EXCEPTION_STRING + th.getMessage());
+			log.error("Error al crear la actividad con id:" + actividad.getId()
+					+ " " + actividad.getDetalle() + " " + EXCEPTION_STRING
+					+ pe.getMessage());
+			log.trace("Error al crear la actividad con id: " + actividad.getId()
+					+ " " + actividad.getDetalle() + " " + EXCEPTION_STRING
+					+ th.getMessage());
 		}
+
 	}
+
 }
