@@ -22,25 +22,14 @@ import com.afnemo.model.interfaces.PersonaDaoInterface;
  */
 
 public class PersonaDao implements PersonaDaoInterface {
-	private static final String persistenceUnitName = "afnemo";
-	private static EntityManagerFactory emf;
-	private static EntityManager em;
+	private static final String PERSISTENCEUNITNAME = "afnemo";
+	private static EntityManagerFactory emf = Persistence
+			.createEntityManagerFactory(PERSISTENCEUNITNAME);
+	private static EntityManager em = emf.createEntityManager();
 	private final Logger log = Logger.getLogger(getClass());
 	private static final String EXCEPTION_STRING = "EXCEPTION STRING: ";
 	public PersonaDao() {
-		try {
-			emf = Persistence.createEntityManagerFactory(persistenceUnitName);
-			em = emf.createEntityManager();
-			log.debug(
-					"Unidad de persistencia en PersonaDao Creada satisfactoriamente");
-
-		} catch (PersistenceException pe) {
-			Throwable th = pe.getCause();
-			log.error("Error al crear entidades de persistencia en PersonaDao"
-					+ EXCEPTION_STRING + pe.getMessage());
-			log.trace("" + EXCEPTION_STRING + th.getMessage());
-		}
-
+		// default implementation not used
 	}
 	@Override
 	public void crearPersona(Persona persona) {
@@ -86,7 +75,7 @@ public class PersonaDao implements PersonaDaoInterface {
 	}
 	@Override
 	public Persona consultarPorId(String id) {
-		// TODO: 
+		// 
 		return null;
 	}
 

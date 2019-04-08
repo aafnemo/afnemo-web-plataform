@@ -1,0 +1,16 @@
+
+?com.afnemo.model.dto.Actividad#getFechaInicio()Ljava/util/Date;
+__unknown_file ("1*Þ
+1L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java8	 8(¢
+Ÿ
+L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java8	 8(
+%0java.util.Date"__id*3*1 
+com.afnemo.model.dto.Actividad"
+fechaInicio"f
+L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java8 8(
+
+%0java.util.DateB" 
+com.afnemo.model.dto.Actividad

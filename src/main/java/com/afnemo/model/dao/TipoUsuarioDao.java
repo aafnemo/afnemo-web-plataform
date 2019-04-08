@@ -22,26 +22,14 @@ import com.afnemo.model.interfaces.TipoUsuarioDaoInterface;
  */
 
 public class TipoUsuarioDao implements TipoUsuarioDaoInterface {
-	private static final String persistenceUnitName = "afnemo";
-	private static EntityManagerFactory emf;
-	private static EntityManager em;
+	private static final String PERSISTENCEUNITNAME = "afnemo";
+	private static EntityManagerFactory emf = Persistence
+			.createEntityManagerFactory(PERSISTENCEUNITNAME);
+	private static EntityManager em = emf.createEntityManager();
 	private final Logger log = Logger.getLogger(getClass());
 	private static final String EXCEPTION_STRING = "EXCEPTION STRING: ";
 	public TipoUsuarioDao() {
-		try {
-			emf = Persistence.createEntityManagerFactory(persistenceUnitName);
-			em = emf.createEntityManager();
-			log.debug(
-					"Unidad de persistencia en TipoUsuarioDao Creada satisfactoriamente");
-
-		} catch (PersistenceException pe) {
-			Throwable th = pe.getCause();
-			log.error(
-					"Error al crear entidades de persistencia en TipoUsuarioDao"
-							+ EXCEPTION_STRING + pe.getMessage());
-			log.trace("" + EXCEPTION_STRING + th.getMessage());
-		}
-
+		// default implementation not used
 	}
 	@Override
 	public void crearTipoUsuario(TipoUsuario tipoUsuario) {
@@ -56,7 +44,7 @@ public class TipoUsuarioDao implements TipoUsuarioDaoInterface {
 			Throwable th = pe.getCause();
 			log.error("Error al crear un tipo de usuario" + EXCEPTION_STRING
 					+ pe.getMessage());
-			log.trace("Error al actualizar el Tipo de Usuario"
+			log.trace("Error al actualizar el tipo de usuario "+ tipoUsuario.getDetalle()
 					+ EXCEPTION_STRING + th.getMessage());
 		}
 	}
