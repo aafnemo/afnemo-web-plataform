@@ -21,19 +21,22 @@ hashCode()java.lang.Object#hashCode()I&
 clone()*java.lang.Object#clone()Ljava/lang/Object;3
 javax.persistence.EntityManagerjava.lang.Object7
 #javax.persistence.EntityTransactionjava.lang.Object(
-java.io.Serializablejava.lang.Objectý
-com.afnemo.model.dto.Actividadjava.lang.Objectjava.io.Serializableb
-setFechaFinal(Ljava/util/Date;)?com.afnemo.model.dto.Actividad#setFechaFinal(Ljava/util/Date;)V2
+java.io.Serializablejava.lang.Objectõ	
+com.afnemo.model.dto.Actividadjava.lang.Objectjava.io.Serializable8
+
+isEstado()*com.afnemo.model.dto.Actividad#isEstado()Zb
+setFechaFinal(Ljava/util/Date;)?com.afnemo.model.dto.Actividad#setFechaFinal(Ljava/util/Date;)V`
+setDetalle(Ljava/lang/String;)>com.afnemo.model.dto.Actividad#setDetalle(Ljava/lang/String;)VQ
+getFechaFinal()>com.afnemo.model.dto.Actividad#getFechaFinal()Ljava/util/Date;K
+getNombre()<com.afnemo.model.dto.Actividad#getNombre()Ljava/lang/String;4
+setId(I)(com.afnemo.model.dto.Actividad#setId(I)V2
 getId()'com.afnemo.model.dto.Actividad#getId()I4
-<init>()(com.afnemo.model.dto.Actividad#<init>()V`
-setDetalle(Ljava/lang/String;)>com.afnemo.model.dto.Actividad#setDetalle(Ljava/lang/String;)V^
+<init>()(com.afnemo.model.dto.Actividad#<init>()V^
 setNombre(Ljava/lang/String;)=com.afnemo.model.dto.Actividad#setNombre(Ljava/lang/String;)Vj
 #setLocalizacion(Ljava/lang/String;)Ccom.afnemo.model.dto.Actividad#setLocalizacion(Ljava/lang/String;)VW
-getLocalizacion()Bcom.afnemo.model.dto.Actividad#getLocalizacion()Ljava/lang/String;Q
-getFechaFinal()>com.afnemo.model.dto.Actividad#getFechaFinal()Ljava/util/Date;S
-getFechaInicio()?com.afnemo.model.dto.Actividad#getFechaInicio()Ljava/util/Date;K
-getNombre()<com.afnemo.model.dto.Actividad#getNombre()Ljava/lang/String;4
-setId(I)(com.afnemo.model.dto.Actividad#setId(I)Vd
+getLocalizacion()Bcom.afnemo.model.dto.Actividad#getLocalizacion()Ljava/lang/String;S
+getFechaInicio()?com.afnemo.model.dto.Actividad#getFechaInicio()Ljava/util/Date;<
+setEstado(Z),com.afnemo.model.dto.Actividad#setEstado(Z)Vd
  setFechaInicio(Ljava/util/Date;)@com.afnemo.model.dto.Actividad#setFechaInicio(Ljava/util/Date;)VM
 getDetalle()=com.afnemo.model.dto.Actividad#getDetalle()Ljava/lang/String;;
 'org.apache.log4j.spi.AppenderAttachablejava.lang.Object©/
@@ -155,10 +158,12 @@ getCause()3java.lang.Throwable#getCause()Ljava/lang/Throwable;e
 <init>(Ljava/lang/String;)Bjavax.persistence.PersistenceException#<init>(Ljava/lang/String;)VŠ
 /<init>(Ljava/lang/String;Ljava/lang/Throwable;)Wjavax.persistence.PersistenceException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)Vf
 <init>(Ljava/lang/Throwable;)Ejavax.persistence.PersistenceException#<init>(Ljava/lang/Throwable;)V+
-javax.persistence.Queryjava.lang.ObjectŒ
+javax.persistence.Queryjava.lang.Object€
 com.afnemo.model.dto.Personajava.lang.Objectjava.io.Serializablej
 $setFechaNacimiento(Ljava/util/Date;)Bcom.afnemo.model.dto.Persona#setFechaNacimiento(Ljava/util/Date;)V^
-setNombres(Ljava/lang/String;)<com.afnemo.model.dto.Persona#setNombres(Ljava/lang/String;)VT
+setNombres(Ljava/lang/String;)<com.afnemo.model.dto.Persona#setNombres(Ljava/lang/String;)V6
+
+isEstado()(com.afnemo.model.dto.Persona#isEstado()ZT
 setId(Ljava/lang/String;)7com.afnemo.model.dto.Persona#setId(Ljava/lang/String;)VX
 setSexo(Ljava/lang/String;)9com.afnemo.model.dto.Persona#setSexo(Ljava/lang/String;)VW
 getUsuario()Gcom.afnemo.model.dto.Persona#getUsuario()Lcom/afnemo/model/dto/Usuario;I
@@ -166,7 +171,8 @@ $setFechaNacimiento(Ljava/util/Date;)Bcom.afnemo.model.dto.Persona#setFechaNaci
  setApellido1(Ljava/lang/String;)>com.afnemo.model.dto.Persona#setApellido1(Ljava/lang/String;)VA
 getId()6com.afnemo.model.dto.Persona#getId()Ljava/lang/String;Y
 getFechaNacimiento()Acom.afnemo.model.dto.Persona#getFechaNacimiento()Ljava/util/Date;2
-<init>()&com.afnemo.model.dto.Persona#<init>()Vb
+<init>()&com.afnemo.model.dto.Persona#<init>()V:
+setEstado(Z)*com.afnemo.model.dto.Persona#setEstado(Z)Vb
  setApellido2(Ljava/lang/String;)>com.afnemo.model.dto.Persona#setApellido2(Ljava/lang/String;)VK
 getNombres();com.afnemo.model.dto.Persona#getNombres()Ljava/lang/String;E
 	getSexo()8com.afnemo.model.dto.Persona#getSexo()Ljava/lang/String;\
@@ -183,14 +189,17 @@ $setFechaNacimiento(Ljava/util/Date;)Bcom.afnemo.model.dto.Persona#setFechaNaci
 setId(I)*com.afnemo.model.dto.TipoUsuario#setId(I)V—
 *addUsuario(Lcom/afnemo/model/dto/Usuario;)icom.afnemo.model.dto.TipoUsuario#addUsuario(Lcom/afnemo/model/dto/Usuario;)Lcom/afnemo/model/dto/Usuario;^
 setUsuarios(Ljava/util/Set;)>com.afnemo.model.dto.TipoUsuario#setUsuarios(Ljava/util/Set;)VO
-getDetalle()?com.afnemo.model.dto.TipoUsuario#getDetalle()Ljava/lang/String;Õ
-com.afnemo.model.dto.Usuariojava.lang.Objectjava.io.Serializable@
+getDetalle()?com.afnemo.model.dto.TipoUsuario#getDetalle()Ljava/lang/String;É
+com.afnemo.model.dto.Usuariojava.lang.Objectjava.io.Serializable6
+
+isEstado()(com.afnemo.model.dto.Usuario#isEstado()Z@
 setPassword([C)-com.afnemo.model.dto.Usuario#setPassword([C)VT
 setId(Ljava/lang/String;)7com.afnemo.model.dto.Usuario#setId(Ljava/lang/String;)VA
 getId()6com.afnemo.model.dto.Usuario#getId()Ljava/lang/String;=
 getPassword(),com.afnemo.model.dto.Usuario#getPassword()[C2
 <init>()&com.afnemo.model.dto.Usuario#<init>()Vx
-+setPersonas(Lcom/afnemo/model/dto/Persona;)Icom.afnemo.model.dto.Usuario#setPersonas(Lcom/afnemo/model/dto/Persona;)V†
++setPersonas(Lcom/afnemo/model/dto/Persona;)Icom.afnemo.model.dto.Usuario#setPersonas(Lcom/afnemo/model/dto/Persona;)V:
+setEstado(Z)*com.afnemo.model.dto.Usuario#setEstado(Z)V†
 2setTipoUsuario(Lcom/afnemo/model/dto/TipoUsuario;)Pcom.afnemo.model.dto.Usuario#setTipoUsuario(Lcom/afnemo/model/dto/TipoUsuario;)Vc
 getTipoUsuario()Ocom.afnemo.model.dto.Usuario#getTipoUsuario()Lcom/afnemo/model/dto/TipoUsuario;W
 getPersona()Gcom.afnemo.model.dto.Usuario#getPersona()Lcom/afnemo/model/dto/Persona;Ö

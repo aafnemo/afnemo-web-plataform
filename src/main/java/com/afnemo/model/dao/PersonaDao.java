@@ -9,6 +9,7 @@ import javax.persistence.PersistenceException;
 
 import org.apache.log4j.Logger;
 
+import com.afnemo.commons.Logs;
 import com.afnemo.model.dto.Persona;
 import com.afnemo.model.interfaces.PersonaDaoInterface;
 
@@ -21,7 +22,7 @@ import com.afnemo.model.interfaces.PersonaDaoInterface;
  * 
  */
 
-public class PersonaDao implements PersonaDaoInterface {
+public class PersonaDao extends Logs implements PersonaDaoInterface {
 	private static final String PERSISTENCEUNITNAME = "afnemo";
 	private static EntityManagerFactory emf = Persistence
 			.createEntityManagerFactory(PERSISTENCEUNITNAME);
@@ -35,7 +36,7 @@ public class PersonaDao implements PersonaDaoInterface {
 	public void crearPersona(Persona persona) {
 		try {
 			em.getTransaction().begin();
-			em.merge(persona);
+			em.persist(persona);
 			em.getTransaction().commit();
 			em.close();
 			log.info("Se crea Persona con Id: " + persona.getId());

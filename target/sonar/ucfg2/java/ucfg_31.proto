@@ -1,16 +1,16 @@
 
-;com.afnemo.model.dto.Persona#getNombres()Ljava/lang/String;
-__unknown_file ("1*Ö
+6com.afnemo.model.dto.Persona#getId()Ljava/lang/String;
+__unknown_file ("1*Ñ
 1J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.java1	 1(œ
-™
+@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.java/	 /(—
+”
 J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.java1	 1(
-%0java.lang.String"__id*-*+
-com.afnemo.model.dto.Persona"	
-nombres"f
+@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.java/	 /(
+%0java.lang.String"__id*(*&
+com.afnemo.model.dto.Persona"
+id"f
 J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.java1 1(
+@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.java/ /(
 
 %0java.lang.StringB 
 com.afnemo.model.dto.Persona

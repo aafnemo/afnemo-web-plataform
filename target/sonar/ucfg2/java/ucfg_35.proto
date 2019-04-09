@@ -1,16 +1,16 @@
 
-=com.afnemo.model.dto.Persona#getApellido2()Ljava/lang/String;
+=com.afnemo.model.dto.Persona#getApellido1()Ljava/lang/String;
 __unknown_file ("1*Ø
 1J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.java=	 =(ž
+@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.java;	 ;(ž
 ›
 J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.java=	 =(
+@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.java;	 ;(
 %0java.lang.String"__id*/*-
 com.afnemo.model.dto.Persona"
-	apellido2"f
+	apellido1"f
 J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.java= =(
+@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.java; ;(
 
 %0java.lang.StringB 
 com.afnemo.model.dto.Persona

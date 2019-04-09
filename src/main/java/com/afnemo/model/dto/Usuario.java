@@ -23,6 +23,8 @@ public class Usuario implements Serializable {
 	private String id;
 	@Column(name = "USR_Password", length = 128, nullable = false)
 	private char[] password;
+	@Column(name="USR_Estado",nullable=false)
+	private boolean estado;
 	@ManyToOne
 	@JoinColumn(name = "FK_TU_Id", nullable = false)
 	private TipoUsuario tipoUsuario;
@@ -62,6 +64,14 @@ public class Usuario implements Serializable {
 
 	public void setPersonas(Persona persona) {
 		this.persona = persona;
+	}
+
+	public boolean isEstado() {
+		return estado;
+	}
+
+	public void setEstado(boolean estado) {
+		this.estado = estado;
 	}
 
 }

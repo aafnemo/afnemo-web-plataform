@@ -1,6 +1,7 @@
 com\afnemo\model\dto\Usuario.class
 com\afnemo\model\dao\TipoUsuarioDao.class
 com\afnemo\model\dao\UsuarioDao.class
+com\afnemo\commons\Logs.class
 com\afnemo\model\interfaces\ActividadDaoInterface.class
 com\afnemo\model\interfaces\TipoUsuarioDaoInterface.class
 com\afnemo\model\dto\Persona.class

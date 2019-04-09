@@ -31,6 +31,10 @@ public class Persona implements Serializable {
 	private String correo;
 	@Column(name = "PRS_Sexo", length = 45, nullable = false)
 	private String sexo;
+	@Column(name = "PRS_Telefono", length = 12, nullable = false)
+	private String telefono;
+	@Column(name="PRS_Estado",nullable=false)
+	private boolean estado;
 	@Column(name = "PRS_FechaNacimiento", nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date fechaNacimiento;
@@ -86,6 +90,12 @@ public class Persona implements Serializable {
 	}
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+	public boolean isEstado() {
+		return estado;
+	}
+	public void setEstado(boolean estado) {
+		this.estado = estado;
 	}
 	
 }

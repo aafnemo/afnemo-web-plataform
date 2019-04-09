@@ -9,6 +9,7 @@ import javax.persistence.PersistenceException;
 
 import org.apache.log4j.Logger;
 
+import com.afnemo.commons.Logs;
 import com.afnemo.model.dto.Actividad;
 import com.afnemo.model.interfaces.ActividadDaoInterface;
 
@@ -21,7 +22,7 @@ import com.afnemo.model.interfaces.ActividadDaoInterface;
  * 
  */
 
-public class ActividadDao implements ActividadDaoInterface {
+public class ActividadDao extends Logs implements ActividadDaoInterface {
 	private static final String PERSISTENCEUNITNAME = "afnemo";
 	private static EntityManagerFactory emf = Persistence
 			.createEntityManagerFactory(PERSISTENCEUNITNAME);
@@ -30,12 +31,13 @@ public class ActividadDao implements ActividadDaoInterface {
 	private static final String EXCEPTION_STRING = "EXCEPTION STRING: ";
 	public ActividadDao() {
 		// default implementation not used
+		
 	}
 	@Override
 	public void crearActividad(com.afnemo.model.dto.Actividad actividad) {
 		try {
 			em.getTransaction().begin();
-			em.merge(actividad);
+			em.persist(actividad);
 			em.getTransaction().commit();
 			em.close();
 			log.info("Se crea actividad con Id: " + actividad.getId());

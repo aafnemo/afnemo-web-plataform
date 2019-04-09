@@ -9,6 +9,7 @@ import javax.persistence.PersistenceException;
 
 import org.apache.log4j.Logger;
 
+import com.afnemo.commons.Logs;
 import com.afnemo.model.dto.TipoUsuario;
 import com.afnemo.model.interfaces.TipoUsuarioDaoInterface;
 
@@ -21,7 +22,7 @@ import com.afnemo.model.interfaces.TipoUsuarioDaoInterface;
  * 
  */
 
-public class TipoUsuarioDao implements TipoUsuarioDaoInterface {
+public class TipoUsuarioDao extends Logs implements TipoUsuarioDaoInterface {
 	private static final String PERSISTENCEUNITNAME = "afnemo";
 	private static EntityManagerFactory emf = Persistence
 			.createEntityManagerFactory(PERSISTENCEUNITNAME);
