@@ -30,7 +30,22 @@ public class UsuarioDao extends Logs implements UsuarioDaoInterface {
 	private final Logger log = Logger.getLogger(getClass());
 	private static final String EXCEPTION_STRING = "EXCEPTION STRING: ";
 	public UsuarioDao() {
+<<<<<<< HEAD
 		// default implementation not used
+=======
+		try {
+			emf = Persistence.createEntityManagerFactory(persistenceUnitName);
+			em = emf.createEntityManager();
+			log.info(
+					"Unidad de persistencia en UsuarioDao Creada satisfactoriamente");
+
+		} catch (PersistenceException pe) {
+			Throwable th = pe.getCause();
+			log.fatal("Error al crear entidades de persistencia en UsuarioDao"
+					+ EXCEPTION_STRING + pe.getMessage());
+			log.trace("" + EXCEPTION_STRING + th.getMessage());
+		}
+>>>>>>> feature/C00005
 	}
 	@Override
 	public void crearUsuario(Usuario usuario) {
@@ -68,7 +83,7 @@ public class UsuarioDao extends Logs implements UsuarioDaoInterface {
 	}
 	@Override
 	public List<Usuario> consultarUsuario(String id) {
-		return em.createNamedQuery("Usuario.findAll").getResultList();
+		return em.createNamedQuery("Usuario.findAll",Usuario.class).getResultList();
 	}
 
 }

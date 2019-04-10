@@ -30,8 +30,25 @@ public class ActividadDao extends Logs implements ActividadDaoInterface {
 	private final Logger log = Logger.getLogger(getClass());
 	private static final String EXCEPTION_STRING = "EXCEPTION STRING: ";
 	public ActividadDao() {
+<<<<<<< HEAD
 		// default implementation not used
 		
+=======
+		try {
+			emf = Persistence.createEntityManagerFactory(persistenceUnitName);
+			em = emf.createEntityManager();
+			log.info(
+					"Unidad de persistencia en TipoUsuarioDao Creada satisfactoriamente");
+
+		} catch (PersistenceException pe) {
+			Throwable th = pe.getCause();
+			log.fatal(
+					"Error al crear entidades de persistencia en TipoUsuarioDao"
+							+ EXCEPTION_STRING + pe.getMessage());
+			log.trace("" + EXCEPTION_STRING + th.getMessage());
+		}
+
+>>>>>>> feature/C00005
 	}
 	@Override
 	public void crearActividad(com.afnemo.model.dto.Actividad actividad) {
@@ -76,7 +93,7 @@ public class ActividadDao extends Logs implements ActividadDaoInterface {
 	}
 	@Override
 	public List<Actividad> consultarActividad(int id) {
-		return em.createNamedQuery("Actividad.findAll").getResultList();
+		return em.createNamedQuery("Actividad.findAll",Actividad.class).getResultList();
 	}
 
 }

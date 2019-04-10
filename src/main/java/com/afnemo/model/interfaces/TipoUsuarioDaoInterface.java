@@ -19,5 +19,5 @@ public interface TipoUsuarioDaoInterface {
 	
 	public void actualizarTipoUsuario(TipoUsuario tipoUsuario);
 	
-	public List<TipoUsuario> consultarTipoUsuario(int id);
+	public List<TipoUsuario> findAll(int id);
 }

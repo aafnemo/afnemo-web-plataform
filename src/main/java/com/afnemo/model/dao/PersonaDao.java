@@ -30,7 +30,23 @@ public class PersonaDao extends Logs implements PersonaDaoInterface {
 	private final Logger log = Logger.getLogger(getClass());
 	private static final String EXCEPTION_STRING = "EXCEPTION STRING: ";
 	public PersonaDao() {
+<<<<<<< HEAD
 		// default implementation not used
+=======
+		try {
+			emf = Persistence.createEntityManagerFactory(persistenceUnitName);
+			em = emf.createEntityManager();
+			log.info(
+					"Unidad de persistencia en PersonaDao Creada satisfactoriamente");
+
+		} catch (PersistenceException pe) {
+			Throwable th = pe.getCause();
+			log.fatal("Error al crear entidades de persistencia en PersonaDao"
+					+ EXCEPTION_STRING + pe.getMessage());
+			log.trace("" + EXCEPTION_STRING + th.getMessage());
+		}
+
+>>>>>>> feature/C00005
 	}
 	@Override
 	public void crearPersona(Persona persona) {
@@ -72,12 +88,17 @@ public class PersonaDao extends Logs implements PersonaDaoInterface {
 	}
 	@Override
 	public List<Persona> consultarTodasPersonas() {
-		return em.createNamedQuery("Persona.findAll").getResultList();
+		return em.createNamedQuery("Persona.findAll", Persona.class)
+				.getResultList();
 	}
 	@Override
 	public Persona consultarPorId(String id) {
+<<<<<<< HEAD
 		// 
 		return null;
+=======
+		return em.find(Persona.class, id);
+>>>>>>> feature/C00005
 	}
 
 }
