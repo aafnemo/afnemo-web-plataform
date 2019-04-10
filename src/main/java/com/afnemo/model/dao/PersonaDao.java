@@ -31,12 +31,12 @@ public class PersonaDao implements PersonaDaoInterface {
 		try {
 			emf = Persistence.createEntityManagerFactory(persistenceUnitName);
 			em = emf.createEntityManager();
-			log.debug(
+			log.info(
 					"Unidad de persistencia en PersonaDao Creada satisfactoriamente");
 
 		} catch (PersistenceException pe) {
 			Throwable th = pe.getCause();
-			log.error("Error al crear entidades de persistencia en PersonaDao"
+			log.fatal("Error al crear entidades de persistencia en PersonaDao"
 					+ EXCEPTION_STRING + pe.getMessage());
 			log.trace("" + EXCEPTION_STRING + th.getMessage());
 		}
@@ -82,12 +82,12 @@ public class PersonaDao implements PersonaDaoInterface {
 	}
 	@Override
 	public List<Persona> consultarTodasPersonas() {
-		return em.createNamedQuery("Persona.findAll").getResultList();
+		return em.createNamedQuery("Persona.findAll", Persona.class)
+				.getResultList();
 	}
 	@Override
 	public Persona consultarPorId(String id) {
-		// TODO: 
-		return null;
+		return em.find(Persona.class, id);
 	}
 
 }

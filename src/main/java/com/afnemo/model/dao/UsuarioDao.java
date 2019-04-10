@@ -31,12 +31,12 @@ public class UsuarioDao implements UsuarioDaoInterface {
 		try {
 			emf = Persistence.createEntityManagerFactory(persistenceUnitName);
 			em = emf.createEntityManager();
-			log.debug(
+			log.info(
 					"Unidad de persistencia en UsuarioDao Creada satisfactoriamente");
 
 		} catch (PersistenceException pe) {
 			Throwable th = pe.getCause();
-			log.error("Error al crear entidades de persistencia en UsuarioDao"
+			log.fatal("Error al crear entidades de persistencia en UsuarioDao"
 					+ EXCEPTION_STRING + pe.getMessage());
 			log.trace("" + EXCEPTION_STRING + th.getMessage());
 		}
@@ -77,7 +77,7 @@ public class UsuarioDao implements UsuarioDaoInterface {
 	}
 	@Override
 	public List<Usuario> consultarUsuario(String id) {
-		return em.createNamedQuery("Usuario.findAll").getResultList();
+		return em.createNamedQuery("Usuario.findAll",Usuario.class).getResultList();
 	}
 
 }

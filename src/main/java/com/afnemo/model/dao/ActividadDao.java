@@ -31,12 +31,12 @@ public class ActividadDao implements ActividadDaoInterface {
 		try {
 			emf = Persistence.createEntityManagerFactory(persistenceUnitName);
 			em = emf.createEntityManager();
-			log.debug(
+			log.info(
 					"Unidad de persistencia en TipoUsuarioDao Creada satisfactoriamente");
 
 		} catch (PersistenceException pe) {
 			Throwable th = pe.getCause();
-			log.error(
+			log.fatal(
 					"Error al crear entidades de persistencia en TipoUsuarioDao"
 							+ EXCEPTION_STRING + pe.getMessage());
 			log.trace("" + EXCEPTION_STRING + th.getMessage());
@@ -86,7 +86,7 @@ public class ActividadDao implements ActividadDaoInterface {
 	}
 	@Override
 	public List<Actividad> consultarActividad(int id) {
-		return em.createNamedQuery("Actividad.findAll").getResultList();
+		return em.createNamedQuery("Actividad.findAll",Actividad.class).getResultList();
 	}
 
 }

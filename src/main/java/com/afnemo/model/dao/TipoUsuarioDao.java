@@ -8,6 +8,7 @@ import javax.persistence.Persistence;
 import javax.persistence.PersistenceException;
 
 import org.apache.log4j.Logger;
+import org.eclipse.persistence.exceptions.QueryException;
 
 import com.afnemo.model.dto.TipoUsuario;
 import com.afnemo.model.interfaces.TipoUsuarioDaoInterface;
@@ -31,12 +32,12 @@ public class TipoUsuarioDao implements TipoUsuarioDaoInterface {
 		try {
 			emf = Persistence.createEntityManagerFactory(persistenceUnitName);
 			em = emf.createEntityManager();
-			log.debug(
+			log.info(
 					"Unidad de persistencia en TipoUsuarioDao Creada satisfactoriamente");
 
 		} catch (PersistenceException pe) {
 			Throwable th = pe.getCause();
-			log.error(
+			log.fatal(
 					"Error al crear entidades de persistencia en TipoUsuarioDao"
 							+ EXCEPTION_STRING + pe.getMessage());
 			log.trace("" + EXCEPTION_STRING + th.getMessage());
@@ -56,8 +57,8 @@ public class TipoUsuarioDao implements TipoUsuarioDaoInterface {
 			Throwable th = pe.getCause();
 			log.error("Error al crear un tipo de usuario" + EXCEPTION_STRING
 					+ pe.getMessage());
-			log.trace("Error al actualizar el Tipo de Usuario"
-					+ EXCEPTION_STRING + th.getMessage());
+			log.trace("Error al crear el Tipo de Usuario" + EXCEPTION_STRING
+					+ th.getMessage());
 		}
 	}
 
@@ -80,7 +81,16 @@ public class TipoUsuarioDao implements TipoUsuarioDaoInterface {
 		}
 	}
 	@Override
-	public List<TipoUsuario> consultarTipoUsuario(int id) {
-		return em.createNamedQuery("tipousuario.findAll").getResultList();
+	public List<TipoUsuario> findAll(int id) {
+		List<TipoUsuario> tiposUsuario;
+		try {
+			tiposUsuario = em
+					.createNamedQuery("TipoUsuario.findAll", TipoUsuario.class)
+					.getResultList();
+		} catch (QueryException e) {
+			log.error("Error al extrar información de la base de datos: "+e.getMessage());
+			tiposUsuario = null;
+		}
+		return tiposUsuario;
 	}
 }
