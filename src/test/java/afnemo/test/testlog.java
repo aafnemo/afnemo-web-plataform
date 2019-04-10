@@ -8,9 +8,6 @@ package afnemo.test;
   * 
   */
 
-import java.sql.Time;
-import java.util.Timer;
-
 import org.apache.log4j.Logger;
 //import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.Test;

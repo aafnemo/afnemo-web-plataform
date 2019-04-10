@@ -7,8 +7,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceException;
 
-import org.apache.log4j.Logger;
-
 import com.afnemo.commons.Logs;
 import com.afnemo.model.dto.Persona;
 import com.afnemo.model.interfaces.PersonaDaoInterface;
@@ -27,14 +25,11 @@ public class PersonaDao extends Logs implements PersonaDaoInterface {
 	private static EntityManagerFactory emf = Persistence
 			.createEntityManagerFactory(PERSISTENCEUNITNAME);
 	private static EntityManager em = emf.createEntityManager();
-	private final Logger log = Logger.getLogger(getClass());
 	private static final String EXCEPTION_STRING = "EXCEPTION STRING: ";
 	public PersonaDao() {
-<<<<<<< HEAD
-		// default implementation not used
-=======
+
 		try {
-			emf = Persistence.createEntityManagerFactory(persistenceUnitName);
+			emf = Persistence.createEntityManagerFactory(PERSISTENCEUNITNAME);
 			em = emf.createEntityManager();
 			log.info(
 					"Unidad de persistencia en PersonaDao Creada satisfactoriamente");
@@ -46,7 +41,6 @@ public class PersonaDao extends Logs implements PersonaDaoInterface {
 			log.trace("" + EXCEPTION_STRING + th.getMessage());
 		}
 
->>>>>>> feature/C00005
 	}
 	@Override
 	public void crearPersona(Persona persona) {
@@ -93,12 +87,17 @@ public class PersonaDao extends Logs implements PersonaDaoInterface {
 	}
 	@Override
 	public Persona consultarPorId(String id) {
-<<<<<<< HEAD
-		// 
-		return null;
-=======
-		return em.find(Persona.class, id);
->>>>>>> feature/C00005
+		Persona persona;
+		try {
+			log.debug("consultar por id: " + id);
+			persona = em.find(Persona.class, id);
+			log.info(persona.getApellido1());
+		} catch (Exception e) {
+			log.error(e);
+			log.error(e.getMessage());
+			persona = null;
+		}
+		return persona;
 	}
 
 }

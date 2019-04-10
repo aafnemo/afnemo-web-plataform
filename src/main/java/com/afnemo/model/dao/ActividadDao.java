@@ -7,8 +7,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceException;
 
-import org.apache.log4j.Logger;
-
 import com.afnemo.commons.Logs;
 import com.afnemo.model.dto.Actividad;
 import com.afnemo.model.interfaces.ActividadDaoInterface;
@@ -27,15 +25,10 @@ public class ActividadDao extends Logs implements ActividadDaoInterface {
 	private static EntityManagerFactory emf = Persistence
 			.createEntityManagerFactory(PERSISTENCEUNITNAME);
 	private static EntityManager em = emf.createEntityManager();
-	private final Logger log = Logger.getLogger(getClass());
 	private static final String EXCEPTION_STRING = "EXCEPTION STRING: ";
 	public ActividadDao() {
-<<<<<<< HEAD
-		// default implementation not used
-		
-=======
 		try {
-			emf = Persistence.createEntityManagerFactory(persistenceUnitName);
+			emf = Persistence.createEntityManagerFactory(PERSISTENCEUNITNAME);
 			em = emf.createEntityManager();
 			log.info(
 					"Unidad de persistencia en TipoUsuarioDao Creada satisfactoriamente");
@@ -48,7 +41,6 @@ public class ActividadDao extends Logs implements ActividadDaoInterface {
 			log.trace("" + EXCEPTION_STRING + th.getMessage());
 		}
 
->>>>>>> feature/C00005
 	}
 	@Override
 	public void crearActividad(com.afnemo.model.dto.Actividad actividad) {
@@ -93,7 +85,8 @@ public class ActividadDao extends Logs implements ActividadDaoInterface {
 	}
 	@Override
 	public List<Actividad> consultarActividad(int id) {
-		return em.createNamedQuery("Actividad.findAll",Actividad.class).getResultList();
+		return em.createNamedQuery("Actividad.findAll", Actividad.class)
+				.getResultList();
 	}
 
 }
