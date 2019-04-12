@@ -23,8 +23,6 @@
 		<servlet.version>3.1.0</servlet.version>
 		<spring.version>5.1.0.RELEASE</spring.version>
 		<sonar.version>3.6.0.1398</sonar.version>
-		<timestamp>${maven.build.timestamp}</timestamp>
-		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
@@ -71,13 +69,6 @@
 			<groupId>org.sonarsource.scanner.maven</groupId>
 			<artifactId>sonar-maven-plugin</artifactId>
 			<version>${sonar.version}</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.42</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -143,7 +134,6 @@
 				<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 				<sonar.organization>aafnemo-github</sonar.organization>
 				<sonar.login>7bc2d567bfcb4fc3bf8d82fa08b58373bb0a4f0b</sonar.login>
-				<sonar.projectDate></sonar.projectDate>
 			</properties>
 			<build>
 				<plugins>

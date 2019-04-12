@@ -8,7 +8,7 @@ package afnemo.test;
   * 
   */
 
-import org.apache.log4j.Logger;
+
 //import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.Test;
 
@@ -18,7 +18,7 @@ public class testlog extends Logs {
 
 	public void loggingtest(int i) throws InterruptedException {
 		// DOMConfigurator.configure("src/main/resources/dtds/log4j.xml");
-		Logger log = Logger.getLogger(getClass());
+		//Logger log = Logger.getLogger(getClass());
 
 		log.trace("Prueba " + i);
 		log.debug("Prueba " + i);
