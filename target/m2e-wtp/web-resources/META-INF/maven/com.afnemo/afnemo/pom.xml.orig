@@ -13,7 +13,11 @@
 		<eclipselink.version>2.5.0</eclipselink.version>
 		<junit.version>4.12</junit.version>
 		<log4j.version>1.2.17</log4j.version>
+<<<<<<< HEAD
+		<log4j-core.version>2.8.2</log4j-core.version>
+=======
 		<log4j-core.version>2.11.1</log4j-core.version>
+>>>>>>> feature/C00006
 		<maven.build.timestamp.format>yyyyMMdd-HHmmss.SS</maven.build.timestamp.format>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compuler.target>1.8</maven.compuler.target>
@@ -59,6 +63,8 @@
 			<artifactId>log4j</artifactId>
 			<version>${log4j.version}</version>
 		</dependency>
+<<<<<<< HEAD
+=======
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -70,6 +76,7 @@
 			<artifactId>log4j-api</artifactId>
 			<version>${log4j-core.version}</version>
 		</dependency>
+>>>>>>> feature/C00006
 		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink -->
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
@@ -81,6 +88,9 @@
 			<artifactId>sonar-maven-plugin</artifactId>
 			<version>${sonar.version}</version>
 		</dependency>
+<<<<<<< HEAD
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+=======
 		<!-- https://mvnrepository.com/artifact/org.primefaces/primefaces -->
 		<dependency>
 			<groupId>org.primefaces</groupId>
@@ -93,13 +103,17 @@
 			<artifactId>regexp</artifactId>
 			<version>1.3</version>
 		</dependency>
+>>>>>>> feature/C00006
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.42</version>
 		</dependency>
+<<<<<<< HEAD
+=======
 
+>>>>>>> feature/C00006
 	</dependencies>
 	<build>
 		<finalName>afnemo</finalName>
@@ -164,6 +178,10 @@
 				<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 				<sonar.organization>aafnemo-github</sonar.organization>
 				<sonar.login>7bc2d567bfcb4fc3bf8d82fa08b58373bb0a4f0b</sonar.login>
+<<<<<<< HEAD
+				<sonar.projectDate></sonar.projectDate>
+=======
+>>>>>>> feature/C00006
 			</properties>
 			<build>
 				<plugins>
