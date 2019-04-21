@@ -20,7 +20,7 @@ import com.afnemo.model.dto.Usuario;
  */
 
 public class ControllerUsuario extends Logs {
-	private static final  boolean ESTADO = true;
+	private static final boolean ESTADO = true;
 	private UsuarioDao udao = new UsuarioDao();
 	private Pattern pattern;
 	private static final String PASS_PATTERN = "^(?=.*\\d)(?=.*[\\u0021-\\u002b\\u003c-\\u0040])(?=.*[A-Z])(?=.*[a-z])\\S{8,16}$";
@@ -35,10 +35,11 @@ public class ControllerUsuario extends Logs {
 			usuario.setPassword(password);
 			usuario.setEstado(ESTADO);
 			udao.crearUsuario(usuario);
-			log.info("Se ha creado exitosamente el usuario: {0} " ,id);
+			log.info("Se ha creado exitosamente el usuario: {0} ", id);
 		} catch (Exception e) {
-			log.error("No se ha podido crear exitosamente el usuario " + id
-					+ " debido a el siguiente error" + e.getMessage());
+			log.error(
+					"No se ha podido crear exitosamente el usuario {0} debido a el siguiente error. {1}",
+					id, e.getMessage());
 		}
 	}
 
@@ -47,17 +48,18 @@ public class ControllerUsuario extends Logs {
 	}
 
 	public String actualizarUsuario(String id, String contrasena) {
-		
+
 		Usuario usuario = udao.consultarUsuario(id);
 		char[] password = validarPassword(contrasena);
 		usuario.setPassword(password);
 		udao.actualizarUsuario(usuario);
-		log.info("La contraseña del usuario: {0} fue actualizada correctamente",id);
+		log.info("La contraseña del usuario: {0} fue actualizada correctamente",
+				id);
 		return "Contraseña actualizada conrrectamente";
 	}
 	/**
-	 * Contraseña debe tener al menos un dígito, una minuscula, una mayuscula y
-	 * al menos un caracter no alfanúmerico:
+	 * Contraseña debe tener al menos un dígito, una minúscula, una mayúscula y
+	 * al menos un carácter no alfanúmerico:
 	 * ^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$
 	 */
 	private boolean validate(final String password) {
@@ -76,5 +78,5 @@ public class ControllerUsuario extends Logs {
 			return new char[0];
 		}
 	}
-	
+
 }
