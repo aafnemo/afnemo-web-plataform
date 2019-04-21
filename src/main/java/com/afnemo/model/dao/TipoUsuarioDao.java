@@ -24,9 +24,9 @@ import com.afnemo.model.interfaces.TipoUsuarioDaoInterface;
 
 public class TipoUsuarioDao extends Logs implements TipoUsuarioDaoInterface {
 	private static final String PERSISTENCEUNITNAME = "afnemo";
-	private static EntityManagerFactory emf = Persistence
+	private EntityManagerFactory emf = Persistence
 			.createEntityManagerFactory(PERSISTENCEUNITNAME);
-	private static EntityManager em = emf.createEntityManager();
+	private EntityManager em = emf.createEntityManager();
 	
 	private static final String EXCEPTION_STRING = "EXCEPTION STRING: ";
 	public TipoUsuarioDao() {
@@ -101,5 +101,9 @@ public class TipoUsuarioDao extends Logs implements TipoUsuarioDaoInterface {
 			tiposUsuario = null;
 		}
 		return tiposUsuario;
+	}
+	@Override
+	public TipoUsuario seleccionarTipoUsuario(int id) {
+		return em.find(TipoUsuario.class,id);
 	}
 }

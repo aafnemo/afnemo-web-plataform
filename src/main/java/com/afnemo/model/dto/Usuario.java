@@ -21,7 +21,7 @@ public class Usuario implements Serializable {
 	@Id
 	@Column(name = "PK_USR_Id", length = 15)
 	private String id;
-	@Column(name = "USR_Password", length = 128, nullable = false)
+	@Column(name = "USR_Password", length = 512, nullable = false)
 	private char[] password;
 	@Column(name="USR_Estado",nullable=false)
 	private boolean estado;

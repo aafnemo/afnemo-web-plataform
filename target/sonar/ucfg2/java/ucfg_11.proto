@@ -1,0 +1,23 @@
+
+gcom.afnemo.controller.ControllerTipoUsuario#seleccionarTipoUsuario(I)Lcom/afnemo/model/dto/TipoUsuario;
+__unknown_file ("1*í
+1Y
+OA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerTipoUsuario.java 	  (Ê
+Ç
+Y
+OA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerTipoUsuario.java 	  ()
+%0#com.afnemo.model.dao.TipoUsuarioDao"__id*9*7-
++com.afnemo.controller.ControllerTipoUsuario"
+tdao·´
+Y
+OA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerTipoUsuario.java 	  ((&
+%1 com.afnemo.model.dto.TipoUsuario"_com.afnemo.model.dao.TipoUsuarioDao#seleccionarTipoUsuario(I)Lcom/afnemo/model/dto/TipoUsuario;*+
+)
+%0#com.afnemo.model.dao.TipoUsuarioDao*
+""2seleccionarTipoUsuario(I)"…
+Y
+OA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerTipoUsuario.java   ()(
+&
+%1 com.afnemo.model.dto.TipoUsuario:
+""B/-
++com.afnemo.controller.ControllerTipoUsuario

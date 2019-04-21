@@ -22,9 +22,9 @@ import com.afnemo.model.interfaces.UsuarioDaoInterface;
 
 public class UsuarioDao extends Logs implements UsuarioDaoInterface {
 	private static final String PERSISTENCEUNITNAME = "afnemo";
-	private static EntityManagerFactory emf = Persistence
+	private EntityManagerFactory emf = Persistence
 			.createEntityManagerFactory(PERSISTENCEUNITNAME);
-	private static EntityManager em = emf.createEntityManager();
+	private EntityManager em = emf.createEntityManager();
 	private static final String EXCEPTION_STRING = "EXCEPTION STRING: ";
 	public UsuarioDao() {
 
@@ -77,9 +77,12 @@ public class UsuarioDao extends Logs implements UsuarioDaoInterface {
 		}
 	}
 	@Override
-	public List<Usuario> consultarUsuario(String id) {
+	public List<Usuario> consultarUsuarios() {
 		return em.createNamedQuery("Usuario.findAll", Usuario.class)
 				.getResultList();
 	}
-
+	@Override
+	public Usuario consultarUsuario(String id) {
+		return em.find(Usuario.class,id);
+	}
 }
