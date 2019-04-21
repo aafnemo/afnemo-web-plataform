@@ -9,7 +9,7 @@ package afnemo.test;
   */
 
 //import org.apache.log4j.xml.DOMConfigurator;
-import org.junit.Test;
+
 
 import com.afnemo.commons.Logs;
 
