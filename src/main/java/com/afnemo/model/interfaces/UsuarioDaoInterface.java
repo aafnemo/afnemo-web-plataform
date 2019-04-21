@@ -17,6 +17,8 @@ public interface UsuarioDaoInterface {
 	public void crearUsuario(Usuario usuario);
 
 	public void actualizarUsuario(Usuario usuario);
+
+	public List<Usuario> consultarUsuarios();
 	
-	public List<Usuario>consultarUsuario(String id);
+	public Usuario consultarUsuario(String id);
 }

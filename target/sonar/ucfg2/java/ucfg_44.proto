@@ -1,16 +1,16 @@
 
-Acom.afnemo.model.dto.Persona#getFechaNacimiento()Ljava/util/Date;
-__unknown_file ("1*Ú
-1J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.javaS	 S(¢
+?com.afnemo.model.dto.Actividad#getFechaInicio()Ljava/util/Date;
+__unknown_file ("1*Þ
+1L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java:	 :(¢
 Ÿ
-J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.javaS	 S(
-%0java.util.Date"__id*5*3
-com.afnemo.model.dto.Persona"
-fechaNacimiento"d
-J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.javaS S(
+L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java:	 :(
+%0java.util.Date"__id*3*1 
+com.afnemo.model.dto.Actividad"
+fechaInicio"f
+L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java: :(
 
-%0java.util.DateB 
-com.afnemo.model.dto.Persona
+%0java.util.DateB" 
+com.afnemo.model.dto.Actividad

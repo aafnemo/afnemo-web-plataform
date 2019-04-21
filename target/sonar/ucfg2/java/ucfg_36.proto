@@ -1,16 +1,28 @@
 
-=com.afnemo.model.dto.Persona#getApellido1()Ljava/lang/String;
-__unknown_file ("1*Ø
-1J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.java;	 ;(ž
-›
-J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.java;	 ;(
-%0java.lang.String"__id*/*-
-com.afnemo.model.dto.Persona"
-	apellido1"f
-J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.java; ;(
-
-%0java.lang.StringB 
-com.afnemo.model.dto.Persona
+Ccom.afnemo.model.dao.UsuarioDao#consultarUsuarios()Ljava/util/List;
+__unknown_file ("1*µ
+1M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaQ	 Q(¬
+©
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaQ	 Q(%
+%0javax.persistence.EntityManager"__id*+*)!
+com.afnemo.model.dao.UsuarioDao"
+emèå
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaQ	 Q(>"
+%1javax.persistence.TypedQuery"sjavax.persistence.EntityManager#createNamedQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+%
+%0javax.persistence.EntityManager*
+Usuario.findAll*
+""25createNamedQuery(Ljava/lang/String;Ljava/lang/Class;)ÝÚ
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaQ	 R(
+%2java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%1javax.persistence.TypedQuery2getResultList()"g
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaQ R(
+
+%2java.util.ListB#!
+com.afnemo.model.dao.UsuarioDao

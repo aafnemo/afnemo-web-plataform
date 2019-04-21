@@ -1,16 +1,17 @@
 
-Gcom.afnemo.model.dto.Persona#getUsuario()Lcom/afnemo/model/dto/Usuario;
-__unknown_file ("1*î
-1J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.javaY	 Y(¨
-¥
-J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.javaY	 Y("
-%0com.afnemo.model.dto.Usuario"__id*-*+
-com.afnemo.model.dto.Persona"	
-usuario"r
-J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.javaY Y($
-"
-%0com.afnemo.model.dto.UsuarioB 
-com.afnemo.model.dto.Persona
+>com.afnemo.model.dto.Actividad#getFechaFinal()Ljava/util/Date;
+__unknown_file ("1*Ý
+1L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java@	 @(¡
+ž
+L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java@	 @(
+%0java.util.Date"__id*2*0 
+com.afnemo.model.dto.Actividad"
+
+fechaFinal"f
+L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java@ @(
+
+%0java.util.DateB" 
+com.afnemo.model.dto.Actividad

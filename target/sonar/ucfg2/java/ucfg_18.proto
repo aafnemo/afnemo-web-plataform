@@ -1,9 +1,57 @@
 
-'com.afnemo.model.dto.Actividad#getId()I
-__unknown_file ("1*©
-1L
-BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java(	 (("V
-L
-BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java( ((
-""B" 
-com.afnemo.model.dto.Actividad
+Mcom.afnemo.controller.ControllerUsuario#validarPassword(Ljava/lang/String;)[C
+__unknown_file ("10*ª
+5U
+KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaF H("_
+U
+KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaF H(
+""*„
+6U
+KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaH H(Å
+
+U
+KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaH H(
+%1$Array"__id*
+
+%3
+<nulltype>*
+5*î
+7U
+KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaG G(6≥∞
+U
+KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaG G(6
+%2$Array" java.lang.String#toCharArray()[C*
+
+%4java.lang.String2toCharArray()}
+{
+U
+KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaG G(6
+%1$Array"__id*
+
+%2$Array*
+5*Î
+8U
+KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaG G(â
+Ü
+U
+KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaG G((
+%4java.lang.String"Pcom.afnemo.commons.HashPassword#createHash(Ljava/lang/String;)Ljava/lang/String;*#"!
+com.afnemo.commons.HashPassword*
+
+passwordjava.lang.String*
+7*„
+10U
+KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaF
+ F(˝
+˙
+U
+KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaF
+ F(
+%0boolean"Ecom.afnemo.controller.ControllerUsuario#validate(Ljava/lang/String;)Z*+)
+'com.afnemo.controller.ControllerUsuario*
+
+passwordjava.lang.String*
+6
+8:
+passwordjava.lang.StringB+)
+'com.afnemo.controller.ControllerUsuario

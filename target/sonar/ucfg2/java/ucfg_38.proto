@@ -1,16 +1,9 @@
 
-=com.afnemo.model.dto.Persona#getApellido2()Ljava/lang/String;
-__unknown_file ("1*Ø
-1J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.javaA	 A(ž
-›
-J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.javaA	 A(
-%0java.lang.String"__id*/*-
-com.afnemo.model.dto.Persona"
-	apellido2"f
-J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.javaA A(
-
-%0java.lang.StringB 
-com.afnemo.model.dto.Persona
+'com.afnemo.model.dto.Actividad#getId()I
+__unknown_file ("1*©
+1L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java(	 (("V
+L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java( ((
+""B" 
+com.afnemo.model.dto.Actividad
