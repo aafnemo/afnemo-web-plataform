@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration monitorInterval="5" status="trace"
+	name="LogsAfnemo" packages="org.apache.logging.log4j.test">
+	<Properties>
+		<Property name="log-path">C:/logs-afnemoweb/${date:yyyy}/${date:yyyyMM}/${date:yyyyMMdd}/
+		</Property>
+	</Properties>
+	<Appenders>
+		<RollingFile name="rollingFile"
+			fileName="${LOG_DIR}/application.log"
+			filePattern="${LOG_DIR}/application.%i.log.gz"
+			ignoreExceptions="false">
+			<PatternLayout>
+				<Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="5" />
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Logger name="root" level="debug" additivity="false">
+			<appender-ref ref="RollingFile" level="debug" />
+		</Logger>
+		<Root level="debug" additivity="fals e">
+			<AppenderRef ref="RollingFile" />
+		</Root>
+	</Loggers>
+</configuration>

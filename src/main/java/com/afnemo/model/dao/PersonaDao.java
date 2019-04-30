@@ -6,9 +6,13 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceException;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 
 import com.afnemo.commons.Logs;
 import com.afnemo.model.dto.Persona;
+import com.afnemo.model.dto.Usuario;
 import com.afnemo.model.interfaces.PersonaDaoInterface;
 
 /**
@@ -22,9 +26,9 @@ import com.afnemo.model.interfaces.PersonaDaoInterface;
 
 public class PersonaDao extends Logs implements PersonaDaoInterface {
 	private static final String PERSISTENCEUNITNAME = "afnemo";
-	private static EntityManagerFactory emf = Persistence
+	private EntityManagerFactory emf = Persistence
 			.createEntityManagerFactory(PERSISTENCEUNITNAME);
-	private static EntityManager em = emf.createEntityManager();
+	private EntityManager em = emf.createEntityManager();
 	private static final String EXCEPTION_STRING = "EXCEPTION STRING: ";
 	public PersonaDao() {
 
@@ -89,7 +93,7 @@ public class PersonaDao extends Logs implements PersonaDaoInterface {
 	public Persona consultarPorId(String id) {
 		Persona persona;
 		try {
-			log.debug("consultar por id: " + id);
+			log.debug("consultar por id: {0}", id);
 			persona = em.find(Persona.class, id);
 			log.info(persona.getApellido1());
 		} catch (Exception e) {
@@ -98,6 +102,13 @@ public class PersonaDao extends Logs implements PersonaDaoInterface {
 			persona = null;
 		}
 		return persona;
+	}
+	public List<Persona> consultarPersonasActivas() {
+		CriteriaBuilder cb = em.getCriteriaBuilder();
+		CriteriaQuery<Persona> q = cb.createQuery(Persona.class);
+		Root<Persona> persona = q.from(Persona.class);
+		q.select(persona).where(cb.equal(persona.get("estado"), true));
+		return em.createQuery(q).getResultList();
 	}
 
 }

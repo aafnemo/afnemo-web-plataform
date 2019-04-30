@@ -1,47 +1,29 @@
 
-Tcom.afnemo.model.dao.UsuarioDao#consultarUsuario(Ljava/lang/String;)Ljava/util/List;
-__unknown_file ("paramAnnotations*€
-paramAnnotationsM
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaP& P(1–
-“
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaO O(
-
-%3"
-__annotate*
-java.lang.Override*
-
-idjava.lang.String
-}
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaP. P(0
-idjava.lang.String"__annotation*
-
-%3*
-1*µ
-1M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaQ	 Q(¬
-©
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaQ	 Q(%
-%0javax.persistence.EntityManager"__id*+*)!
-com.afnemo.model.dao.UsuarioDao"
-emèå
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaQ	 Q(>"
-%1javax.persistence.TypedQuery"sjavax.persistence.EntityManager#createNamedQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
+_com.afnemo.controller.ControladorUsuario#consultarUsuario(Ljava/lang/String;)Ljava/lang/String;
+__unknown_file ("1*¾
+1V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java0	 0(À
+½
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java0	 0(%
+%0com.afnemo.model.dao.UsuarioDao"__id*6*4*
+(com.afnemo.controller.ControladorUsuario"
+udaoÌÉ
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java0	 0(""
+%1com.afnemo.model.dto.Usuario"bcom.afnemo.model.dao.UsuarioDao#consultarUsuario(Ljava/lang/String;)Lcom/afnemo/model/dto/Usuario;*'
 %
-%0javax.persistence.EntityManager*
-Usuario.findAll*
-""25createNamedQuery(Ljava/lang/String;Ljava/lang/Class;)ÝÚ
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaQ	 R(
-%2java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+%0com.afnemo.model.dao.UsuarioDao*
+
+idjava.lang.String2$consultarUsuario(Ljava/lang/String;)Ú×
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java0	 0(*
+%2java.lang.String"6com.afnemo.model.dto.Usuario#getId()Ljava/lang/String;*$
 "
-%1javax.persistence.TypedQuery2getResultList()"g
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaQ R(
-
-%2java.util.List:
-idjava.lang.StringB#!
-com.afnemo.model.dao.UsuarioDao
+%1com.afnemo.model.dto.Usuario2getId()"r
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java0 0(+
+
+%2java.lang.String:
+idjava.lang.StringB,*
+(com.afnemo.controller.ControladorUsuario

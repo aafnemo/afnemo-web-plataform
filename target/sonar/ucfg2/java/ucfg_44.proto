@@ -1,16 +1,98 @@
 
-Acom.afnemo.model.dto.Persona#getFechaNacimiento()Ljava/util/Date;
-__unknown_file ("1*⁄
-1J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.javaS	 S(¢
-ü
-J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.javaS	 S(
-%0java.util.Date"__id*5*3
-com.afnemo.model.dto.Persona"
-fechaNacimiento"d
-J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Persona.javaS S(
-
-%0java.util.DateB 
-com.afnemo.model.dto.Persona
+Jcom.afnemo.model.dao.UsuarioDao#consultarUsuariosActivos()Ljava/util/List;
+__unknown_file ("1*Û 
+1M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javac c(¨
+©
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javac c(%
+%0javax.persistence.EntityManager"__id*+*)!
+com.afnemo.model.dao.UsuarioDao"
+em•¢
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javac c(.0
+%1*javax.persistence.criteria.CriteriaBuilder"`javax.persistence.EntityManager#getCriteriaBuilder()Ljavax/persistence/criteria/CriteriaBuilder;*'
+%
+%0javax.persistence.EntityManager2getCriteriaBuilder()æ
+ª
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javac c(/0
+cb*javax.persistence.criteria.CriteriaBuilder"__id*2
+0
+%1*javax.persistence.criteria.CriteriaBuilder”–
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javad d(:.
+%2(javax.persistence.criteria.CriteriaQuery"sjavax.persistence.criteria.CriteriaBuilder#createQuery(Ljava/lang/Class;)Ljavax/persistence/criteria/CriteriaQuery;*2
+0
+cb*javax.persistence.criteria.CriteriaBuilder*
+""2createQuery(Ljava/lang/Class;)π
+∂
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javad d(;-
+q(javax.persistence.criteria.CriteriaQuery"__id*0
+.
+%2(javax.persistence.criteria.CriteriaQueryÆ´
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javae e(0%
+%3javax.persistence.criteria.Root"ajavax.persistence.criteria.AbstractQuery#from(Ljava/lang/Class;)Ljavax/persistence/criteria/Root;*/
+-
+q(javax.persistence.criteria.CriteriaQuery*
+""2from(Ljava/lang/Class;)Æ
+´
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javae e(1+
+usuariosjavax.persistence.criteria.Root"__id*'
+%
+%3javax.persistence.criteria.Rootñì
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaf f(.
+%4(javax.persistence.criteria.CriteriaQuery"Åjavax.persistence.criteria.CriteriaQuery#select(Ljavax/persistence/criteria/Selection;)Ljavax/persistence/criteria/CriteriaQuery;*/
+-
+q(javax.persistence.criteria.CriteriaQuery*-
++
+usuariosjavax.persistence.criteria.Root2.select(Ljavax/persistence/criteria/Selection;)ß§
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaf$ f(:%
+%5javax.persistence.criteria.Path"Xjavax.persistence.criteria.Path#get(Ljava/lang/String;)Ljavax/persistence/criteria/Path;*-
++
+usuariosjavax.persistence.criteria.Root*
+
+estado2get(Ljava/lang/String;)π∂
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaf f(A*
+%6$javax.persistence.criteria.Predicate"ëjavax.persistence.criteria.CriteriaBuilder#equal(Ljavax/persistence/criteria/Expression;Ljava/lang/Object;)Ljavax/persistence/criteria/Predicate;*2
+0
+cb*javax.persistence.criteria.CriteriaBuilder*'
+%
+%5javax.persistence.criteria.Path*
+""2@equal(Ljavax/persistence/criteria/Expression;Ljava/lang/Object;)ñì
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javaf f(B.
+%7(javax.persistence.criteria.CriteriaQuery"Åjavax.persistence.criteria.CriteriaQuery#where(Ljavax/persistence/criteria/Expression;)Ljavax/persistence/criteria/CriteriaQuery;*0
+.
+%4(javax.persistence.criteria.CriteriaQuery*,
+*
+%6$javax.persistence.criteria.Predicate2.where(Ljavax/persistence/criteria/Expression;)¨
+©
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javag	 g(%
+%8javax.persistence.EntityManager"__id*+*)!
+com.afnemo.model.dao.UsuarioDao"
+emÄ˝
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javag	 g("
+%9javax.persistence.TypedQuery"ujavax.persistence.EntityManager#createQuery(Ljavax/persistence/criteria/CriteriaQuery;)Ljavax/persistence/TypedQuery;*'
+%
+%8javax.persistence.EntityManager*/
+-
+q(javax.persistence.criteria.CriteriaQuery27createQuery(Ljavax/persistence/criteria/CriteriaQuery;)ﬁ€
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javag	 g(*
+%10java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%9javax.persistence.TypedQuery2getResultList()"h
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\UsuarioDao.javag g(+
+
+%10java.util.ListB#!
+com.afnemo.model.dao.UsuarioDao

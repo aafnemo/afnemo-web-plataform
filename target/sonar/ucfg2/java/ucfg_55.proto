@@ -1,17 +1,16 @@
 
-=com.afnemo.model.dto.TipoUsuario#getUsuarios()Ljava/util/Set;
-__unknown_file ("1*á
-1N
-DA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\TipoUsuario.java:	 :(¢
-Ÿ
-N
-DA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\TipoUsuario.java:	 :(
-%0java.util.Set"__id*2*0"
- com.afnemo.model.dto.TipoUsuario"
-
-usuarios"g
-N
-DA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\TipoUsuario.java: :(
-
-%0java.util.SetB$"
- com.afnemo.model.dto.TipoUsuario
+Bcom.afnemo.model.dto.Actividad#getLocalizacion()Ljava/lang/String;
+__unknown_file ("1*ã
+1L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.javaF	 F(¥
+¢
+L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.javaF	 F(
+%0java.lang.String"__id*4*2 
+com.afnemo.model.dto.Actividad"
+localizacion"h
+L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.javaF F(
+
+%0java.lang.StringB" 
+com.afnemo.model.dto.Actividad

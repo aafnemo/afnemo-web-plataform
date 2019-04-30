@@ -6,6 +6,7 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -19,14 +20,14 @@ import javax.persistence.Table;
  * @Copyright (C) 2019 Asociación Afrocultural Neftalí Mosquera (afnemo)
  * 
  */
-
+ 
 @Entity
 @Table(name = "TBL_TipoUsuario", schema = "SCH_Afnemo")
-@NamedQuery(name = "tipousuario.findall", query = "select t from TipoUsuario t")
+@NamedQuery(name = "tipousuario.findall", query = "select t from TipoUsuario t order by t.detalle")
 public class TipoUsuario implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "PK_TU_Id")
 	private int id;
 	@Column(name = "TU_Detalle", length = 20, nullable = false)
@@ -37,7 +38,7 @@ public class TipoUsuario implements Serializable {
 	public TipoUsuario() {
 		super();
 	}
-
+ 
 	public int getId() {
 		return this.id;
 	}

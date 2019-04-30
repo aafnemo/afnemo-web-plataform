@@ -1,9 +1,13 @@
+com\afnemo\controller\ControladorTipoUsuario.class
+com\afnemo\commons\HashPassword.class
 com\afnemo\model\dto\Usuario.class
+com\afnemo\controller\ControladorPersona.class
 com\afnemo\model\dao\TipoUsuarioDao.class
 com\afnemo\model\dao\UsuarioDao.class
 com\afnemo\commons\Logs.class
 com\afnemo\model\interfaces\ActividadDaoInterface.class
 com\afnemo\model\interfaces\TipoUsuarioDaoInterface.class
+com\afnemo\controller\ControladorUsuario.class
 com\afnemo\model\dto\Persona.class
 com\afnemo\model\dao\PersonaDao.class
 com\afnemo\model\dto\TipoUsuario.class

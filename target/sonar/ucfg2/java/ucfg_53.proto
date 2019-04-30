@@ -1,16 +1,17 @@
 
-?com.afnemo.model.dto.TipoUsuario#getDetalle()Ljava/lang/String;
-__unknown_file ("1*æ
-1N
-DA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\TipoUsuario.java2	 2(¤
-¡
-N
-DA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\TipoUsuario.java2	 2(
-%0java.lang.String"__id*1*/"
- com.afnemo.model.dto.TipoUsuario"	
-detalle"j
-N
-DA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\TipoUsuario.java2 2(
-
-%0java.lang.StringB$"
- com.afnemo.model.dto.TipoUsuario
+>com.afnemo.model.dto.Actividad#getFechaFinal()Ljava/util/Date;
+__unknown_file ("1*Ý
+1L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java@	 @(¡
+ž
+L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java@	 @(
+%0java.util.Date"__id*2*0 
+com.afnemo.model.dto.Actividad"
+
+fechaFinal"f
+L
+BA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Actividad.java@ @(
+
+%0java.util.DateB" 
+com.afnemo.model.dto.Actividad
