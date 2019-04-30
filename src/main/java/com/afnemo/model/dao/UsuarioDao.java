@@ -6,6 +6,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceException;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 
 import com.afnemo.commons.Logs;
 import com.afnemo.model.dto.Usuario;
@@ -22,10 +25,11 @@ import com.afnemo.model.interfaces.UsuarioDaoInterface;
 
 public class UsuarioDao extends Logs implements UsuarioDaoInterface {
 	private static final String PERSISTENCEUNITNAME = "afnemo";
+	private static final String EXCEPTION_STRING = "EXCEPTION STRING: ";
 	private EntityManagerFactory emf = Persistence
 			.createEntityManagerFactory(PERSISTENCEUNITNAME);
 	private EntityManager em = emf.createEntityManager();
-	private static final String EXCEPTION_STRING = "EXCEPTION STRING: ";
+
 	public UsuarioDao() {
 
 		try {
@@ -42,6 +46,7 @@ public class UsuarioDao extends Logs implements UsuarioDaoInterface {
 		}
 
 	}
+
 	@Override
 	public void crearUsuario(Usuario usuario) {
 		try {
@@ -59,6 +64,7 @@ public class UsuarioDao extends Logs implements UsuarioDaoInterface {
 					+ EXCEPTION_STRING + th.getMessage());
 		}
 	}
+
 	@Override
 	public void actualizarUsuario(Usuario usuario) {
 		try {
@@ -76,13 +82,24 @@ public class UsuarioDao extends Logs implements UsuarioDaoInterface {
 					+ EXCEPTION_STRING + th.getMessage());
 		}
 	}
+
 	@Override
 	public List<Usuario> consultarUsuarios() {
 		return em.createNamedQuery("Usuario.findAll", Usuario.class)
 				.getResultList();
 	}
+
 	@Override
 	public Usuario consultarUsuario(String id) {
-		return em.find(Usuario.class,id);
+		return em.find(Usuario.class, id);
+	}
+
+	@Override
+	public List<Usuario> consultarUsuariosActivos() {
+		CriteriaBuilder cb = em.getCriteriaBuilder();
+		CriteriaQuery<Usuario> q = cb.createQuery(Usuario.class);
+		Root<Usuario> usuarios = q.from(Usuario.class);
+		q.select(usuarios).where(cb.equal(usuarios.get("estado"), true));
+		return em.createQuery(q).getResultList();
 	}
 }

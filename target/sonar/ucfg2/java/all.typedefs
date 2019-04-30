@@ -431,7 +431,42 @@ intValue() java.math.BigInteger#intValue()Ie
 destructiveMulAdd([III)-java.math.BigInteger#destructiveMulAdd([III)V¢
 9divideAndRemainderBurnikelZiegler(Ljava/math/BigInteger;)ejava.math.BigInteger#divideAndRemainderBurnikelZiegler(Ljava/math/BigInteger;)[Ljava/math/BigInteger;C
 
-valueOf(J)5java.math.BigInteger#valueOf(J)Ljava/math/BigInteger;è
+valueOf(J)5java.math.BigInteger#valueOf(J)Ljava/math/BigInteger;±
+com.afnemo.model.dto.Personajava.lang.Objectjava.io.Serializablej
+$setFechaNacimiento(Ljava/util/Date;)Bcom.afnemo.model.dto.Persona#setFechaNacimiento(Ljava/util/Date;)V^
+setNombres(Ljava/lang/String;)<com.afnemo.model.dto.Persona#setNombres(Ljava/lang/String;)V6
+
+isEstado()(com.afnemo.model.dto.Persona#isEstado()ZT
+setId(Ljava/lang/String;)7com.afnemo.model.dto.Persona#setId(Ljava/lang/String;)V`
+setTelefono(Ljava/lang/String;)=com.afnemo.model.dto.Persona#setTelefono(Ljava/lang/String;)VX
+setSexo(Ljava/lang/String;)9com.afnemo.model.dto.Persona#setSexo(Ljava/lang/String;)VW
+getUsuario()Gcom.afnemo.model.dto.Persona#getUsuario()Lcom/afnemo/model/dto/Usuario;I
+getCorreo():com.afnemo.model.dto.Persona#getCorreo()Ljava/lang/String;M
+getTelefono()<com.afnemo.model.dto.Persona#getTelefono()Ljava/lang/String;b
+ setApellido1(Ljava/lang/String;)>com.afnemo.model.dto.Persona#setApellido1(Ljava/lang/String;)VA
+getId()6com.afnemo.model.dto.Persona#getId()Ljava/lang/String;Y
+getFechaNacimiento()Acom.afnemo.model.dto.Persona#getFechaNacimiento()Ljava/util/Date;2
+<init>()&com.afnemo.model.dto.Persona#<init>()V:
+setEstado(Z)*com.afnemo.model.dto.Persona#setEstado(Z)Vb
+ setApellido2(Ljava/lang/String;)>com.afnemo.model.dto.Persona#setApellido2(Ljava/lang/String;)VK
+getNombres();com.afnemo.model.dto.Persona#getNombres()Ljava/lang/String;E
+	getSexo()8com.afnemo.model.dto.Persona#getSexo()Ljava/lang/String;\
+setCorreo(Ljava/lang/String;);com.afnemo.model.dto.Persona#setCorreo(Ljava/lang/String;)VO
+getApellido1()=com.afnemo.model.dto.Persona#getApellido1()Ljava/lang/String;v
+*setUsuario(Lcom/afnemo/model/dto/Usuario;)Hcom.afnemo.model.dto.Persona#setUsuario(Lcom/afnemo/model/dto/Usuario;)VO
+getApellido2()=com.afnemo.model.dto.Persona#getApellido2()Ljava/lang/String;C
+/com.afnemo.model.interfaces.PersonaDaoInterfacejava.lang.Objectç
+com.afnemo.commons.Logsjava.lang.Object-
+<init>()!com.afnemo.commons.Logs#<init>()V1
+
+<clinit>()#com.afnemo.commons.Logs#<clinit>()VÑ
+com.afnemo.model.dao.PersonaDaocom.afnemo.commons.Logs/com.afnemo.model.interfaces.PersonaDaoInterface5
+<init>())com.afnemo.model.dao.PersonaDao#<init>()VÜ
+"consultarPorId(Ljava/lang/String;)`com.afnemo.model.dao.PersonaDao#consultarPorId(Ljava/lang/String;)Lcom/afnemo/model/dto/Persona;h
+consultarPersonasActivas()Jcom.afnemo.model.dao.PersonaDao#consultarPersonasActivas()Ljava/util/List;d
+consultarTodasPersonas()Hcom.afnemo.model.dao.PersonaDao#consultarTodasPersonas()Ljava/util/List;á
+1actualizarPersona(Lcom/afnemo/model/dto/Persona;)Rcom.afnemo.model.dao.PersonaDao#actualizarPersona(Lcom/afnemo/model/dto/Persona;)V}
+,crearPersona(Lcom/afnemo/model/dto/Persona;)Mcom.afnemo.model.dao.PersonaDao#crearPersona(Lcom/afnemo/model/dto/Persona;)Vè
  com.afnemo.model.dto.TipoUsuariojava.lang.Objectjava.io.Serializableù
 -removeUsuario(Lcom/afnemo/model/dto/Usuario;)lcom.afnemo.model.dto.TipoUsuario#removeUsuario(Lcom/afnemo/model/dto/Usuario;)Lcom/afnemo/model/dto/Usuario;4
 getId())com.afnemo.model.dto.TipoUsuario#getId()I6
@@ -442,11 +477,7 @@ valueOf(J)5java.math.BigInteger#valueOf(J)Ljava/math/BigInteger;è
 *addUsuario(Lcom/afnemo/model/dto/Usuario;)icom.afnemo.model.dto.TipoUsuario#addUsuario(Lcom/afnemo/model/dto/Usuario;)Lcom/afnemo/model/dto/Usuario;^
 setUsuarios(Ljava/util/Set;)>com.afnemo.model.dto.TipoUsuario#setUsuarios(Ljava/util/Set;)VO
 getDetalle()?com.afnemo.model.dto.TipoUsuario#getDetalle()Ljava/lang/String;G
-3com.afnemo.model.interfaces.TipoUsuarioDaoInterfacejava.lang.Objectç
-com.afnemo.commons.Logsjava.lang.Object-
-<init>()!com.afnemo.commons.Logs#<init>()V1
-
-<clinit>()#com.afnemo.commons.Logs#<clinit>()V™
+3com.afnemo.model.interfaces.TipoUsuarioDaoInterfacejava.lang.Object™
 #com.afnemo.model.dao.TipoUsuarioDaocom.afnemo.commons.Logs3com.afnemo.model.interfaces.TipoUsuarioDaoInterfaceJ
 	findAll()=com.afnemo.model.dao.TipoUsuarioDao#findAll()Ljava/util/List;ë
 4crearTipoUsuario(Lcom/afnemo/model/dto/TipoUsuario;)Ycom.afnemo.model.dao.TipoUsuarioDao#crearTipoUsuario(Lcom/afnemo/model/dto/TipoUsuario;)V9
@@ -466,16 +497,20 @@ isEstado()(com.afnemo.model.dto.Usuario#isEstado()Z@
 setEstado(Z)*com.afnemo.model.dto.Usuario#setEstado(Z)VÜ
 2setTipoUsuario(Lcom/afnemo/model/dto/TipoUsuario;)Pcom.afnemo.model.dto.Usuario#setTipoUsuario(Lcom/afnemo/model/dto/TipoUsuario;)Vc
 getTipoUsuario()Ocom.afnemo.model.dto.Usuario#getTipoUsuario()Lcom/afnemo/model/dto/TipoUsuario;W
-getPersona()Gcom.afnemo.model.dto.Usuario#getPersona()Lcom/afnemo/model/dto/Persona;®
-'com.afnemo.controller.ControllerUsuariocom.afnemo.commons.Logst
-#validarPassword(Ljava/lang/String;)Mcom.afnemo.controller.ControllerUsuario#validarPassword(Ljava/lang/String;)[CÜ
-$consultarUsuario(Ljava/lang/String;)^com.afnemo.controller.ControllerUsuario#consultarUsuario(Ljava/lang/String;)Ljava/lang/String;=
-<init>()1com.afnemo.controller.ControllerUsuario#<init>()V¨
-7actualizarUsuario(Ljava/lang/String;Ljava/lang/String;)qcom.afnemo.controller.ControllerUsuario#actualizarUsuario(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;è
-1crearUsario(Ljava/lang/String;Ljava/lang/String;)Zcom.afnemo.controller.ControllerUsuario#crearUsario(Ljava/lang/String;Ljava/lang/String;)Ve
-validate(Ljava/lang/String;)Ecom.afnemo.controller.ControllerUsuario#validate(Ljava/lang/String;)ZC
-/com.afnemo.model.interfaces.UsuarioDaoInterfacejava.lang.Objectî
-com.afnemo.model.dao.UsuarioDaocom.afnemo.commons.Logs/com.afnemo.model.interfaces.UsuarioDaoInterfaceZ
+getPersona()Gcom.afnemo.model.dto.Usuario#getPersona()Lcom/afnemo/model/dto/Persona;°	
+(com.afnemo.controller.ControladorUsuariocom.afnemo.commons.Logsq
+consultarUsuariosActivos()Scom.afnemo.controller.ControladorUsuario#consultarUsuariosActivos()Ljava/util/List;u
+#validarPassword(Ljava/lang/String;)Ncom.afnemo.controller.ControladorUsuario#validarPassword(Ljava/lang/String;)[Cá
+$consultarUsuario(Ljava/lang/String;)_com.afnemo.controller.ControladorUsuario#consultarUsuario(Ljava/lang/String;)Ljava/lang/String;m
+consultarTodosUsuarios()Qcom.afnemo.controller.ControladorUsuario#consultarTodosUsuarios()Ljava/util/List;>
+<init>()2com.afnemo.controller.ControladorUsuario#<init>()V≠
+7actualizarUsuario(Ljava/lang/String;Ljava/lang/String;)rcom.afnemo.controller.ControladorUsuario#actualizarUsuario(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;ê
+1crearUsario(Ljava/lang/String;Ljava/lang/String;)[com.afnemo.controller.ControladorUsuario#crearUsario(Ljava/lang/String;Ljava/lang/String;)Vç
+'deshabilitarUsuario(Ljava/lang/String;)bcom.afnemo.controller.ControladorUsuario#deshabilitarUsuario(Ljava/lang/String;)Ljava/lang/String;f
+validate(Ljava/lang/String;)Fcom.afnemo.controller.ControladorUsuario#validate(Ljava/lang/String;)ZC
+/com.afnemo.model.interfaces.UsuarioDaoInterfacejava.lang.Object˛
+com.afnemo.model.dao.UsuarioDaocom.afnemo.commons.Logs/com.afnemo.model.interfaces.UsuarioDaoInterfaceh
+consultarUsuariosActivos()Jcom.afnemo.model.dao.UsuarioDao#consultarUsuariosActivos()Ljava/util/List;Z
 consultarUsuarios()Ccom.afnemo.model.dao.UsuarioDao#consultarUsuarios()Ljava/util/List;ä
 $consultarUsuario(Ljava/lang/String;)bcom.afnemo.model.dao.UsuarioDao#consultarUsuario(Ljava/lang/String;)Lcom/afnemo/model/dto/Usuario;5
 <init>())com.afnemo.model.dao.UsuarioDao#<init>()V}
@@ -643,28 +678,18 @@ isEstado()*com.afnemo.model.dto.Actividad#isEstado()Zb
  setFechaInicio(Ljava/util/Date;)@com.afnemo.model.dto.Actividad#setFechaInicio(Ljava/util/Date;)VM
 getDetalle()=com.afnemo.model.dto.Actividad#getDetalle()Ljava/lang/String;+
 javax.persistence.Queryjava.lang.ObjectI
-javax.persistence.TypedQueryjavax.persistence.Queryjava.lang.ObjectÄ
-com.afnemo.model.dto.Personajava.lang.Objectjava.io.Serializablej
-$setFechaNacimiento(Ljava/util/Date;)Bcom.afnemo.model.dto.Persona#setFechaNacimiento(Ljava/util/Date;)V^
-setNombres(Ljava/lang/String;)<com.afnemo.model.dto.Persona#setNombres(Ljava/lang/String;)V6
-
-isEstado()(com.afnemo.model.dto.Persona#isEstado()ZT
-setId(Ljava/lang/String;)7com.afnemo.model.dto.Persona#setId(Ljava/lang/String;)VX
-setSexo(Ljava/lang/String;)9com.afnemo.model.dto.Persona#setSexo(Ljava/lang/String;)VW
-getUsuario()Gcom.afnemo.model.dto.Persona#getUsuario()Lcom/afnemo/model/dto/Usuario;I
-getCorreo():com.afnemo.model.dto.Persona#getCorreo()Ljava/lang/String;b
- setApellido1(Ljava/lang/String;)>com.afnemo.model.dto.Persona#setApellido1(Ljava/lang/String;)VA
-getId()6com.afnemo.model.dto.Persona#getId()Ljava/lang/String;Y
-getFechaNacimiento()Acom.afnemo.model.dto.Persona#getFechaNacimiento()Ljava/util/Date;2
-<init>()&com.afnemo.model.dto.Persona#<init>()V:
-setEstado(Z)*com.afnemo.model.dto.Persona#setEstado(Z)Vb
- setApellido2(Ljava/lang/String;)>com.afnemo.model.dto.Persona#setApellido2(Ljava/lang/String;)VK
-getNombres();com.afnemo.model.dto.Persona#getNombres()Ljava/lang/String;E
-	getSexo()8com.afnemo.model.dto.Persona#getSexo()Ljava/lang/String;\
-setCorreo(Ljava/lang/String;);com.afnemo.model.dto.Persona#setCorreo(Ljava/lang/String;)VO
-getApellido1()=com.afnemo.model.dto.Persona#getApellido1()Ljava/lang/String;v
-*setUsuario(Lcom/afnemo/model/dto/Usuario;)Hcom.afnemo.model.dto.Persona#setUsuario(Lcom/afnemo/model/dto/Usuario;)VO
-getApellido2()=com.afnemo.model.dto.Persona#getApellido2()Ljava/lang/String;†
+javax.persistence.TypedQueryjavax.persistence.Queryjava.lang.Object>
+*javax.persistence.criteria.CriteriaBuilderjava.lang.ObjectE
+1javax.persistence.criteria.CommonAbstractCriteriajava.lang.Objecto
+(javax.persistence.criteria.AbstractQueryjava.lang.Object1javax.persistence.criteria.CommonAbstractCriteriaf
+(javax.persistence.criteria.CriteriaQuery(javax.persistence.criteria.AbstractQueryjava.lang.Object2
+javax.persistence.TupleElementjava.lang.ObjectX
+$javax.persistence.criteria.Selectionjava.lang.Objectjavax.persistence.TupleElement_
+%javax.persistence.criteria.Expression$javax.persistence.criteria.Selectionjava.lang.ObjectZ
+javax.persistence.criteria.Pathjava.lang.Object%javax.persistence.criteria.Expression:
+&javax.persistence.criteria.FetchParentjava.lang.Object|
+javax.persistence.criteria.From&javax.persistence.criteria.FetchParentjava.lang.Objectjavax.persistence.criteria.PathT
+javax.persistence.criteria.Rootjava.lang.Objectjavax.persistence.criteria.From†
 7org.eclipse.persistence.exceptions.EclipseLinkExceptionjava.lang.RuntimeException_
 printStackTrace()Jorg.eclipse.persistence.exceptions.EclipseLinkException#printStackTrace()VÅ
 "setShouldPrintInternalException(Z)[org.eclipse.persistence.exceptions.EclipseLinkException#setShouldPrintInternalException(Z)Vb

@@ -1,16 +1,9 @@
 
-6com.afnemo.model.dto.Usuario#getId()Ljava/lang/String;
-__unknown_file ("1*Ñ
-1J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Usuario.java&	 &(—
-”
-J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Usuario.java&	 &(
-%0java.lang.String"__id*(*&
-com.afnemo.model.dto.Usuario"
-id"f
-J
-@A:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\Usuario.java& &(
-
-%0java.lang.StringB 
-com.afnemo.model.dto.Usuario
+)com.afnemo.model.dto.TipoUsuario#getId()I
+__unknown_file ("1*­
+1N
+DA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\TipoUsuario.java+	 +("X
+N
+DA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\TipoUsuario.java+ +(
+""B$"
+ com.afnemo.model.dto.TipoUsuario

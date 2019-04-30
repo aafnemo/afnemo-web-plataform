@@ -1,23 +1,24 @@
 
-gcom.afnemo.controller.ControllerTipoUsuario#seleccionarTipoUsuario(I)Lcom/afnemo/model/dto/TipoUsuario;
-__unknown_file ("1*í
-1Y
-OA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerTipoUsuario.java 	  (Ê
-Ç
-Y
-OA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerTipoUsuario.java 	  ()
-%0#com.afnemo.model.dao.TipoUsuarioDao"__id*9*7-
-+com.afnemo.controller.ControllerTipoUsuario"
-tdao·´
-Y
-OA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerTipoUsuario.java 	  ((&
-%1 com.afnemo.model.dto.TipoUsuario"_com.afnemo.model.dao.TipoUsuarioDao#seleccionarTipoUsuario(I)Lcom/afnemo/model/dto/TipoUsuario;*+
-)
-%0#com.afnemo.model.dao.TipoUsuarioDao*
-""2seleccionarTipoUsuario(I)"…
-Y
-OA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerTipoUsuario.java   ()(
-&
-%1 com.afnemo.model.dto.TipoUsuario:
-""B/-
-+com.afnemo.controller.ControllerTipoUsuario
+kcom.afnemo.controller.ControladorPersona#consultarPersona(Ljava/lang/String;)Lcom/afnemo/model/dto/Persona;
+__unknown_file ("1*é
+1V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java(	 ((À
+½
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java(	 ((%
+%0com.afnemo.model.dao.PersonaDao"__id*6*4*
+(com.afnemo.controller.ControladorPersona"
+pdaoÈÅ
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java(	 (( "
+%1com.afnemo.model.dto.Persona"`com.afnemo.model.dao.PersonaDao#consultarPorId(Ljava/lang/String;)Lcom/afnemo/model/dto/Persona;*'
+%
+%0com.afnemo.model.dao.PersonaDao*
+
+idjava.lang.String2"consultarPorId(Ljava/lang/String;)"~
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java( ((!$
+"
+%1com.afnemo.model.dto.Persona:
+idjava.lang.StringB,*
+(com.afnemo.controller.ControladorPersona

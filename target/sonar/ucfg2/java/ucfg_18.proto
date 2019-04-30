@@ -1,57 +1,75 @@
 
-Mcom.afnemo.controller.ControllerUsuario#validarPassword(Ljava/lang/String;)[C
-__unknown_file ("10*ª
-5U
-KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaF H("_
-U
-KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaF H(
-""*„
-6U
-KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaH H(Å
-
-U
-KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaH H(
-%1$Array"__id*
-
-%3
-<nulltype>*
-5*î
-7U
-KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaG G(6≥∞
-U
-KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaG G(6
-%2$Array" java.lang.String#toCharArray()[C*
+rcom.afnemo.controller.ControladorUsuario#actualizarUsuario(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+__unknown_file ("1*√
+1V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java5 5(¿
+Ω
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java5 5(%
+%0com.afnemo.model.dao.UsuarioDao"__id*6*4*
+(com.afnemo.controller.ControladorUsuario"
+udaoÃ…
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java5 5(-"
+%1com.afnemo.model.dto.Usuario"bcom.afnemo.model.dao.UsuarioDao#consultarUsuario(Ljava/lang/String;)Lcom/afnemo/model/dto/Usuario;*'
+%
+%0com.afnemo.model.dao.UsuarioDao*
 
-%4java.lang.String2toCharArray()}
-{
-U
-KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaG G(6
-%1$Array"__id*
-
-%2$Array*
-5*Î
-8U
-KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaG G(â
+idjava.lang.String2$consultarUsuario(Ljava/lang/String;)∞
+≠
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java5 5(.'
+usuariocom.afnemo.model.dto.Usuario"__id*$
+"
+%1com.afnemo.model.dto.Usuarioâ
 Ü
-U
-KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaG G((
-%4java.lang.String"Pcom.afnemo.commons.HashPassword#createHash(Ljava/lang/String;)Ljava/lang/String;*#"!
-com.afnemo.commons.HashPassword*
-
-passwordjava.lang.String*
-7*„
-10U
-KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaF
- F(˝
-˙
-U
-KA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControllerUsuario.javaF
- F(
-%0boolean"Ecom.afnemo.controller.ControllerUsuario#validate(Ljava/lang/String;)Z*+)
-'com.afnemo.controller.ControllerUsuario*
-
-passwordjava.lang.String*
-6
-8:
-passwordjava.lang.StringB+)
-'com.afnemo.controller.ControllerUsuario
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java6 6(/
+%2$Array"Ncom.afnemo.controller.ControladorUsuario#validarPassword(Ljava/lang/String;)[C*,*
+(com.afnemo.controller.ControladorUsuario* 
+
+
+contrasenajava.lang.String⁄◊
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java7 7(
+
+%3void"-com.afnemo.model.dto.Usuario#setPassword([C)V*)
+'
+usuariocom.afnemo.model.dto.Usuario*
+""2setPassword([C)¿
+Ω
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java8 8(%
+%4com.afnemo.model.dao.UsuarioDao"__id*6*4*
+(com.afnemo.controller.ControladorUsuario"
+udao¬ø
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java8 8(!
+
+%5void"Rcom.afnemo.model.dao.UsuarioDao#actualizarUsuario(Lcom/afnemo/model/dto/Usuario;)V*'
+%
+%4com.afnemo.model.dao.UsuarioDao*)
+'
+usuariocom.afnemo.model.dto.Usuario21actualizarUsuario(Lcom/afnemo/model/dto/Usuario;)ø
+º
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java9 9(%
+%6org.apache.logging.log4j.Logger"__id*5*3*
+(com.afnemo.controller.ControladorUsuario"
+logÊ„
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java9 :(
+
+%7void"Korg.apache.logging.log4j.Logger#info(Ljava/lang/String;Ljava/lang/Object;)V*'
+%
+%6org.apache.logging.log4j.Logger*A?
+=La contrase√±a del usuario: {0} fue actualizada correctamente*
+
+idjava.lang.String2*info(Ljava/lang/String;Ljava/lang/Object;)"Ñ
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.java; ;(1*(
+&Contrase√±a actualizada conrrectamente:
+idjava.lang.String:
+
+contrasenajava.lang.StringB,*
+(com.afnemo.controller.ControladorUsuario
