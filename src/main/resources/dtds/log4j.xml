@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration monitorInterval="10">
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration debug="true"
+	xmlns:log4j='http://jakarta.apache.org/log4j/'>
 	<appender name="console"
 		class="org.apache.log4j.ConsoleAppender">
 		<param name="Target" value="System.out" />
@@ -9,8 +11,9 @@
 		</layout>
 	</appender>
 	<appender name="infoappender"
-		class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="logs/$${date:yyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_loginfo.log" />
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="logs-afnemoweb/info/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date4}.info.log" />
+		<!--<param name="DatePattern" value=".yyyy-MM-dd" />-->
 		<param name="MaxFileSize" value="1000KB" />
 		<param name="MaxBackupIndex" value="100" />
 		<param name="threshold" value="INFO" />
@@ -20,8 +23,9 @@
 		</layout>
 	</appender>
 	<appender name="errorappender"
-		class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="logs/$${date:yyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logerror.log" />
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="logs-afnemoweb/error/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date4}.error.log" />
+		<!--<param name="DatePattern" value=".yyyy-MM-dd" />-->
 		<param name="MaxFileSize" value="1000KB" />
 		<param name="MaxBackupIndex" value="100" />
 		<param name="threshold" value="ERROR" />
@@ -31,8 +35,9 @@
 		</layout>
 	</appender>
 	<appender name="debugappender"
-		class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="logs/$${date:yyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logdebug.log" />
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="logs-afnemoweb/debug/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date4}.debug.log" />
+		<!--<param name="DatePattern" value=".yyyy-MM-dd" />-->
 		<param name="MaxFileSize" value="1000KB" />
 		<param name="MaxBackupIndex" value="100" />
 		<param name="threshold" value="DEBUG" />
@@ -42,8 +47,9 @@
 		</layout>
 	</appender>
 	<appender name="warnappender"
-		class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="logs/$${date:yyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logwarn.log" />
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="logs-afnemoweb/warning/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date4}.warn.log" />
+		<!--<param name="DatePattern" value=".yyyy-MM-dd" />-->
 		<param name="MaxFileSize" value="1000KB" />
 		<param name="MaxBackupIndex" value="100" />
 		<param name="threshold" value="WARN" />
@@ -53,8 +59,9 @@
 		</layout>
 	</appender>
 	<appender name="fatalappender"
-		class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="logs/$${date:yyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logfatal.log" />
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="logs-afnemoweb/fatal/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date4}.fatal.log" />
+		<!--<param name="DatePattern" value=".yyyy-MM-dd" />-->
 		<param name="MaxFileSize" value="1000KB" />
 		<param name="MaxBackupIndex" value="100" />
 		<param name="threshold" value="FATAL" />
@@ -64,8 +71,9 @@
 		</layout>
 	</appender>
 	<appender name="traceappender"
-		class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="logs/$${date:yyy-MM}/afnemo-%d{MM-dd-yyyy}-%i_logtrace.log" />
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="logs-afnemoweb/trace/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date4}.trace.log" />
+		<!--<param name="DatePattern" value=".yyyy-MM-dd" />-->
 		<param name="MaxFileSize" value="1000KB" />
 		<param name="MaxBackupIndex" value="100" />
 		<param name="threshold" value="TRACE" />
@@ -85,5 +93,4 @@
 		<appender-ref ref="fatalappender" />
 		<appender-ref ref="traceappender" />
 	</root>
-
-</configuration>
+</log4j:configuration>
