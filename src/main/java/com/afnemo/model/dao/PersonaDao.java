@@ -6,9 +6,13 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceException;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 
 import com.afnemo.commons.Logs;
 import com.afnemo.model.dto.Persona;
+import com.afnemo.model.dto.Usuario;
 import com.afnemo.model.interfaces.PersonaDaoInterface;
 
 /**
@@ -98,6 +102,13 @@ public class PersonaDao extends Logs implements PersonaDaoInterface {
 			persona = null;
 		}
 		return persona;
+	}
+	public List<Persona> consultarPersonasActivas() {
+		CriteriaBuilder cb = em.getCriteriaBuilder();
+		CriteriaQuery<Persona> q = cb.createQuery(Persona.class);
+		Root<Persona> persona = q.from(Persona.class);
+		q.select(persona).where(cb.equal(persona.get("estado"), true));
+		return em.createQuery(q).getResultList();
 	}
 
 }

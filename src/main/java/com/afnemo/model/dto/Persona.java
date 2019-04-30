@@ -27,17 +27,20 @@ public class Persona implements Serializable {
 	private String apellido1;
 	@Column(name = "PRS_Apellido2", length = 30, nullable = false)
 	private String apellido2;
-	@Column(name = "PRS_Correo", length = 45, nullable = false)
+	@Column(name = "PRS_Correo", length = 45, nullable = true)
 	private String correo;
 	@Column(name = "PRS_Sexo", length = 45, nullable = false)
 	private String sexo;
-	@Column(name = "PRS_Telefono", length = 12, nullable = false)
+	@Column(name = "PRS_Telefono", length = 12, nullable = true)
 	private String telefono;
 	@Column(name="PRS_Estado",nullable=false)
 	private boolean estado;
 	@Column(name = "PRS_FechaNacimiento", nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date fechaNacimiento;
+	@Column(name = "PRS_FechaRegistro", nullable = false)
+	@Temporal(TemporalType.DATE)
+	private Date fechaRegistro;
 	@OneToOne
 	@JoinColumn(name="PK_USR_Id",nullable = false)
 	private Usuario usuario;
@@ -96,6 +99,12 @@ public class Persona implements Serializable {
 	}
 	public void setEstado(boolean estado) {
 		this.estado = estado;
+	}
+	public String getTelefono() {
+		return telefono;
+	}
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
 	}
 	
 }
