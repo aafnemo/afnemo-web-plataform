@@ -7,11 +7,13 @@ com\afnemo\model\dao\UsuarioDao.class
 com\afnemo\commons\Logs.class
 com\afnemo\model\interfaces\ActividadDaoInterface.class
 com\afnemo\model\interfaces\TipoUsuarioDaoInterface.class
+com\afnemo\controller\ControladorActividad.class
 com\afnemo\controller\ControladorUsuario.class
 com\afnemo\model\dto\Persona.class
 com\afnemo\model\dao\PersonaDao.class
 com\afnemo\model\dto\TipoUsuario.class
 com\afnemo\model\interfaces\PersonaDaoInterface.class
+com\afnemo\StartWebApp.class
 com\afnemo\model\dao\ActividadDao.class
 com\afnemo\model\dto\Actividad.class
 com\afnemo\model\interfaces\UsuarioDaoInterface.class

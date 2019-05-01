@@ -1,28 +1,0 @@
-
-Hcom.afnemo.model.dao.PersonaDao#consultarTodasPersonas()Ljava/util/List;
-__unknown_file ("1*µ
-1M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaY	 Y(¬
-©
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaY	 Y(%
-%0javax.persistence.EntityManager"__id*+*)!
-com.afnemo.model.dao.PersonaDao"
-emèå
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaY	 Y(>"
-%1javax.persistence.TypedQuery"sjavax.persistence.EntityManager#createNamedQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
-%
-%0javax.persistence.EntityManager*
-Persona.findAll*
-""25createNamedQuery(Ljava/lang/String;Ljava/lang/Class;)ÝÚ
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaY	 Z(
-%2java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
-"
-%1javax.persistence.TypedQuery2getResultList()"g
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaY Z(
-
-%2java.util.ListB#!
-com.afnemo.model.dao.PersonaDao

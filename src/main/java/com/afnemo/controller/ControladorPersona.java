@@ -9,6 +9,7 @@ package com.afnemo.controller;
   */
 
 import java.util.Date;
+import java.util.List;
 
 import com.afnemo.model.dao.PersonaDao;
 import com.afnemo.model.dto.Persona;
@@ -17,7 +18,7 @@ import com.afnemo.model.dto.Usuario;
 public class ControladorPersona {
 	private static final boolean ESTADO = false;
 	private static PersonaDao pdao = new PersonaDao();
-	
+
 	public String crearPersona(String id, String name, String lastname1,
 			String lastname2, String email, String sex, Date birthday,
 			String phone, Usuario user) {
@@ -35,8 +36,12 @@ public class ControladorPersona {
 		pdao.crearPersona(person);
 		return "Registro exitoso";
 	}
-	
+
 	public Persona consultarPersona(String id) {
 		return pdao.consultarPorId(id);
+	}
+	public List<Persona> consultarPersonas() {
+		
+		return null;
 	}
 }
