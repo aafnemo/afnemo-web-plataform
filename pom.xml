@@ -25,6 +25,7 @@
 		<servlet.version>3.1.0</servlet.version>
 		<spring.version>5.1.0.RELEASE</spring.version>
 		<sonar.version>3.6.0.1398</sonar.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
@@ -189,8 +190,25 @@
 							<goals>
 								<goal>copy-dependencies</goal>
 							</goals>
+							<configuration>
+								<artifactItems>
+									<artifactItem>
+										<groupId>com.github.jsimone</groupId>
+										<artifactId>webapp-runner</artifactId>
+										<version>8.0.30.2</version>
+										<destFileName>webapp-runner.jar</destFileName>
+									</artifactItem>
+								</artifactItems>
+							</configuration>
 						</execution>
 					</executions>
+				</plugin>
+				<plugin>
+					<groupId>com.heroku.sdk</groupId>
+					<artifactId>heroku-maven-plugin</artifactId>
+					<configuration>
+						<appName>AFNEMO</appName>
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
