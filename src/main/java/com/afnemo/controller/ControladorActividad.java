@@ -13,5 +13,7 @@ import com.afnemo.model.dao.ActividadDao;
 public class ControladorActividad {
 	private static final boolean ESTADO = false;
 	private static  ActividadDao adao = new ActividadDao();
-	//public String crearActividad(String d)
+	public String crearActividad(int id) {
+		return "hola";
+	}
 }
