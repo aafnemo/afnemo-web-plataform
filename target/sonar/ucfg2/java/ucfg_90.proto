@@ -1,0 +1,29 @@
+
+lcom.afnemo.model.dto.TipoUsuario#removeUsuario(Lcom/afnemo/model/dto/Usuario;)Lcom/afnemo/model/dto/Usuario;
+__unknown_file ("1*¸
+1N
+DA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\TipoUsuario.javaI I(ÜÙ
+N
+DA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\TipoUsuario.javaI I(
+%0java.util.Set"=com.afnemo.model.dto.TipoUsuario#getUsuarios()Ljava/util/Set;*$"
+ com.afnemo.model.dto.TipoUsuario2getUsuarios()ëè
+N
+DA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\TipoUsuario.javaI I(
+%1boolean")java.util.Set#remove(Ljava/lang/Object;)Z*
+
+%0java.util.Set*)
+'
+usuariocom.afnemo.model.dto.Usuario2remove(Ljava/lang/Object;)˜•
+N
+DA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\TipoUsuario.javaJ J(
+
+%2void"Pcom.afnemo.model.dto.Usuario#setTipoUsuario(Lcom/afnemo/model/dto/TipoUsuario;)V*)
+'
+usuariocom.afnemo.model.dto.Usuario*
+""22setTipoUsuario(Lcom/afnemo/model/dto/TipoUsuario;)"{
+N
+DA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dto\TipoUsuario.javaK K()
+'
+usuariocom.afnemo.model.dto.Usuario:'
+usuariocom.afnemo.model.dto.UsuarioB$"
+ com.afnemo.model.dto.TipoUsuario

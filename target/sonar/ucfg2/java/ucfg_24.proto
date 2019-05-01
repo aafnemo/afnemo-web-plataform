@@ -1,0 +1,21 @@
+
+Scom.afnemo.controller.ControladorUsuario#consultarUsuariosActivos()Ljava/util/List;
+__unknown_file ("1*•
+1V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.javaM	 M(À
+½
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.javaM	 M(%
+%0com.afnemo.model.dao.UsuarioDao"__id*6*4*
+(com.afnemo.controller.ControladorUsuario"
+udao‚ÿ
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.javaM	 M((
+%1java.util.List"Jcom.afnemo.model.dao.UsuarioDao#consultarUsuariosActivos()Ljava/util/List;*'
+%
+%0com.afnemo.model.dao.UsuarioDao2consultarUsuariosActivos()"p
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorUsuario.javaM M()
+
+%1java.util.ListB,*
+(com.afnemo.controller.ControladorUsuario

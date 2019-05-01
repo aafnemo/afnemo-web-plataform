@@ -11,37 +11,44 @@ package com.afnemo.controller;
 import java.util.Date;
 import java.util.List;
 
+import com.afnemo.commons.Logs;
 import com.afnemo.model.dao.PersonaDao;
 import com.afnemo.model.dto.Persona;
 import com.afnemo.model.dto.Usuario;
 
-public class ControladorPersona {
+public class ControladorPersona extends Logs {
 	private static final boolean ESTADO = false;
 	private static PersonaDao pdao = new PersonaDao();
 
 	public String crearPersona(String id, String name, String lastname1,
 			String lastname2, String email, String sex, Date birthday,
 			String phone, Usuario user) {
-		Persona person = new Persona();
-		person.setId(id);
-		person.setNombres(name);
-		person.setApellido1(lastname1);
-		person.setApellido2(lastname2);
-		person.setCorreo(email);
-		person.setFechaNacimiento(birthday);
-		person.setSexo(sex);
-		person.setEstado(ESTADO);
-		person.setTelefono(phone);
-		person.setUsuario(user);
-		pdao.crearPersona(person);
-		return "Registro exitoso";
+		try {
+			Persona person = new Persona();
+			person.setId(id);
+			person.setNombres(name);
+			person.setApellido1(lastname1);
+			person.setApellido2(lastname2);
+			person.setCorreo(email);
+			person.setFechaNacimiento(birthday);
+			person.setSexo(sex);
+			person.setEstado(ESTADO);
+			person.setTelefono(phone);
+			person.setUsuario(user);
+			pdao.crearPersona(person);
+			return "Registro exitoso";
+		} catch (Exception e) {
+			return "Error al crear la persona";
+		}
 	}
 
 	public Persona consultarPersona(String id) {
 		return pdao.consultarPorId(id);
 	}
 	public List<Persona> consultarPersonas() {
-		
-		return null;
+		return pdao.consultarTodasPersonas();
+	}
+	public List<Persona> consultarActivos() {
+		return pdao.consultarPersonasActivas();
 	}
 }
