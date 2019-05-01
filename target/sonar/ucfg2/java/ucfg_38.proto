@@ -1,24 +1,0 @@
-
-_com.afnemo.model.dao.TipoUsuarioDao#seleccionarTipoUsuario(I)Lcom/afnemo/model/dto/TipoUsuario;
-__unknown_file ("1*Î
-1Q
-GA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\TipoUsuarioDao.javak	 k(´
-±
-Q
-GA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\TipoUsuarioDao.javak	 k(%
-%0javax.persistence.EntityManager"__id*/*-%
-#com.afnemo.model.dao.TipoUsuarioDao"
-em¿¼
-Q
-GA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\TipoUsuarioDao.javak	 k(&&
-%1 com.afnemo.model.dto.TipoUsuario"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
-%
-%0javax.persistence.EntityManager*
-""*
-""2)find(Ljava/lang/Class;Ljava/lang/Object;)"}
-Q
-GA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\TipoUsuarioDao.javak k('(
-&
-%1 com.afnemo.model.dto.TipoUsuario:
-""B'%
-#com.afnemo.model.dao.TipoUsuarioDao

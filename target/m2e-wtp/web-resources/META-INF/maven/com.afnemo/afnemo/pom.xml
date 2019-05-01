@@ -140,6 +140,15 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
+					<groupId>com.heroku.sdk</groupId>
+					<artifactId>heroku-maven-plugin</artifactId>
+					<version>2.0.3</version>
+					<configuration>
+						<appName>afnemo</appName>
+						<warFile>target/AFNEMO.war</warFile>
+					</configuration>
+				</plugin>
+				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.1</version>
@@ -165,6 +174,20 @@
 							<phase>verify</phase>
 							<goals>
 								<goal>sonar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>3.0.1</version>
+					<executions>
+						<execution>
+							<id>copy-dependencies</id>
+							<phase>package</phase>
+							<goals>
+								<goal>copy-dependencies</goal>
 							</goals>
 						</execution>
 					</executions>
