@@ -1,9 +1,21 @@
 
-Lcom.afnemo.controller.ControladorPersona#consultarPersonas()Ljava/util/List;
-__unknown_file ("1*½
+Kcom.afnemo.controller.ControladorPersona#consultarActivos()Ljava/util/List;
+__unknown_file ("1*•
 1V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java2	 2("`
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java9	 9(À
+½
 V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java2 2(
-""B,*
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java9	 9(%
+%0com.afnemo.model.dao.PersonaDao"__id*6*4*
+(com.afnemo.controller.ControladorPersona"
+pdao‚ÿ
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java9	 9((
+%1java.util.List"Jcom.afnemo.model.dao.PersonaDao#consultarPersonasActivas()Ljava/util/List;*'
+%
+%0com.afnemo.model.dao.PersonaDao2consultarPersonasActivas()"p
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java9 9()
+
+%1java.util.ListB,*
 (com.afnemo.controller.ControladorPersona

@@ -1,98 +1,103 @@
 
-Jcom.afnemo.model.dao.PersonaDao#consultarPersonasActivas()Ljava/util/List;
-__unknown_file ("1* 
-1M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javak k(¨
-©
+`com.afnemo.model.dao.PersonaDao#consultarPorId(Ljava/lang/String;)Lcom/afnemo/model/dto/Persona;
+__unknown_file ("paramAnnotations*–
+6M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javab b(#ˆÛ
 M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javak k(%
-%0javax.persistence.EntityManager"__id*+*)!
-com.afnemo.model.dao.PersonaDao"
-em•¢
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javak k(.0
-%1*javax.persistence.criteria.CriteriaBuilder"`javax.persistence.EntityManager#getCriteriaBuilder()Ljavax/persistence/criteria/CriteriaBuilder;*'
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javab b(#
+
+%7void"9org.apache.logging.log4j.Logger#info(Ljava/lang/String;)V*'
 %
-%0javax.persistence.EntityManager2getCriteriaBuilder()æ
-ª
+%5org.apache.logging.log4j.Logger*
+
+%6java.lang.String2info(Ljava/lang/String;)*
+1*ò
+7M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaa a('ß
+§
 M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javak k(/0
-cb*javax.persistence.criteria.CriteriaBuilder"__id*2
-0
-%1*javax.persistence.criteria.CriteriaBuilder”–
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javal l(:.
-%2(javax.persistence.criteria.CriteriaQuery"sjavax.persistence.criteria.CriteriaBuilder#createQuery(Ljava/lang/Class;)Ljavax/persistence/criteria/CriteriaQuery;*2
-0
-cb*javax.persistence.criteria.CriteriaBuilder*
-""2createQuery(Ljava/lang/Class;)π
-∂
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javal l(;-
-q(javax.persistence.criteria.CriteriaQuery"__id*0
-.
-%2(javax.persistence.criteria.CriteriaQueryÆ´
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javam m(/%
-%3javax.persistence.criteria.Root"ajavax.persistence.criteria.AbstractQuery#from(Ljava/lang/Class;)Ljavax/persistence/criteria/Root;*/
--
-q(javax.persistence.criteria.CriteriaQuery*
-""2from(Ljava/lang/Class;)≠
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaa a(''
+personacom.afnemo.model.dto.Persona"__id*$
+"
+%4com.afnemo.model.dto.Persona≠
 ™
 M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javam m(0*
-personajavax.persistence.criteria.Root"__id*'
-%
-%3javax.persistence.criteria.Rootïí
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javab b(%
+%5org.apache.logging.log4j.Logger"__id*,**!
+com.afnemo.model.dao.PersonaDao"
+log‰·
 M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javan n(.
-%4(javax.persistence.criteria.CriteriaQuery"Åjavax.persistence.criteria.CriteriaQuery#select(Ljavax/persistence/criteria/Selection;)Ljavax/persistence/criteria/CriteriaQuery;*/
--
-q(javax.persistence.criteria.CriteriaQuery*,
-*
-personajavax.persistence.criteria.Root2.select(Ljavax/persistence/criteria/Selection;)¶£
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javan# n(8%
-%5javax.persistence.criteria.Path"Xjavax.persistence.criteria.Path#get(Ljava/lang/String;)Ljavax/persistence/criteria/Path;*,
-*
-personajavax.persistence.criteria.Root*
-
-estado2get(Ljava/lang/String;)π∂
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javan n(?*
-%6$javax.persistence.criteria.Predicate"ëjavax.persistence.criteria.CriteriaBuilder#equal(Ljavax/persistence/criteria/Expression;Ljava/lang/Object;)Ljavax/persistence/criteria/Predicate;*2
-0
-cb*javax.persistence.criteria.CriteriaBuilder*'
-%
-%5javax.persistence.criteria.Path*
-""2@equal(Ljavax/persistence/criteria/Expression;Ljava/lang/Object;)ñì
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javan n(@.
-%7(javax.persistence.criteria.CriteriaQuery"Åjavax.persistence.criteria.CriteriaQuery#where(Ljavax/persistence/criteria/Expression;)Ljavax/persistence/criteria/CriteriaQuery;*0
-.
-%4(javax.persistence.criteria.CriteriaQuery*,
-*
-%6$javax.persistence.criteria.Predicate2.where(Ljavax/persistence/criteria/Expression;)¨
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javab b("
+%6java.lang.String"=com.afnemo.model.dto.Persona#getApellido1()Ljava/lang/String;*)
+'
+personacom.afnemo.model.dto.Persona2getApellido1()*
+6*“
+8M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaa a(¨
 ©
 M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javao	 o(%
-%8javax.persistence.EntityManager"__id*+*)!
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaa a(%
+%3javax.persistence.EntityManager"__id*+*)!
 com.afnemo.model.dao.PersonaDao"
-emÄ˝
+em…∆
 M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javao	 o("
-%9javax.persistence.TypedQuery"ujavax.persistence.EntityManager#createQuery(Ljavax/persistence/criteria/CriteriaQuery;)Ljavax/persistence/TypedQuery;*'
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaa a('"
+%4com.afnemo.model.dto.Persona"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
 %
-%8javax.persistence.EntityManager*/
--
-q(javax.persistence.criteria.CriteriaQuery27createQuery(Ljavax/persistence/criteria/CriteriaQuery;)ﬁ€
+%3javax.persistence.EntityManager*
+""*
+
+idjava.lang.String2)find(Ljava/lang/Class;Ljava/lang/Object;)*
+7*¡
+9M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java` `(≠
+™
 M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javao	 o(*
-%10java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
-"
-%9javax.persistence.TypedQuery2getResultList()"h
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java` `(%
+%1org.apache.logging.log4j.Logger"__id*,**!
+com.afnemo.model.dao.PersonaDao"
+log∑¥
 M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javao o(+
-
-%10java.util.ListB#!
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java` `()
+
+%2void"Lorg.apache.logging.log4j.Logger#debug(Ljava/lang/String;Ljava/lang/Object;)V*'
+%
+%1org.apache.logging.log4j.Logger*
+consultar por id: {0}*
+
+idjava.lang.String2+debug(Ljava/lang/String;Ljava/lang/Object;)*
+8*Å
+paramAnnotationsM
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java] ]()ñ
+ì
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java\ \(
+
+%0"
+__annotate*
+java.lang.Override*
+
+idjava.lang.String
+}
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java]& ]((
+idjava.lang.String"__annotation*
+
+%0*
+10*‰
+10M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java^ ^(â
+Ü
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java^ ^('
+personacom.afnemo.model.dto.Persona"__id*
+""*
+9*Œ
+1M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javah	 h("z
+M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javah h()
+'
+personacom.afnemo.model.dto.Persona:
+idjava.lang.StringB#!
 com.afnemo.model.dao.PersonaDao

@@ -11,11 +11,16 @@ package com.afnemo.controller;
 import java.util.Date;
 import java.util.List;
 
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
+
 import com.afnemo.commons.Logs;
 import com.afnemo.model.dao.PersonaDao;
 import com.afnemo.model.dto.Persona;
 import com.afnemo.model.dto.Usuario;
-
+@ManagedBean(name = "Persona")
+@ApplicationScoped
 public class ControladorPersona extends Logs {
 	private static final boolean ESTADO = false;
 	private static PersonaDao pdao = new PersonaDao();
@@ -50,5 +55,11 @@ public class ControladorPersona extends Logs {
 	}
 	public List<Persona> consultarActivos() {
 		return pdao.consultarPersonasActivas();
+	}
+	public String action() {
+		String value = FacesContext.getCurrentInstance().getExternalContext()
+				.getRequestParameterMap().get("hidden1");
+		log.debug(value + "Pruebas back");
+		return "hola";
 	}
 }
