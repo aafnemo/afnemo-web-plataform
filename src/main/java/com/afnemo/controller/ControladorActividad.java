@@ -8,6 +8,9 @@ package com.afnemo.controller;
   * 
   */
 
-public class ControladorActividad {
+import com.afnemo.model.dao.ActividadDao;
 
+public class ControladorActividad {
+	private static final boolean ESTADO = false;
+	private static  ActividadDao adao = new ActividadDao();
 }
