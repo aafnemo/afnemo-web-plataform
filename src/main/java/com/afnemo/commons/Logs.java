@@ -4,8 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.apache.log4j.xml.DOMConfigurator;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 /**
  * 
@@ -20,7 +19,7 @@ public class Logs {
 	public final Logger log;
 	public Logs() {
 		DOMConfigurator.configure("src/main/resources/dtds/log4j.xml");
-		this.log = LogManager.getLogger(getClass());
+		this.log = Logger.getLogger(getClass());
 	}
 	static {
 		SimpleDateFormat dateFormat1 = new SimpleDateFormat("yyyy");

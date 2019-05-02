@@ -1,8 +1,10 @@
 package com.afnemo.commons;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.apache.log4j.xml.DOMConfigurator;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 /**
  * 
@@ -14,12 +16,12 @@ import org.apache.logging.log4j.Logger;
  */
 
 public class Logsl {
-	static Logger log;
+	public Logger log;
 	public Logsl() {
-		DOMConfigurator.configure("src/main/resources/dtds/log4j2.xml");
-		log = LogManager.getLogger(getClass());
+		DOMConfigurator.configure("src/main/resources/dtds/log4j.xml");
+		log = Logger.getLogger(getClass());
 	}
-	/*static {
+	static {
 		SimpleDateFormat dateFormat1 = new SimpleDateFormat("yyyy");
 		SimpleDateFormat dateFormat2 = new SimpleDateFormat("yyyyMM");
 		SimpleDateFormat dateFormat3 = new SimpleDateFormat("yyyyMMdd");
@@ -31,5 +33,5 @@ public class Logsl {
 		System.setProperty("current.date3", dateFormat3.format(new Date()));
 		System.setProperty("current.date4", dateFormat4.format(new Date()));
 		System.setProperty("current.date5", dateFormat5.format(new Date()));
-	}*/
+	}
 }

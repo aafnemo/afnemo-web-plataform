@@ -8,6 +8,7 @@ package com.afnemo.controller;
   * 
   */
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -18,28 +19,44 @@ import javax.faces.context.FacesContext;
 import com.afnemo.commons.Logs;
 import com.afnemo.model.dao.PersonaDao;
 import com.afnemo.model.dto.Persona;
-import com.afnemo.model.dto.Usuario;
+
 @ManagedBean(name = "Persona")
 @ApplicationScoped
 public class ControladorPersona extends Logs {
 	private static final boolean ESTADO = false;
 	private static PersonaDao pdao = new PersonaDao();
 
-	public String crearPersona(String id, String name, String lastname1,
-			String lastname2, String email, String sex, Date birthday,
-			String phone, Usuario user) {
+	public String crearPersona() {
 		try {
+			FacesContext facesContext = FacesContext.getCurrentInstance();
+
 			Persona person = new Persona();
-			person.setId(id);
-			person.setNombres(name);
-			person.setApellido1(lastname1);
-			person.setApellido2(lastname2);
-			person.setCorreo(email);
+			person.setId(facesContext.getExternalContext()
+					.getRequestParameterMap().get("id"));
+			person.setNombres(facesContext.getExternalContext()
+					.getRequestParameterMap().get("nombres"));
+			person.setApellido1(facesContext.getExternalContext()
+					.getRequestParameterMap().get("apellido1"));
+			person.setApellido2(facesContext.getExternalContext()
+					.getRequestParameterMap().get("apellido2"));
+			person.setCorreo(facesContext.getExternalContext()
+					.getRequestParameterMap().get("correo"));
+			Date birthday = new SimpleDateFormat("dd-MM-yyyy")
+					.parse(facesContext.getExternalContext()
+							.getRequestParameterMap().get("date"));
 			person.setFechaNacimiento(birthday);
-			person.setSexo(sex);
+			person.setSexo(facesContext.getExternalContext()
+					.getRequestParameterMap().get("sexo"));
 			person.setEstado(ESTADO);
-			person.setTelefono(phone);
-			person.setUsuario(user);
+			person.setTelefono(facesContext.getExternalContext()
+					.getRequestParameterMap().get("telefono"));
+			String user = facesContext.getExternalContext()
+					.getRequestParameterMap().get("usuario");
+			String pass = facesContext.getExternalContext()
+					.getRequestParameterMap().get("pass");
+			ControladorUsuario cu = new ControladorUsuario();
+			cu.crearUsario(user, pass);
+			person.setUsuario(cu.consultarUsuario(user));
 			pdao.crearPersona(person);
 			return "Registro exitoso";
 		} catch (Exception e) {

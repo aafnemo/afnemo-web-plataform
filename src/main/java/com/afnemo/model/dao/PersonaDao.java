@@ -93,7 +93,7 @@ public class PersonaDao extends Logs implements PersonaDaoInterface {
 	public Persona consultarPorId(String id) {
 		Persona persona;
 		try {
-			log.debug("consultar por id: {0}", id);
+			log.debug("consultar por id: " + id);
 			persona = em.find(Persona.class, id);
 			log.info(persona.getApellido1());
 		} catch (Exception e) {
