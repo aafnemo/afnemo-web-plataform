@@ -20,42 +20,38 @@ import com.afnemo.commons.Logs;
 import com.afnemo.model.dao.PersonaDao;
 import com.afnemo.model.dto.Persona;
 
-@ManagedBean(name = "Persona")
+@ManagedBean
 @ApplicationScoped
 public class ControladorPersona extends Logs {
 	private static final boolean ESTADO = false;
 	private static PersonaDao pdao = new PersonaDao();
+	private String id;
+	private String nombres;
+	private String apellido1;
+	private String apellido2;
+	private String correo;
+	private String date;
+	private String sex;
+	private String telefono;
+	private String user;
+	private String password;
 
 	public String crearPersona() {
 		try {
-			FacesContext facesContext = FacesContext.getCurrentInstance();
 
 			Persona person = new Persona();
-			person.setId(facesContext.getExternalContext()
-					.getRequestParameterMap().get("id"));
-			person.setNombres(facesContext.getExternalContext()
-					.getRequestParameterMap().get("nombres"));
-			person.setApellido1(facesContext.getExternalContext()
-					.getRequestParameterMap().get("apellido1"));
-			person.setApellido2(facesContext.getExternalContext()
-					.getRequestParameterMap().get("apellido2"));
-			person.setCorreo(facesContext.getExternalContext()
-					.getRequestParameterMap().get("correo"));
-			Date birthday = new SimpleDateFormat("dd-MM-yyyy")
-					.parse(facesContext.getExternalContext()
-							.getRequestParameterMap().get("date"));
+			person.setId(this.id);
+			person.setNombres(this.nombres);
+			person.setApellido1(this.apellido1);
+			person.setApellido2(this.apellido2);
+			person.setCorreo(this.correo);
+			Date birthday = new SimpleDateFormat("dd-MM-yyyy").parse(this.date);
 			person.setFechaNacimiento(birthday);
-			person.setSexo(facesContext.getExternalContext()
-					.getRequestParameterMap().get("sexo"));
+			person.setSexo(this.sex);
 			person.setEstado(ESTADO);
-			person.setTelefono(facesContext.getExternalContext()
-					.getRequestParameterMap().get("telefono"));
-			String user = facesContext.getExternalContext()
-					.getRequestParameterMap().get("usuario");
-			String pass = facesContext.getExternalContext()
-					.getRequestParameterMap().get("pass");
+			person.setTelefono(this.telefono);
 			ControladorUsuario cu = new ControladorUsuario();
-			cu.crearUsario(user, pass);
+			cu.crearUsario(this.user, this.password);
 			person.setUsuario(cu.consultarUsuario(user));
 			pdao.crearPersona(person);
 			return "Registro exitoso";
@@ -77,6 +73,6 @@ public class ControladorPersona extends Logs {
 		String value = FacesContext.getCurrentInstance().getExternalContext()
 				.getRequestParameterMap().get("hidden1");
 		log.debug(value + "Pruebas back");
-		return "hola";
+		return null;
 	}
 }

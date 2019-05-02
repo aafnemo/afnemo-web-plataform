@@ -12,7 +12,6 @@ import javax.persistence.criteria.Root;
 
 import com.afnemo.commons.Logs;
 import com.afnemo.model.dto.Persona;
-import com.afnemo.model.dto.Usuario;
 import com.afnemo.model.interfaces.PersonaDaoInterface;
 
 /**

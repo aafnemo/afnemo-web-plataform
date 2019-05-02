@@ -14,7 +14,7 @@
 		<h:form id="registro">
 			<h:panelGrid columns="2" cellpadding="5">
 				<h:outputLabel for="id" value="Número de identificación" />
-				<h:inputText id="id"></h:inputText>
+				<h:inputText id="id" value="#{controladorPersona}"></h:inputText>
 				<h:outputLabel for="nombres" value="Nombres" />
 				<h:inputText id="nombres"></h:inputText>
 				<h:outputLabel for="nombres" value="Primer Apellido" />
@@ -38,7 +38,7 @@
 				<h:outputLabel for="pass" value="Nombres" />
 				<h:inputSecret id="pass"></h:inputSecret>
 
-				<h:commandButton value="submit" action="#{Persona.crearPersona}"></h:commandButton>
+				<h:commandButton value="submit" action="#{persona.crearPersona}"></h:commandButton>
 			</h:panelGrid>
 		</h:form>
 	</ui:define>
