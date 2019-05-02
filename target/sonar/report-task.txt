@@ -3,5 +3,5 @@ projectKey=com.afnemo:afnemo
 serverUrl=https://sonarcloud.io
 serverVersion=7.8.0.23906
 dashboardUrl=https://sonarcloud.io/dashboard?id=com.afnemo%3Aafnemo
-ceTaskId=AWp0m8cYqdengcc13gJ1
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWp0m8cYqdengcc13gJ1
+ceTaskId=AWp18Q-xY8peG1DLqhpn
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWp18Q-xY8peG1DLqhpn
