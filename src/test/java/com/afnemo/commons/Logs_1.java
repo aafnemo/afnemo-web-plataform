@@ -1,12 +1,10 @@
 package com.afnemo.commons;
 
-import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.apache.log4j.xml.DOMConfigurator;
-
 import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
 
 /**
  * 
@@ -17,13 +15,11 @@ import org.apache.log4j.Logger;
  * 
  */
 
-public class Logs {
-	public final Logger log;
-	public Logs() {
-		URL u = getClass().getClassLoader()
-				.getResource("src/main/resources/dtds/log4j.xml");
-		DOMConfigurator.configure(u);
-		this.log = Logger.getLogger(getClass());
+public class Logs_1{
+	public final Logger LOGGER;
+	public Logs_1() {
+		DOMConfigurator.configure("src/main/resources/dtds/log4j.xml");
+		this.LOGGER = Logger.getLogger(getClass());
 	}
 	static {
 		SimpleDateFormat dateFormat1 = new SimpleDateFormat("yyyy");

@@ -1,63 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration monitorInterval="5" status="trace"
-	name="LogsAfnemo" packages="org.apache.logging.log4j.test">
-	<Properties>
-		<Property name="filenamedebug">logs-afnemoweb/$</Property>
-	</Properties>
-	<Appenders>
-		<Console name="STDOUT" target="SYSTEM_OUT">
-			<PatternLayout
-				pattern="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] %l | %m%n" />
-		</Console>
-		<RollingFile name="DEBUGFILE"
-			fileName="logs-afnemoweb/debug/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date4}.debug.log"
-			filePattern="${log-path}/filename-%d{yyyy-MM-dd}-%i.log">
-			<PatternLayout
-				pattern="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L] | [%t] Message: %m%n" />
-		</RollingFile>
-		<RollingFile name="TRACEFILE"
-			fileName="logs-afnemoweb/debug/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date4}.trace.log"
-			filePattern="${log-path}/filename-%d{yyyy-MM-dd}-%i.log">
-			<PatternLayout
-				pattern="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L] | [%t] Message: %m%n" />
-		</RollingFile>
-		<RollingFile name="INFOFILE"
-			fileName="logs-afnemoweb/debug/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date4}.info.log"
-			filePattern="${log-path}/filename-%d{yyyy-MM-dd}-%i.log">
-			<PatternLayout
-				pattern="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L] | [%t] Message: %m%n" />
-		</RollingFile>
-		<RollingFile name="ERRORFILE"
-			fileName="logs-afnemoweb/debug/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date4}.error.log"
-			filePattern="${log-path}/filename-%d{yyyy-MM-dd}-%i.log">
-			<PatternLayout
-				pattern="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L] | [%t] Message: %m%n" />
-		</RollingFile>
-		<RollingFile name="FATALFILE"
-			fileName="logs-afnemoweb/debug/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date4}.fatal.log"
-			filePattern="/filename-%d{yyyy-MM-dd}-%i.log">
-			<PatternLayout
-				pattern="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L] | [%t] Message: %m%n" />
-		</RollingFile>
-		<RollingFile name="WARNFILE"
-			fileName="logs-afnemoweb/debug/%d{yyyy}/%d{yyyyMM}/${yyyyMMdd}/afnemo_${yyyyMMddHH}.warn.log"
-			filePattern="logs-afnemoweb/debug/%d{yyyy}/%d{yyyyMM}/${yyyyMMdd}//afnemo_-%d{yyyy-MM-dd}-%i.log">
-			<PatternLayout
-				pattern="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%c{1} - %M:line %L] | [%t] Message: %m%n" />
-		</RollingFile>
-		<Async name="ASYNC">
-			<AppenderRef ref="STDOUT" />
-			<AppenderRef ref="TRACEFILE" />
-			<AppenderRef ref="DEBUGFILE" />
-			<AppenderRef ref="INFOFILE" />
-			<AppenderRef ref="ERRORFILE" />
-			<AppenderRef ref="FATALFILE" />
-			<AppenderRef ref="WARNFILE" />
-		</Async>
-	</Appenders>
-	<Loggers>
-		<Root level="trace">
-			<AppenderRef ref="ASYNC" />
-		</Root>
-	</Loggers>
-</configuration>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration debug="true"
+	xmlns:log4j='http://jakarta.apache.org/log4j/'>
+	<appender name="console"
+		class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] %l|%m%n" />
+		</layout>
+	</appender>
+	<appender name="infoappender"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="logs-afnemoweb/info/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date5}.info.log" />
+		<!--<param name="DatePattern" value=".yyyy-MM-dd" />-->
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<param name="threshold" value="INFO" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] Message: %m%n" />
+		</layout>
+	</appender>
+	<appender name="errorappender"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="logs-afnemoweb/error/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date5}.error.log" />
+		<!--<param name="DatePattern" value=".yyyy-MM-dd" />-->
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<param name="threshold" value="ERROR" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] Message: %m%n" />
+		</layout>
+	</appender>
+	<appender name="debugappender"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="logs-afnemoweb/debug/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date5}.debug.log" />
+		<!--<param name="DatePattern" value=".yyyy-MM-dd" />-->
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<param name="threshold" value="DEBUG" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] Message: %m%n" />
+		</layout>
+	</appender>
+	<appender name="warnappender"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="logs-afnemoweb/warning/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date5}.warn.log" />
+		<!--<param name="DatePattern" value=".yyyy-MM-dd" />-->
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<param name="threshold" value="WARN" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] Message: %m%n" />
+		</layout>
+	</appender>
+	<appender name="fatalappender"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="logs-afnemoweb/fatal/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date5}.fatal.log" />
+		<!--<param name="DatePattern" value=".yyyy-MM-dd" />-->
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<param name="threshold" value="FATAL" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] Message: %m%n" />
+		</layout>
+	</appender>
+	<appender name="traceappender"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="logs-afnemoweb/trace/${current.date1}/${current.date2}/${current.date3}/afnemo_${current.date5}.trace.log" />
+		<!--<param name="DatePattern" value=".yyyy-MM-dd" />-->
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<param name="threshold" value="TRACE" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="-- [%-5p]|%d{yyyy-MM-dd EEE, d MMM HH:mm:ss.SSS}|File: %F|[%C{1} - %M:line %L]|[%t] Message: %m%n" />
+		</layout>
+	</appender>
+
+	<root>
+		<priority value="TRACE"></priority>
+		<appender-ref ref="console" />
+		<appender-ref ref="infoappender" />
+		<appender-ref ref="debugappender" />
+		<appender-ref ref="errorappender" />
+		<appender-ref ref="warnappender" />
+		<appender-ref ref="fatalappender" />
+		<appender-ref ref="traceappender" />
+	</root>
+</log4j:configuration>

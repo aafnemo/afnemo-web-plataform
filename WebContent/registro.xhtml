@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+>
+
+<ui:composition template="/template.xhtml">
+
+	<ui:define name="content">
+		<h:form id="registro">
+			<h:panelGrid columns="2" cellpadding="5">
+				<h:outputLabel for="id" value="Número de identificación" />
+				<h:inputText id="id" value="#{controladorPersona}"></h:inputText>
+				<h:outputLabel for="nombres" value="Nombres" />
+				<h:inputText id="nombres"></h:inputText>
+				<h:outputLabel for="nombres" value="Primer Apellido" />
+				<h:inputText id="apellido1"></h:inputText>
+				<h:outputLabel for="nombres" value="Segundo Apellido" />
+				<h:inputText id="apellido2"></h:inputText>
+				<h:outputLabel for="correo" value="Correo" />
+				<h:inputText id="email" required="true" label="Email"
+					validatorMessage="#{Persona.crearPersona} is not valid">
+					<f:validateRegex
+						pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
+				</h:inputText>
+				<h:outputLabel for="date" value="Cumpleaños" />
+				<h:inputText id="date"></h:inputText>
+				<h:outputLabel for="sexo" value="Genero" />
+				<h:inputText id="sexo"></h:inputText>
+				<h:outputLabel for="telefono" value="Teléfono" />
+				<h:inputText id="telefono"></h:inputText>
+				<h:outputLabel for="usuario" value="Usuario" />
+				<h:inputText id="usuario"></h:inputText>
+				<h:outputLabel for="pass" value="Nombres" />
+				<h:inputSecret id="pass"></h:inputSecret>
+
+				<h:commandButton value="submit" action="#{persona.crearPersona}"></h:commandButton>
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>
