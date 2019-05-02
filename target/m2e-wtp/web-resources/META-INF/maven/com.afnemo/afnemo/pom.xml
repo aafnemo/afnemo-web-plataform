@@ -4,11 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.afnemo</groupId>
 	<artifactId>afnemo</artifactId>
-<<<<<<< HEAD
-	<version>V2.7</version>
-=======
-	<version>V2.9</version>
->>>>>>> release/V2.9
+	<version>V3.0</version>
 	<packaging>war</packaging>
 	<name>Asociacion Afrocultural Neftali Mosquera</name>
 	<description>Plataforma Web</description>

@@ -19,45 +19,62 @@ import javax.faces.context.FacesContext;
 import com.afnemo.commons.Logs;
 import com.afnemo.model.dao.PersonaDao;
 import com.afnemo.model.dto.Persona;
+import com.afnemo.model.dto.Usuario;
 
 @ManagedBean
 @ApplicationScoped
 public class ControladorPersona extends Logs {
 	private static final boolean ESTADO = false;
 	private static PersonaDao pdao = new PersonaDao();
-	private String id;
-	private String nombres;
-	private String apellido1;
-	private String apellido2;
-	private String correo;
-	private String date;
-	private String sex;
-	private String telefono;
-	private String user;
+	private Persona person = new Persona();
+	private Usuario user = new Usuario();
 	private String password;
-
 	public String crearPersona() {
 		try {
 
-			Persona person = new Persona();
-			person.setId(this.id);
-			person.setNombres(this.nombres);
-			person.setApellido1(this.apellido1);
-			person.setApellido2(this.apellido2);
-			person.setCorreo(this.correo);
-			Date birthday = new SimpleDateFormat("dd-MM-yyyy").parse(this.date);
-			person.setFechaNacimiento(birthday);
-			person.setSexo(this.sex);
-			person.setEstado(ESTADO);
-			person.setTelefono(this.telefono);
+			/**
+			 * person.setId(this); person.setNombres(this.nombres);
+			 * person.setApellido1(this.apellido1);
+			 * person.setApellido2(this.apellido2);
+			 * person.setCorreo(this.correo); Date birthday = new
+			 * SimpleDateFormat("dd-MM-yyyy").parse(this.date);
+			 * person.setFechaNacimiento(birthday); person.setSexo(this.sex);
+			 * person.setEstado(ESTADO); person.setTelefono(this.telefono);
+			 */
 			ControladorUsuario cu = new ControladorUsuario();
-			cu.crearUsario(this.user, this.password);
-			person.setUsuario(cu.consultarUsuario(user));
+			person.setUsuario(cu.consultarUsuario(user.getId()));
+			cu.crearUsario(user.getId(), password);
 			pdao.crearPersona(person);
-			return "Registro exitoso";
+			return "registro.xhtml";
 		} catch (Exception e) {
-			return "Error al crear la persona";
+			log.error("Error al Registrar usuario" + e.getMessage());
+			e.printStackTrace();
+			return "registro.xhtml";
 		}
+	}
+
+	public Persona getPerson() {
+		return person;
+	}
+
+	public void setPerson(Persona person) {
+		this.person = person;
+	}
+
+	public Usuario getUser() {
+		return user;
+	}
+
+	public void setUser(Usuario user) {
+		this.user = user;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public Persona consultarPersona(String id) {
@@ -73,6 +90,6 @@ public class ControladorPersona extends Logs {
 		String value = FacesContext.getCurrentInstance().getExternalContext()
 				.getRequestParameterMap().get("hidden1");
 		log.debug(value + "Pruebas back");
-		return null;
+		return "index.xhtml";
 	}
 }

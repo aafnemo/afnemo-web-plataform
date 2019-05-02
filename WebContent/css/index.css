@@ -2,7 +2,7 @@
 
 * {
 	font-family: sans-serif;
-	margin-right: 2px;
+	margin-right: 0px;
 	font-size: large;
 }
 
@@ -11,8 +11,9 @@
 }
 
 .header {
-	background: #00aeef; /*#64C0E8; */
-	margin-left: -5px;
+	background: #64C0E8;
+	margin-left: -8px;
+	margin-right: 0px;
 	margin-top: -10px;
 }
 
@@ -28,18 +29,14 @@ div {
 	background: url("images/background-body.jpg") 100% 100% no-repeat;
 }
 
-|
-body {
-	background-image:
-		url("https://www.nesdis.noaa.gov/sites/all/themes/nesdis_bootstrap/images/weather_illustration.jpg")
-		100% 100% no-repeat;
-	background-color: #cccccc;
-}
-
 @import
 	url(https://fonts.googleapis.com/css?family=Rubik:300,400,500,700);
 
 body {
+	background-image:
+		url("https://www.nesdis.noaa.gov/sites/all/themes/nesdis_bootstrap/images/weather_illustration.jpg")
+		100% 100% no-repeat;
+	
 	font-family: Rubik, sans-serif;
 	position: relative;
 	font-weight: 400;
@@ -56,14 +53,14 @@ li {
 }
 
 a {
-	color: black;
+	color: #ff0000;
 }
 
 a:focus, a:hover {
 	text-decoration: none;
 	-webkit-transition: .3s ease;
 	-o-transition: .3s ease;
-	transition: .3s ease
+	transition: .2s ease
 }
 
 a:focus {
@@ -71,12 +68,12 @@ a:focus {
 }
 
 a:hover, a:active {
-	color: red;
+	color: white;
 	text-decoration: underline;
 }
 
 a:visited {
-	color: green;
+	color: #6c633c;
 }
 
 img {
@@ -86,7 +83,7 @@ img {
 p {
 	font-size: 16px;
 	line-height: 30px;
-	color: #898b96;
+	color: #000000;
 	font-weight: 300
 }
 
@@ -106,8 +103,8 @@ h4 {
 	line-height: 40px;
 	cursor: pointer;
 	width: 40px;
-	background: #5867dd;
-	color: #fff;
+	background: #ffff00;
+	color: #000000;
 	position: fixed;
 	-webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
 	box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
@@ -125,19 +122,20 @@ h4 {
 }
 
 .footer-big {
-	padding: 25px 0 5px 0
+	padding: 25px 1px 0px 1px;
 }
 
 .footer-big .footer-widget {
 	margin-bottom: 40px
+	
 }
 
 .footer--light {
-	background: #fff
+	background: #804040;
 }
 
 .footer-big .footer-menu ul li a, .footer-big p, .footer-big ul li {
-	color: #000
+	color: #ffffff
 }
 
 .footer-menu {
@@ -169,7 +167,7 @@ h4 {
 .mini-footer {
 	background: #192027;
 	text-align: center;
-	padding: 12px 0
+	padding: 1px 10px 5px 10px;
 }
 
 .mini-footer p {
@@ -180,7 +178,7 @@ h4 {
 }
 
 .mini-footer p a {
-	color: #5867dd
+	color: #ffffff
 }
 
 .mini-footer p a:hover {
@@ -213,11 +211,11 @@ h4 {
 }
 
 .widget-about .contact-details li a {
-	color: #5867dd
+	color: #ffffff
 }
 
 .widget-about .contact-details li a:hover {
-	color: red;
+	color: #cb8e34;
 }
 
 @media ( max-width :991px) {
@@ -271,5 +269,5 @@ h4 {
 }
 
 i {
-	color: #444;
+	color: #ffffff;
 }
