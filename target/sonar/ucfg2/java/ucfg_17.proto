@@ -1,21 +1,23 @@
 
-Ycom.afnemo.controller.ControladorTipoUsuario#seleccionarTiposdeUsuarios()Ljava/util/List;
-__unknown_file ("1*“
+hcom.afnemo.controller.ControladorTipoUsuario#seleccionarTipoUsuario(I)Lcom/afnemo/model/dto/TipoUsuario;
+__unknown_file ("1*ò
 1Z
-PA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorTipoUsuario.java#	 #(Ì
+PA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorTipoUsuario.java 	  (Ì
 É
 Z
-PA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorTipoUsuario.java#	 #()
+PA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorTipoUsuario.java 	  ()
 %0#com.afnemo.model.dao.TipoUsuarioDao"__id*:*8.
 ,com.afnemo.controller.ControladorTipoUsuario"
-tdaoìé
+tdao¸µ
 Z
-PA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorTipoUsuario.java#	 #(
-%1java.util.List"=com.afnemo.model.dao.TipoUsuarioDao#findAll()Ljava/util/List;*+
+PA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorTipoUsuario.java 	  ((&
+%1 com.afnemo.model.dto.TipoUsuario"_com.afnemo.model.dao.TipoUsuarioDao#seleccionarTipoUsuario(I)Lcom/afnemo/model/dto/TipoUsuario;*+
 )
-%0#com.afnemo.model.dao.TipoUsuarioDao2	findAll()"t
+%0#com.afnemo.model.dao.TipoUsuarioDao*
+""2seleccionarTipoUsuario(I)"†
 Z
-PA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorTipoUsuario.java# #(
-
-%1java.util.ListB0.
+PA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorTipoUsuario.java   ()(
+&
+%1 com.afnemo.model.dto.TipoUsuario:
+""B0.
 ,com.afnemo.controller.ControladorTipoUsuario

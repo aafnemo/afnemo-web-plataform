@@ -2,22 +2,37 @@
 kcom.afnemo.controller.ControladorPersona#consultarPersona(Ljava/lang/String;)Lcom/afnemo/model/dto/Persona;
 __unknown_file ("1*é
 1V
+<<<<<<< HEAD
 LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java.	 .(À
 ½
 V
 LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java.	 .(%
+=======
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java3	 3(À
+½
+V
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java3	 3(%
+>>>>>>> V2.7
 %0com.afnemo.model.dao.PersonaDao"__id*6*4*
 (com.afnemo.controller.ControladorPersona"
 pdaoÈÅ
 V
+<<<<<<< HEAD
 LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java.	 .( "
+=======
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java3	 3( "
+>>>>>>> V2.7
 %1com.afnemo.model.dto.Persona"`com.afnemo.model.dao.PersonaDao#consultarPorId(Ljava/lang/String;)Lcom/afnemo/model/dto/Persona;*'
 %
 %0com.afnemo.model.dao.PersonaDao*
 
 idjava.lang.String2"consultarPorId(Ljava/lang/String;)"~
 V
+<<<<<<< HEAD
 LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java. .(!$
+=======
+LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java3 3(!$
+>>>>>>> V2.7
 "
 %1com.afnemo.model.dto.Persona:
 idjava.lang.StringB,*

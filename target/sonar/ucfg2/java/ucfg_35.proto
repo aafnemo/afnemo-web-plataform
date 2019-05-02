@@ -1,103 +1,28 @@
 
-`com.afnemo.model.dao.PersonaDao#consultarPorId(Ljava/lang/String;)Lcom/afnemo/model/dto/Persona;
-__unknown_file ("paramAnnotations*Ð
-6M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javab b(#öó
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javab b(#
-
-%7void"9org.apache.logging.log4j.Logger#info(Ljava/lang/String;)V*'
-%
-%5org.apache.logging.log4j.Logger*
-
-%6java.lang.String2info(Ljava/lang/String;)*
-1*˜
-7M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaa a('§
-¤
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaa a(''
-personacom.afnemo.model.dto.Persona"__id*$
-"
-%4com.afnemo.model.dto.Persona­
-ª
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javab b(%
-%5org.apache.logging.log4j.Logger"__id*,**!
-com.afnemo.model.dao.PersonaDao"
-logäá
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javab b("
-%6java.lang.String"=com.afnemo.model.dto.Persona#getApellido1()Ljava/lang/String;*)
-'
-personacom.afnemo.model.dto.Persona2getApellido1()*
-6*Ò
-8M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaa a(¬
+Hcom.afnemo.model.dao.PersonaDao#consultarTodasPersonas()Ljava/util/List;
+__unknown_file ("1*µ
+1M
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaY	 Y(¬
 ©
 M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaa a(%
-%3javax.persistence.EntityManager"__id*+*)!
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaY	 Y(%
+%0javax.persistence.EntityManager"__id*+*)!
 com.afnemo.model.dao.PersonaDao"
-emÉÆ
+emèå
 M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaa a('"
-%4com.afnemo.model.dto.Persona"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaY	 Y(>"
+%1javax.persistence.TypedQuery"sjavax.persistence.EntityManager#createNamedQuery(Ljava/lang/String;Ljava/lang/Class;)Ljavax/persistence/TypedQuery;*'
 %
-%3javax.persistence.EntityManager*
-""*
-
-idjava.lang.String2)find(Ljava/lang/Class;Ljava/lang/Object;)*
-7*Á
-9M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java` `(­
-ª
+%0javax.persistence.EntityManager*
+Persona.findAll*
+""25createNamedQuery(Ljava/lang/String;Ljava/lang/Class;)ÝÚ
 M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java` `(%
-%1org.apache.logging.log4j.Logger"__id*,**!
-com.afnemo.model.dao.PersonaDao"
-log·´
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaY	 Z(
+%2java.util.List"<javax.persistence.TypedQuery#getResultList()Ljava/util/List;*$
+"
+%1javax.persistence.TypedQuery2getResultList()"g
 M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java` `()
-
-%2void"Lorg.apache.logging.log4j.Logger#debug(Ljava/lang/String;Ljava/lang/Object;)V*'
-%
-%1org.apache.logging.log4j.Logger*
-consultar por id: {0}*
-
-idjava.lang.String2+debug(Ljava/lang/String;Ljava/lang/Object;)*
-8*
-paramAnnotationsM
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java] ]()–
-“
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java\ \(
-
-%0"
-__annotate*
-java.lang.Override*
-
-idjava.lang.String
-}
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java]& ]((
-idjava.lang.String"__annotation*
-
-%0*
-10*ä
-10M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java^ ^(‰
-†
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.java^ ^('
-personacom.afnemo.model.dto.Persona"__id*
-""*
-9*Î
-1M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javah	 h("z
-M
-CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javah h()
-'
-personacom.afnemo.model.dto.Persona:
-idjava.lang.StringB#!
+CA:\AFNEMO\afnemo\src\main\java\com\afnemo\model\dao\PersonaDao.javaY Z(
+
+%2java.util.ListB#!
 com.afnemo.model.dao.PersonaDao
