@@ -22,7 +22,8 @@ public class ControladorTipoUsuario extends Logs {
 		try {
 			tu.setDetalle(tipo);
 			tdao.crearTipoUsuario(tu);
-			log.info("El tipo de usuario {0} ha sido creado exitosamente",tipo);
+			log.info("El tipo de usuario " + tipo
+					+ " ha sido creado exitosamente");
 		} catch (Exception e) {
 			log.error("Error al crear el tipo de usuario " + tipo + " debido a "
 					+ e.getMessage());

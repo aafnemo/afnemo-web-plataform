@@ -12,7 +12,6 @@ import javax.persistence.criteria.Root;
 
 import com.afnemo.commons.Logs;
 import com.afnemo.model.dto.Persona;
-import com.afnemo.model.dto.Usuario;
 import com.afnemo.model.interfaces.PersonaDaoInterface;
 
 /**
@@ -93,7 +92,7 @@ public class PersonaDao extends Logs implements PersonaDaoInterface {
 	public Persona consultarPorId(String id) {
 		Persona persona;
 		try {
-			log.debug("consultar por id: {0}", id);
+			log.debug("consultar por id: " + id);
 			persona = em.find(Persona.class, id);
 			log.info(persona.getApellido1());
 		} catch (Exception e) {

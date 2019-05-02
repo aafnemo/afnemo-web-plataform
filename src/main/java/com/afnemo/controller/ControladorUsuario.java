@@ -36,16 +36,15 @@ public class ControladorUsuario extends Logs {
 			usuario.setPassword(password);
 			usuario.setEstado(ESTADO);
 			udao.crearUsuario(usuario);
-			log.info("Se ha creado exitosamente el usuario: {0} ", id);
+			log.info("Se ha creado exitosamente el usuario: " + id);
 		} catch (Exception e) {
-			log.error(
-					"No se ha podido crear exitosamente el usuario {0} debido a el siguiente error. {1}",
-					id, e.getMessage());
+			log.error("No se ha podido crear exitosamente el usuario" + id
+					+ " debido a el siguiente error. " + e.getMessage());
 		}
 	}
 
-	public String consultarUsuario(String id) {
-		return udao.consultarUsuario(id).getId();
+	public Usuario consultarUsuario(String id) {
+		return udao.consultarUsuario(id);
 	}
 
 	public String actualizarUsuario(String id, String contrasena) {
@@ -54,8 +53,8 @@ public class ControladorUsuario extends Logs {
 		char[] password = validarPassword(contrasena);
 		usuario.setPassword(password);
 		udao.actualizarUsuario(usuario);
-		log.info("La contraseña del usuario: {0} fue actualizada correctamente",
-				id);
+		log.info("La contraseña del usuario: " + id
+				+ " fue actualizada correctamente");
 		return "Contraseña actualizada conrrectamente";
 	}
 

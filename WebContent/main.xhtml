@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<ui:composition>
+	<header class="header"> <nav
+		class="navbar navbar-expand-lg navbar-light bg-primary"> <a
+		class="navbar-brand" href="index.xhtml"><img src="images/Logo.png"
+		height="120px" alt="Asociación Afrocultural Neftalí Mosquera" /></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse"
+		data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+		aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ui:insert name="menu">
+			<ul class="navbar-nav">
+				<li class="nav-item active"><a class="nav-link"
+					href="index.xhtml">Inicio <ui:insert name="currentinicio"></ui:insert>
+				</a></li>
+				<li class="nav-item"><a class="nav-link" href="registro.xhtml">Registrarse<ui:insert
+							name="currentconjuntociudades"></ui:insert>
+				</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="selectbycity.xhtml"> Iniciar Sesion <ui:insert
+							name="currentiniciounaciudad"></ui:insert>
+				</a></li>
+			</ul>
+		</ui:insert>
+	</div>
+	</nav> </header>
+</ui:composition>
+</html>

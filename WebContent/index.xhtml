@@ -11,11 +11,12 @@
 </head>
 <ui:composition template="/template.xhtml">
 	<ui:define name="title">Inicio</ui:define>
+	<ui:define name="content">
+		<h:form id="myForm">
+			<input type="hidden" name="hidden1" value="this is hidden2" />
+			<h:commandButton value="submit" action="#{persona.action}" />
+		</h:form>
+	</ui:define>
 </ui:composition>
-<ui:define name="content">
-	<h:form id="myForm">
-		<input type="hidden" name="hidden1" value="this is hidden2" />
-		<h:commandButton value="submit" action="#{Persona.action}" />
-	</h:form>
-</ui:define>
+
 </html>
