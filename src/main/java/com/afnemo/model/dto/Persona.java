@@ -2,7 +2,6 @@ package com.afnemo.model.dto;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
 
 import javax.persistence.*;
 /**
@@ -35,6 +34,8 @@ public class Persona implements Serializable {
 	private String telefono;
 	@Column(name="PRS_Estado",nullable=false)
 	private boolean estado;
+	@Column(name="PRS_Entidad",nullable=false)
+	private String entidad;
 	@Column(name = "PRS_FechaNacimiento", nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date fechaNacimiento;
@@ -44,8 +45,6 @@ public class Persona implements Serializable {
 	@OneToOne
 	@JoinColumn(name="PK_USR_Id",nullable = false)
 	private Usuario usuario;
-	@ManyToMany
-	private Set<Actividad> actividades;
 	public String getId() {
 		return id;
 	}

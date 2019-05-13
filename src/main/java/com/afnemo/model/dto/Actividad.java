@@ -35,6 +35,9 @@ public class Actividad implements Serializable {
 	private String localizacion;
 	@Column(name="ACT_Estado",nullable=false)
 	private boolean estado;
+	@OneToOne
+	@JoinColumn(name="PK_USR_Id",nullable = false)
+	private Usuario usuario;
 	
 	public int getId() {
 		return id;

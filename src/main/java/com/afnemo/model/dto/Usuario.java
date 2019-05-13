@@ -18,6 +18,7 @@ import javax.persistence.*;
 public class Usuario implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@Column(name = "PK_USR_Id", length = 15)
 	private String id;
@@ -30,6 +31,8 @@ public class Usuario implements Serializable {
 	private TipoUsuario tipoUsuario;
 	@OneToOne(mappedBy = "usuario")
 	private Persona persona;
+	@OneToOne(mappedBy = "usuario")
+	private Actividad actividad;
 	public Usuario() {
 		// default implementation ignored
 	}
