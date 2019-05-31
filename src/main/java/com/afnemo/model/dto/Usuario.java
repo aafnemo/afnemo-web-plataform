@@ -18,63 +18,41 @@ import javax.persistence.*;
 public class Usuario implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@Column(name = "PK_USR_Id", length = 15)
 	private String id;
-	@Column(name = "USR_Password", length = 512, nullable = false)
-	private char[] password;
-	@Column(name="USR_Estado",nullable=false)
+	@Column(name = "USR_Estado", nullable = false)
 	private boolean estado;
-	@ManyToOne
-	@JoinColumn(name = "FK_TU_Id", nullable = false)
+	@Column(name = "USR_Password", length = 254, nullable = false)
+	private String password;
+	@ManyToOne(optional = false)
 	private TipoUsuario tipoUsuario;
-	@OneToOne(mappedBy = "usuario")
-	private Persona persona;
-	@OneToOne(mappedBy = "usuario")
-	private Actividad actividad;
-	public Usuario() {
-		// default implementation ignored
-	}
-
+	
+	
 	public String getId() {
 		return id;
 	}
-
 	public void setId(String id) {
 		this.id = id;
 	}
-
-	public char[] getPassword() {
-		return password;
-	}
-
-	public void setPassword(char[] password) {
-		this.password = password;
-	}
-
-	public TipoUsuario getTipoUsuario() {
-		return tipoUsuario;
-	}
-
-	public void setTipoUsuario(TipoUsuario tipoUsuario) {
-		this.tipoUsuario = tipoUsuario;
-	}
-
-	public Persona getPersona() {
-		return persona;
-	}
-
-	public void setPersonas(Persona persona) {
-		this.persona = persona;
-	}
-
 	public boolean isEstado() {
 		return estado;
 	}
-
 	public void setEstado(boolean estado) {
 		this.estado = estado;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public TipoUsuario getTipoUsuario() {
+		return tipoUsuario;
+	}
+	public void setTipoUsuario(TipoUsuario tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
 	}
 
 }

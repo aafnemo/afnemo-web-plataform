@@ -33,7 +33,7 @@ public class ControladorUsuario extends Logs {
 		try {
 			usuario.setId(id);
 			char[] password = validarPassword(contrasena);
-			usuario.setPassword(password);
+			usuario.setPassword(String.valueOf(password));
 			usuario.setEstado(ESTADO);
 			udao.crearUsuario(usuario);
 			log.info("Se ha creado exitosamente el usuario: " + id);
@@ -51,7 +51,7 @@ public class ControladorUsuario extends Logs {
 
 		Usuario usuario = udao.consultarUsuario(id);
 		char[] password = validarPassword(contrasena);
-		usuario.setPassword(password);
+		usuario.setPassword(String.valueOf(password));
 		udao.actualizarUsuario(usuario);
 		log.info("La contraseña del usuario: " + id
 				+ " fue actualizada correctamente");

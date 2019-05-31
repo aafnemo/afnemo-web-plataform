@@ -33,11 +33,11 @@ public class Actividad implements Serializable {
 	private Date fechaFinal;
 	@Column(name = "ACT_Localizacion", length = 45, nullable = false)
 	private String localizacion;
-	@Column(name="ACT_Estado",nullable=false)
+	@Column(name = "ACT_Estado", nullable = false)
 	private boolean estado;
-	@OneToOne
-	@JoinColumn(name="PK_USR_Id",nullable = false)
+	@ManyToOne(optional = false)
 	private Usuario usuario;
+	
 	
 	public int getId() {
 		return id;
@@ -80,6 +80,12 @@ public class Actividad implements Serializable {
 	}
 	public void setEstado(boolean estado) {
 		this.estado = estado;
+	}
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 }

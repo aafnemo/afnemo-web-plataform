@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      lang="es">
+    <head>
+        <!-- ========= DEFINITION TEMPLATE HEAD =============-->
+        <!--===============================================================================================-->
+        <link rel="icon"  type="image/x-icon" href="images/Icono.ico" />
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css"
+              href="vendor2/animate/animate.css" />
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css"
+              href="vendor2/select2/select2.min.css" />
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="css/util.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <!--===============================================================================================-->
+        <!-- ========= DEFINITION TEMPLATE HEAD =============-->
+        <title>AFNEMO :: <ui:insert name="title">Sitio en Construcción</ui:insert></title>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+        <meta name="description" content=""/>
+        <meta name="keywords" content=""/>
+        <meta name="author" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <link
+            href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+            rel="stylesheet" />
+
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="css/owl.carousel.css"/>
+        <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="css/templatemo-style.css"/>
+        <link rel="stylesheet" href="css/index.css"/>
+        <link rel="stylesheet" href="css/mystyle.css"/>
+        <link rel="icon" type="image/png" href="images/Icono.ico" />
+
+    </head>
+    <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+        <ui:insert name="header">
+            <ui:include src="commonheader.xhtml"/>
+        </ui:insert>
+        <ui:insert name="body">
+
+            <div class="size1 bg0 where1-parent">
+                <!-- Coutdown -->
+                <div class="flex-c-m bg-img1 size2 where1 overlay1 where2 respon2"
+                     style="background-image: url('images/background-body.jpg');">
+                    <div class="wsize2 flex-w flex-c-m cd100 js-tilt">
+                        <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+                            <span class="l2-txt1 p-b-9 days"></span> <span class="s2-txt4">Dias</span>
+                        </div>
+                        <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+                            <span class="l2-txt1 p-b-9 hours"></span> <span class="s2-txt4">Horas</span>
+                        </div>
+                        <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+                            <span class="l2-txt1 p-b-9 minutes"></span> <span class="s2-txt4">Minutos</span>
+                        </div>
+                        <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+                            <span class="l2-txt1 p-b-9 seconds"></span> <span class="s2-txt4">Segundos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div
+                    class="size3 flex-col-sb flex-w p-l-75 p-r-75 p-t-45 p-b-45 respon1">
+                    <div class="wrap-pic1">
+                        <img src="images/Logo.jpg" alt="LOGO" />
+                    </div>
+                    <div class="p-t-50 p-b-60">
+                        <p class="m1-txt1 p-b-36">
+                            Nuestro sitio está en construcción <span class="m1-txt2">Vuelve
+                                pronto</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--===============================================================================================-->
+            <script src="vendor2/jquery/jquery-3.2.1.min.js"></script>
+            <!--===============================================================================================-->
+            <script src="vendor2/bootstrap/js/popper.js"></script>
+            <script src="vendor2/bootstrap/js/bootstrap.min.js"></script>
+            <!--===============================================================================================-->
+            <script src="vendor2/select2/select2.min.js"></script>
+            <!--===============================================================================================-->
+            <script src="vendor2/countdowntime/moment.min.js"></script>
+            <script src="vendor2/countdowntime/moment-timezone.min.js"></script>
+            <script src="vendor2/countdowntime/moment-timezone-with-data.min.js"></script>
+            <script src="vendor2/countdowntime/countdowntime.js"></script>
+            <script>
+                $('.cd100').countdown100({
+                    /*Set Endtime here*/
+                    /*Endtime must be > current time*/
+                    endtimeYear: 2019,
+                    endtimeMonth: 5,
+                    endtimeDate: 20,
+                    endtimeHours: 20,
+                    endtimeMinutes: 0,
+                    endtimeSeconds: 0,
+                    timeZone: "America/Bogota"
+                            // ex:  timeZone: "America/Bogota"
+                            //go to " http://momentjs.com/timezone/ " to get timezone
+                });
+            </script>
+            <!--===============================================================================================-->
+            <script src="vendor2/tilt/tilt.jquery.min.js"></script>
+            <script>
+                $('.js-tilt').tilt({
+                    scale: 1.1
+                })
+            </script>
+            <!--===============================================================================================-->
+            <script src="js/main.js"></script>
+
+        </ui:insert>   
+        <ui:insert name="footer">
+            <ui:include src="/footer.xhtml"/>
+        </ui:insert>
+        <!-- SCRIPTS -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/smoothscroll.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>

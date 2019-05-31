@@ -32,9 +32,9 @@ public class Persona implements Serializable {
 	private String sexo;
 	@Column(name = "PRS_Telefono", length = 12, nullable = true)
 	private String telefono;
-	@Column(name="PRS_Estado",nullable=false)
+	@Column(name = "PRS_Estado", nullable = false)
 	private boolean estado;
-	@Column(name="PRS_Entidad",nullable=false)
+	@Column(name = "PRS_Entidad", nullable = false)
 	private String entidad;
 	@Column(name = "PRS_FechaNacimiento", nullable = false)
 	@Temporal(TemporalType.DATE)
@@ -42,8 +42,7 @@ public class Persona implements Serializable {
 	@Column(name = "PRS_FechaRegistro", nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date fechaRegistro;
-	@OneToOne
-	@JoinColumn(name="PK_USR_Id",nullable = false)
+	@ManyToOne(optional = false)
 	private Usuario usuario;
 	public String getId() {
 		return id;
@@ -81,17 +80,11 @@ public class Persona implements Serializable {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	public Date getFechaNacimiento() {
-		return fechaNacimiento;
+	public String getTelefono() {
+		return telefono;
 	}
-	public void setFechaNacimiento(Date fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento;
-	}
-	public Usuario getUsuario() {
-		return usuario;
-	}
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
 	}
 	public boolean isEstado() {
 		return estado;
@@ -99,11 +92,29 @@ public class Persona implements Serializable {
 	public void setEstado(boolean estado) {
 		this.estado = estado;
 	}
-	public String getTelefono() {
-		return telefono;
+	public String getEntidad() {
+		return entidad;
 	}
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
+	public void setEntidad(String entidad) {
+		this.entidad = entidad;
 	}
-	
+	public Date getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+	public void setFechaNacimiento(Date fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+	public Date getFechaRegistro() {
+		return fechaRegistro;
+	}
+	public void setFechaRegistro(Date fechaRegistro) {
+		this.fechaRegistro = fechaRegistro;
+	}
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
 }

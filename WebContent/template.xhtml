@@ -1,138 +1,52 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui"
-	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-<h:head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="images/Icono.ico" />
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css"
-		href="vendor2/bootstrap/css/bootstrap.min.css" />
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css"
-		href="fonts2/font-awesome-4.7.0/css/font-awesome.min.css" />
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css"
-		href="vendor2/animate/animate.css" />
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css"
-		href="vendor2/select2/select2.min.css" />
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css" />
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<!--===============================================================================================-->
-	<link rel="stylesheet"
-		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-		crossorigin="anonymous" />
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-		crossorigin="anonymous"></script>
-	<link
-		href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
-		rel="stylesheet" />
-	<link href="css/mystyle.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	<title>AFNEMO :: <ui:insert name="title" /></title>
-	<link rel="icon" type="image/png" href="images/Icono.ico" />
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
 
-</h:head>
-<h:body id="body">
-	<div id="layout">
-		<div id="logo"></div>
-		<ui:include src="/main.xhtml" />
-	</div> 
-	
-	<div id="content">
-		<ui:insert name="content">
-			<div class="size1 bg0 where1-parent">
-				<!-- Coutdown -->
-				<div class="flex-c-m bg-img1 size2 where1 overlay1 where2 respon2"
-					style="background-image: url('images/background-body.jpg');">
-					<div class="wsize2 flex-w flex-c-m cd100 js-tilt">
-						<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
-							<span class="l2-txt1 p-b-9 days"></span> <span class="s2-txt4">Dias</span>
-						</div>
-						<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
-							<span class="l2-txt1 p-b-9 hours"></span> <span class="s2-txt4">Horas</span>
-						</div>
-						<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
-							<span class="l2-txt1 p-b-9 minutes"></span> <span class="s2-txt4">Minutos</span>
-						</div>
-						<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
-							<span class="l2-txt1 p-b-9 seconds"></span> <span class="s2-txt4">Segundos</span>
-						</div>
-					</div>
-				</div>
+    <h:head>
+        <title><ui:insert name="title">Default Title</ui:insert></title>
+        <h:outputStylesheet library="css" name="jsfcrud.css"/>
+        <h:outputScript library="js" name="jsfcrud.js"/>
+        <link rel="icon"  type="image/x-icon" href="images/Icono.ico" />
+        <link rel="icon" type="image/png" href="images/Icono.ico" />
+    </h:head>
 
-				<!-- Form -->
-				<div
-					class="size3 flex-col-sb flex-w p-l-75 p-r-75 p-t-45 p-b-45 respon1">
-					<div class="wrap-pic1">
-						<img src="images/Logo.jpg" alt="LOGO" />
-					</div>
-					<div class="p-t-50 p-b-60">
-						<p class="m1-txt1 p-b-36">
-							Nuestro sitio está en construcción <span class="m1-txt2">Vuelve
-								pronto</span>
-						</p>
-					</div>
-				</div>
-			</div>
-			<!--===============================================================================================-->
-			<script src="vendor2/jquery/jquery-3.2.1.min.js"></script>
-			<!--===============================================================================================-->
-			<script src="vendor2/bootstrap/js/popper.js"></script>
-			<script src="vendor2/bootstrap/js/bootstrap.min.js"></script>
-			<!--===============================================================================================-->
-			<script src="vendor2/select2/select2.min.js"></script>
-			<!--===============================================================================================-->
-			<script src="vendor2/countdowntime/moment.min.js"></script>
-			<script src="vendor2/countdowntime/moment-timezone.min.js"></script>
-			<script src="vendor2/countdowntime/moment-timezone-with-data.min.js"></script>
-			<script src="vendor2/countdowntime/countdowntime.js"></script>
-			<script>
-				$('.cd100').countdown100({
-					/*Set Endtime here*/
-					/*Endtime must be > current time*/
-					endtimeYear : 2019,
-					endtimeMonth : 5,
-					endtimeDate : 13,
-					endtimeHours : 20,
-					endtimeMinutes : 0,
-					endtimeSeconds : 0,
-					timeZone : "America/Bogota"
-				// ex:  timeZone: "America/Bogota"
-				//go to " http://momentjs.com/timezone/ " to get timezone
-				});
-			</script>
-			<!--===============================================================================================-->
-			<script src="vendor2/tilt/tilt.jquery.min.js"></script>
-			<script>
-				$('.js-tilt').tilt({
-					scale : 1.1
-				})
-			</script>
-			<!--===============================================================================================-->
-			<script src="js/main.js"></script>
-		</ui:insert>
-	</div>
+    <h:body>
 
-	<div id="footer">
-		<ui:include src="/footer.xhtml" />
-	</div>
-</h:body>
+        <p:growl id="growl" life="3000" />
+        <p:layout fullPage="true">
+            <p:layoutUnit position="north" size="65" header="#{bundle.AppName}" >
+                <ui:insert name="menu">
+                    <h:form id="menuForm">
+                        <div>
+                            <p:menubar>
+                                <p:menuitem value="#{bundle.Home}" outcome="/welcomePrimefaces" icon="ui-icon-home"/>
+                                <p:submenu label="#{bundle.Maintenance}">
+                                    <p:menuitem value="Actividad" outcome="/actividad/List.xhtml" />
+                                    <p:menuitem value="Persona" outcome="/persona/List.xhtml" />
+                                    <p:menuitem value="TipoUsuario" outcome="/tipousuario/List.xhtml" />
+                                    <p:menuitem value="Usuario" outcome="/usuario/List.xhtml" />
+                                    <p:menuitem value="Historia" outcome="/trayectoria" />
+                                </p:submenu>
+                                <p:menuitem value="#{bundle.LogOut}" outcome="/index" icon="ui-icon-power"/>
+                            </p:menubar>
+                        </div>
+                    </h:form>
+                </ui:insert>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="south" size="60">
+                <ui:insert name="footer"/>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="center">
+                <ui:insert name="body"/>
+            </p:layoutUnit>
+
+        </p:layout>
+
+    </h:body>
+
 </html>

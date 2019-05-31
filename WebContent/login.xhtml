@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Iniciar Sesión</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="icon" type="image/png" href="images/Icono.ico" />
+    </h:head>
+    <h:body>
+        <ui:composition template="/template.xhtml">
+            <ui:define name="title">
+                Iniciar Sesión
+            </ui:define>
+            <ui:define name="menu">
+                <h:form id="menuForm">
+                    <p:menubar>
+                        <p:menuitem value="#{bundle.Home}" outcome="/index" icon="ui-icon-home"/>
+                    </p:menubar>
+                </h:form>
+            </ui:define>
+            <br/>
+            <ui:define name="body">
+                <div id = "header1" align="center">
+                    <img src="images/Logo.jpg" width="300px"/>
+                </div>
+                <h:form id="form_login">
+                    <div align="center">
+                        <br/><br/><br/><br/>
+                        <p:focus context="form_login" />
+                        <h:panelGrid columns="2">
+                            <h:outputLabel for="username" value="Usuario:  " style="font-size: 16px; "/>
+                            <p:inputText id="username" value="#{inicioSesion.usuario}" required="true" label="Nombre de usuario" />
+                            <h:outputLabel for="password" value="Contraseña:" style="font-size: 16px;"/>
+                            <p:password id="password" value="#{inicioSesion.password}" required="true" label="Contraseña" />
+                        </h:panelGrid>
+                        <h:messages class="error-alert"></h:messages>
+                        <br/>
+                        <p:commandButton value="Ingresar" update="form_login" action="#{inicioSesion.login()}" style="font-size: 13px !important;"></p:commandButton>
+                    </div>
+                </h:form>
+                <br />
+                <div align="center">
+                    <a href="/sgee-proyectos/manuales/Ingreso_y_pagina_principal/index.html" target="_blank" class="link">
+                        <p:graphicImage url="/images/question1.png" title="Ayuda" /><br />Ayuda para ingresar
+                    </a>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://xmlns.jcp.org/jsf/core"
+       xmlns:p="http://primefaces.org/ui"
+       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:composition template="template.xhtml">
+        <style type="text/css">
+            .value {
+                font-weight: bold;
+            }
+        </style>
+        <ui:define name="body">
+            <h:form id="form">
+                <p:dataGrid var="car" value="#{actividadController.items}" columns="3"
+                            rows="12" paginator="true" id="cars"
+                            paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                            rowsPerPageTemplate="3,6,9,12,15">
+                    <f:facet name="header">
+                        Actividades
+                    </f:facet>
+                    <p:panel header="#{car.ACTid}" style="text-align:center" >
+                        <h:panelGrid columns="1" style="width:100%" >
+                            <h:outputText value="Descripción: #{car.ACTDetalle}" />
+                            <h:outputText value="Fecha: #{car.ACTFechaInicio}" />
+                            <h:outputText value="Fecha: #{car.ACTLocalizacion}" />
+                        </h:panelGrid>
+                    </p:panel>
+                </p:dataGrid>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
