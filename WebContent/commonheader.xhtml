@@ -1,56 +1,53 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-    <head>
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<head>
 
-    </head>
-    <ui:composition>
-        <!-- PRE LOADER -->
-        <section class="preloader">
-            <div class="spinner">
+</head>
+<ui:composition>
+	<!-- PRE LOADER -->
+	<section class="preloader">
+	<div class="spinner">
 
-                <span class="spinner-rotate"></span>
-            </div>
-        </section>
+		<span class="spinner-rotate"></span>
+	</div>
+	</section>
 
-        <!-- MENU -->
-        <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
-            <div class="container">
+	<!-- MENU -->
+	<section class="navbar custom-navbar navbar-fixed-top"
+		role="navigation">
+	<div class="container">
 
-                <div class="navbar-header">
-                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon icon-bar"></span>
-                        <span class="icon icon-bar"></span>
-                        <span class="icon icon-bar"></span>
-                    </button>
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse"
+				data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span> <span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
 
-                    <!-- lOGO TEXT HERE -->
-                    <a href="#" class="navbar-brand">AFNEMO</a>
-                </div>
-
-                <!-- MENU LINKS -->
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-nav-first">
-                        <li><h:link outcome="/index.xhtml" value="Inicio"/></li>
-                        <li><h:link outcome="/acerca.xhtml" value="Acerca de nosotros"/></li>
-                        <li><h:link outcome="/labor.xhtml" value="Nuestra labor"/> </li>
-                        <li><h:link outcome="/historia.xhtml" value="Contactanos"/></li>
-
-                        <li><h:link outcome="/historia.xhtml" value="Historia"/></li>
-
-                        <!--<li><h:link outcome="/historia.xhtml" value="Historia"/></li>-->
-
-                        <!-- <li><h:link outcome="/login.xhtml" value="Iniciar sesión"/></li>-->
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="tel:3114965531"><i class="fa fa-phone"></i> +57 311 496 55 31</a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </section>
-    </ui:composition>
+			<!-- lOGO TEXT HERE -->
+			<a href="#" class="navbar-brand">AFNEMO</a>
+		</div>
+		<!-- MENU LINKS -->
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-nav-first">
+				<li><h:link outcome="/index.xhtml" value="Inicio" /></li>
+				<li><h:link outcome="/acerca.xhtml" value="Acerca de nosotros" /></li>
+				<li><h:link outcome="/labor.xhtml" value="Nuestra labor" /></li>
+				<li><h:link outcome="/historia.xhtml" value="Contactanos" /></li>
+				<li><h:link outcome="/historia.xhtml" value="Historia" /></li>
+				<!--<li><h:link outcome="/historia.xhtml" value="Historia"/></li>-->
+				<!-- <li><h:link outcome="/login.xhtml" value="Iniciar sesión"/></li>-->
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="tel:3114965531"><i class="fa fa-phone"></i>
+						+57 311 496 55 31</a></li>
+			</ul>
+		</div>
+	</div>
+	</section>
+</ui:composition>
 </html>
