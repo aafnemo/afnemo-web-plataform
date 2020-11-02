@@ -1,262 +1,0 @@
-
-õcom.afnemo.controller.ControladorPersona#crearPersona(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/lang/String;Lcom/afnemo/model/dto/Usuario;)Ljava/lang/String;
-__unknown_file ("14*Ë
-2V
-<<<<<<< HEAD
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java'
- '("n
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java' '(
-Registro exitoso*–
-13V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java ("¯
-¬
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java ("&
-=======
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java,
- ,("n
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java, ,(
-Registro exitoso*–
-13V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java   ("¯
-¬
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java   ("&
->>>>>>> V2.7
-personcom.afnemo.model.dto.Persona"__id*$
-"
-%0com.afnemo.model.dto.Personaÿü
-V
-<<<<<<< HEAD
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java (
-=======
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java! !(
->>>>>>> V2.7
-
-%2void"7com.afnemo.model.dto.Persona#setId(Ljava/lang/String;)V*(
-&
-personcom.afnemo.model.dto.Persona*
-
-idjava.lang.String2setId(Ljava/lang/String;)*
-12*à
-3V
-<<<<<<< HEAD
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java& &(Á
-¾
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java& &(&
-=======
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java+ +(Á
-¾
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java+ +(&
->>>>>>> V2.7
-%13com.afnemo.model.dao.PersonaDao"__id*6*4*
-(com.afnemo.controller.ControladorPersona"
-pdao¹¶
-V
-<<<<<<< HEAD
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java& &(
-=======
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java+ +(
->>>>>>> V2.7
-%14void"Mcom.afnemo.model.dao.PersonaDao#crearPersona(Lcom/afnemo/model/dto/Persona;)V*(
-&
-%13com.afnemo.model.dao.PersonaDao*(
-&
-personcom.afnemo.model.dto.Persona2,crearPersona(Lcom/afnemo/model/dto/Persona;)*
-2*´
-14V
-<<<<<<< HEAD
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java (!š
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java ("
-%0com.afnemo.model.dto.Persona"com.afnemo.model.dto.Persona¯
-¬
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java (!
-=======
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java   (!š
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java   ("
-%0com.afnemo.model.dto.Persona"com.afnemo.model.dto.Persona¯
-¬
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java   (!
->>>>>>> V2.7
-%1"&com.afnemo.model.dto.Persona#<init>()V*$
-"
-%0com.afnemo.model.dto.Persona*
-13*“
-4V
-<<<<<<< HEAD
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java% %(	°­
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java% %(
-=======
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java* *(	°­
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java* *(
->>>>>>> V2.7
-%12void"Hcom.afnemo.model.dto.Persona#setUsuario(Lcom/afnemo/model/dto/Usuario;)V*(
-&
-personcom.afnemo.model.dto.Persona*&
-$
-usercom.afnemo.model.dto.Usuario2*setUsuario(Lcom/afnemo/model/dto/Usuario;)*
-3*ò
-5V
-<<<<<<< HEAD
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java$ $(	Œ
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java$ $(
-=======
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java) )(	Œ
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java) )(
->>>>>>> V2.7
-%11void"=com.afnemo.model.dto.Persona#setTelefono(Ljava/lang/String;)V*(
-&
-personcom.afnemo.model.dto.Persona*
-
-phonejava.lang.String2setTelefono(Ljava/lang/String;)*
-4*¹
-6V
-<<<<<<< HEAD
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java# #(	w
-u
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java# #(
-%9boolean"__id*
-""ÝÚ
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java# #(
-=======
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java( ((	w
-u
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java( ((
-%9boolean"__id*
-""ÝÚ
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java( ((
->>>>>>> V2.7
-%10void"*com.afnemo.model.dto.Persona#setEstado(Z)V*(
-&
-personcom.afnemo.model.dto.Persona*
-
-%9boolean2setEstado(Z)*
-5*ç
-7V
-<<<<<<< HEAD
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java" "(	„
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java" "(
-=======
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java' '(	„
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java' '(
->>>>>>> V2.7
-
-%8void"9com.afnemo.model.dto.Persona#setSexo(Ljava/lang/String;)V*(
-&
-personcom.afnemo.model.dto.Persona*
-
-sexjava.lang.String2setSexo(Ljava/lang/String;)*
-6*ü
-8V
-<<<<<<< HEAD
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java! !(	™–
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java! !(&
-=======
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java& &(	™–
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java& &(&
->>>>>>> V2.7
-
-%7void"Bcom.afnemo.model.dto.Persona#setFechaNacimiento(Ljava/util/Date;)V*(
-&
-personcom.afnemo.model.dto.Persona*
-
-birthdayjava.util.Date2$setFechaNacimiento(Ljava/util/Date;)*
-7*í
-9V
-<<<<<<< HEAD
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java   (	Š‡
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java   (
-=======
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java% %(	Š‡
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java% %(
->>>>>>> V2.7
-
-%6void";com.afnemo.model.dto.Persona#setCorreo(Ljava/lang/String;)V*(
-&
-personcom.afnemo.model.dto.Persona*
-
-emailjava.lang.String2setCorreo(Ljava/lang/String;)*
-8*ø
-10V
-<<<<<<< HEAD
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java (	”‘
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java (!
-=======
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java$ $(	”‘
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java$ $(!
->>>>>>> V2.7
-
-%5void">com.afnemo.model.dto.Persona#setApellido2(Ljava/lang/String;)V*(
-&
-personcom.afnemo.model.dto.Persona*
-
-	lastname2java.lang.String2 setApellido2(Ljava/lang/String;)*
-9*ù
-11V
-<<<<<<< HEAD
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java (	”‘
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java (!
-=======
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java# #(	”‘
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java# #(!
->>>>>>> V2.7
-
-%4void">com.afnemo.model.dto.Persona#setApellido1(Ljava/lang/String;)V*(
-&
-personcom.afnemo.model.dto.Persona*
-
-	lastname1java.lang.String2 setApellido1(Ljava/lang/String;)*
-10*ð
-12V
-<<<<<<< HEAD
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java (	‹ˆ
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java (
-=======
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java" "(	‹ˆ
-V
-LA:\AFNEMO\afnemo\src\main\java\com\afnemo\controller\ControladorPersona.java" "(
->>>>>>> V2.7
-
-%3void"<com.afnemo.model.dto.Persona#setNombres(Ljava/lang/String;)V*(
-&
-personcom.afnemo.model.dto.Persona*
-
-namejava.lang.String2setNombres(Ljava/lang/String;)*
-11:
-idjava.lang.String:
-namejava.lang.String:
-	lastname1java.lang.String:
-	lastname2java.lang.String:
-emailjava.lang.String:
-sexjava.lang.String:
-birthdayjava.util.Date:
-phonejava.lang.String:$
-usercom.afnemo.model.dto.UsuarioB,*
-(com.afnemo.controller.ControladorPersona
